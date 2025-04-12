@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className='bg-gray-900 mx-40'
+        className='bg-gray-900 md:mx-50'
       >
         <div className="bg-black text-white">
           <Header />

@@ -39,7 +39,8 @@ export async function fetchChannelStats(channelId: string): Promise<ChannelInfo 
 
 import { channelIds } from '@/constants/channelIds';
 
-export async function fetchAllStats() {
-  const rawData = await Promise.all(channelIds.map(id => fetchChannelStats(id)));
+export async function fetchAllStats(group: keyof typeof channelIds = 'nijisanji') {
+  const ids = Object.values(channelIds[group]);
+  const rawData = await Promise.all(ids.map(id => fetchChannelStats(id)));
   return rawData.filter((d): d is NonNullable<typeof d> => d !== null);
 }
