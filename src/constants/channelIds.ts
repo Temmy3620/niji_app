@@ -280,7 +280,6 @@ export const channelIds = {
     73: 'UC9LSiN9hXI55svYEBrrK-tw',
     74: 'UCu2n3qHuOuQIygREMnWeQWg',
   }
-} as const; // as const でキーをリテラル型として扱う
+} as const;
 
-// グループキーの型を生成 (例: 'nijisanji' | 'hololive')
 export type GroupKey = keyof typeof channelIds;

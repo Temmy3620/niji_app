@@ -1,19 +1,13 @@
-import { fetchAllStats, ChannelData } from '@/lib/youtubeApi'; // youtubeApi.ts のパスを確認
+import { fetchAllStats, ChannelData } from '@/lib/youtubeApi';
+import { GroupKey } from '@/constants/channelIds';
 import ClientHome from '@/components/ClientHome';
-import { channelIds, GroupKey } from '@/constants/channelIds'; // channelIds.ts のパスを確認
 
-// --- 表示したいグループの設定 ---
-// key は channelIds.ts のキーと一致させる
 const GROUPS_CONFIG: { key: GroupKey; name: string }[] = [
   { key: 'nijisanji', name: 'にじさんじ' },
   { key: 'hololive', name: 'ホロライブ' },
-  // channelIds.ts にグループを追加したら、ここにも追加
   // { key: 'vspo', name: 'ぶいすぽっ！' },
 ];
-// ------------------------------
 
-// --- ClientHome に渡すデータ構造の型 ---
-// (ClientHome側で定義してもOK)
 export interface GroupData {
   groupName: string;
   channels: ChannelData[];
@@ -21,7 +15,6 @@ export interface GroupData {
 export interface GroupDataMap {
   [groupKey: string]: GroupData;
 }
-// -----------------------------------
 
 export default async function Home() {
   console.log('[Server] Home Component: データ取得開始');
