@@ -19,11 +19,9 @@ export interface GroupDataMap {
 export default async function Home() {
   console.log('[Server] Home Component: データ取得開始');
 
-  // 全グループのデータを並行して取得
   const groupDataPromises = GROUPS_CONFIG.map(async (group) => {
     console.log(`[Server] ${group.name} のデータを取得中...`);
     try {
-      // 型安全のため group.key を渡す
       const channels = await fetchAllStats(group.key);
       console.log(`[Server] ${group.name} のデータ取得完了 (${channels.length} 件)`);
       return {
@@ -48,7 +46,6 @@ export default async function Home() {
 
   const results = await Promise.all(groupDataPromises);
 
-  // 結果を { groupKey: { groupName, channels } } の形式に変換
   const allGroupData: GroupDataMap = results.reduce((acc, result) => {
     acc[result.key] = result.data;
     return acc;

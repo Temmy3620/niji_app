@@ -7,7 +7,7 @@ export default function Header() {
         🌈 Vtuber_App
       </h1>
       <p className="text-sm text-gray-300 hidden md:block">
-        Let's explore the world of Nijisanji !!
+        Let's explore the world of Vtuber !!
       </p>
     </header>
   );
