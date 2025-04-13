@@ -2,10 +2,18 @@ import { fetchAllStats, ChannelData } from '@/lib/youtubeApi';
 import { GroupKey } from '@/constants/channelIds';
 import ClientHome from '@/components/ClientHome';
 
-const GROUPS_CONFIG: { key: GroupKey; name: string }[] = [
-  { key: 'nijisanji', name: 'にじさんじ' },
-  { key: 'hololive', name: 'ホロライブ' },
-  // { key: 'vspo', name: 'ぶいすぽっ！' },
+const GROUPS_CONFIG: { key: GroupKey; name: string; iconUrl: string }[] = [
+  {
+    key: 'nijisanji',
+    name: 'にじさんじ',
+    iconUrl: 'https://yt3.ggpht.com/ytc/AIdro_mSA0LOwiWKqjaCpsUIs2KT-yvAC4-Xv9RNZ8Zc6n0NPrc=s88-c-k-c0x00ffffff-no-rj',
+  },
+  {
+    key: 'hololive',
+    name: 'ホロライブ',
+    iconUrl: 'https://yt3.ggpht.com/aDD5WjpOtpuZO8QLEVnDI5pX-fjUNcKo5XM0gTpMvWlCxwG5dowWHAUhaooKl7nCstEM_-87=s88-c-k-c0x00ffffff-no-rj',
+  },
+  // { key: 'vspo', name: 'ぶいすぽっ！', iconUrl: '...' },
 ];
 
 export interface GroupData {

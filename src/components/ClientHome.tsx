@@ -34,6 +34,7 @@ interface GroupDataMap {
 interface GroupConfig {
   key: string;
   name: string;
+  iconUrl: string; // Added iconUrl to GroupConfig
 }
 
 interface ClientHomeProps {
@@ -55,6 +56,7 @@ export default function ClientHome({ allGroupData, groupsConfig, defaultGroupKey
     return acc;
   }, {} as SortState);
   const [sortState, setSortState] = useState<SortState>(initialSortState);
+  const [selectedGroupKey, setSelectedGroupKey] = useState(defaultGroupKey);
 
   const getSortedData = (groupKey: string): ChannelData[] => {
     const channels = allGroupData[groupKey]?.channels || [];
@@ -78,18 +80,44 @@ export default function ClientHome({ allGroupData, groupsConfig, defaultGroupKey
 
   return (
     <main className="p-4 md:p-6">
-      <Tabs defaultValue={defaultGroupKey} className="w-full">
-        <TabsList className={`grid w-full grid-cols-${Math.min(groupsConfig.length, 4)} sm:grid-cols-${Math.min(groupsConfig.length, 5)} gap-2 mb-4`}>
-          {groupsConfig.map((group) => (
-            <TabsTrigger
-              key={group.key}
-              value={group.key}
-              className="data-[state=active]:shadow-md data-[state=active]:bg-indigo-600 data-[state=active]:text-white px-3 py-1.5 text-sm sm:text-base" // サイズ調整
-            >
-              {group.name}
-            </TabsTrigger>
-          ))}
-        </TabsList>
+      <Tabs value={selectedGroupKey} onValueChange={setSelectedGroupKey} className="w-full">
+        <div className="flex justify-between items-center mb-4 gap-4 flex-wrap">
+          <TabsList className="flex gap-4">
+            {groupsConfig.map((group) => (
+              <TabsTrigger
+                key={group.key}
+                value={group.key}
+                className={`relative bg-white w-12 h-12 border-2 rounded-full overflow-hidden ${group.key === selectedGroupKey
+                  ? 'border-indigo-500'
+                  : 'border-transparent opacity-50 hover:opacity-100'
+                  } transition-all`}
+              >
+                <div className="p-0.5 bg-white rounded-full w-full h-full">
+                  <img
+                    src={group.iconUrl}
+                    alt={group.name}
+                    className="object-cover w-full h-full scale-[1.3] rounded-full"
+                  />
+                </div>
+              </TabsTrigger>
+            ))}
+          </TabsList>
+
+          <Select
+            onValueChange={(value) => handleSortChange(selectedGroupKey, value)}
+            value={sortState[selectedGroupKey] || 'subscribers'}
+          >
+            <SelectTrigger className="w-[180px] bg-gray-800 border-gray-700 text-white text-sm">
+              <SelectValue placeholder="並び替え" />
+            </SelectTrigger>
+            <SelectContent className="bg-gray-900 text-white border-gray-700">
+              <SelectGroup>
+                <SelectItem value="subscribers" className="cursor-pointer hover:bg-indigo-700 text-sm">登録者数順</SelectItem>
+                <SelectItem value="views" className="cursor-pointer hover:bg-indigo-700 text-sm">総再生数順</SelectItem>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
+        </div>
 
         {groupsConfig.map((group) => {
           const sortedChannels = useMemo(
@@ -100,23 +128,6 @@ export default function ClientHome({ allGroupData, groupsConfig, defaultGroupKey
 
           return (
             <TabsContent key={group.key} value={group.key} className="mt-4 focus-visible:ring-0 focus-visible:ring-offset-0">
-              <div className="mb-4 flex justify-end">
-                <Select
-                  onValueChange={(value) => handleSortChange(group.key, value)}
-                  value={sortState[group.key] || 'subscribers'}
-                >
-                  <SelectTrigger className="w-[180px] bg-gray-800 border-gray-700 text-white text-sm">
-                    <SelectValue placeholder="並び替え" />
-                  </SelectTrigger>
-                  <SelectContent className="bg-gray-900 text-white border-gray-700">
-                    <SelectGroup>
-                      <SelectItem value="subscribers" className="cursor-pointer hover:bg-indigo-700 text-sm">登録者数順</SelectItem>
-                      <SelectItem value="views" className="cursor-pointer hover:bg-indigo-700 text-sm">総再生数順</SelectItem>
-                    </SelectGroup>
-                  </SelectContent>
-                </Select>
-              </div>
-
               {sortedChannels.length > 0 ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {sortedChannels.map((channel) => (
