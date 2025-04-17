@@ -1,6 +1,6 @@
 import { fetchAllStats, ChannelData } from '@/lib/youtubeApi';
 import { GroupKey } from '@/constants/channelIds';
-import ClientHome from '@/components/ClientHome';
+import MonthlyViewTrend from '@/components/MonthlyViewTrend';
 
 const GROUPS_CONFIG: { key: GroupKey; name: string; iconUrl: string }[] = [
   {
@@ -72,8 +72,7 @@ export default async function Home() {
   console.log(`[Server] ClientHome にデータを渡します。デフォルトタブ: ${defaultGroupKey}`);
 
   return (
-    // ClientHome に必要なデータを全て渡す
-    <ClientHome
+    <MonthlyViewTrend
       allGroupData={allGroupData}
       groupsConfig={GROUPS_CONFIG}
       defaultGroupKey={defaultGroupKey}

@@ -1,5 +1,6 @@
 'use client';
 
+import { usePathname } from 'next/navigation';
 import { Card } from "@/components/ui/card";
 
 export type ChannelData = {
@@ -8,9 +9,16 @@ export type ChannelData = {
   thumbnail: string;
   subscribers: string;
   views: string;
+  subscriberDiff?: number;
+  viewDiff?: number;
 };
 
 export default function ChannelCard({ channel }: { channel: ChannelData }) {
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
+  const isMonthlySubscribersPage = pathname === '/MonthlySubscribers';
+  const isMonthlyViewsPage = pathname === '/MonthlyViews';
+
   const subscriberText = channel.subscribers === '非公開'
     ? '非公開'
     : (Number(channel.subscribers) || 0).toLocaleString() + ' 人';
@@ -28,14 +36,42 @@ export default function ChannelCard({ channel }: { channel: ChannelData }) {
         />
         <div className="flex-grow min-w-0">
           <h2 className="text-lg font-semibold truncate text-white" title={channel.title}>{channel.title}</h2>
-          <p className="flex items-center gap-1 text-sm text-gray-300">
-            <span role="img" aria-label="Subscribers">👥</span>
-            {subscriberText}
-          </p>
-          <p className="flex items-center gap-1 text-sm text-gray-300">
-            <span role="img" aria-label="Views">▶️</span>
-            {(Number(channel.views) || 0).toLocaleString()} 回
-          </p>
+
+          {(isHomePage || isMonthlySubscribersPage) && (
+            <p className="flex items-center gap-1 text-sm text-gray-300">
+              <span role="img" aria-label="Subscribers">👥</span>
+              {subscriberText}
+            </p>
+          )}
+
+          {isMonthlySubscribersPage && typeof channel.subscriberDiff === 'number' && (
+            <p
+              className={`flex items-center gap-1 text-sm ${channel.subscriberDiff >= 0 ? 'text-green-400' : 'text-red-400'
+                }`}
+            >
+              <span role="img" aria-label="Diff">📈</span>
+              {channel.subscriberDiff >= 0 ? '+' : ''}
+              {channel.subscriberDiff.toLocaleString()} 人
+            </p>
+          )}
+
+          {(isHomePage || isMonthlyViewsPage) && (
+            <p className="flex items-center gap-1 text-sm text-gray-300">
+              <span role="img" aria-label="Views">▶️</span>
+              {(Number(channel.views) || 0).toLocaleString()} 回
+            </p>
+          )}
+
+          {isMonthlyViewsPage && typeof channel.viewDiff === 'number' && (
+            <p
+              className={`flex items-center gap-1 text-sm ${channel.viewDiff >= 0 ? 'text-green-400' : 'text-red-400'
+                }`}
+            >
+              <span role="img" aria-label="Diff">📈</span>
+              {channel.viewDiff >= 0 ? '+' : ''}
+              {channel.viewDiff.toLocaleString()} 回
+            </p>
+          )}
         </div>
       </div>
     </Card>

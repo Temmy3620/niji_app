@@ -5,9 +5,9 @@ import { usePathname } from 'next/navigation';
 const NavTabs = () => {
   const pathname = usePathname();
   const tabs = [
-    { href: '/', label: '登録者数' },
-    { href: '/MonthlySubscribers', label: '月間登録者数推移' },
-    { href: '/MonthlyViews', label: '月間総再生数推移' },
+    { href: '/', label: '登録者数・総再生数' },
+    { href: '/MonthlySubscribers', label: '月間登録者数推移ランキング' },
+    { href: '/MonthlyViews', label: '月間総再生数推移ランキング' },
   ];
 
   return (
@@ -19,8 +19,8 @@ const NavTabs = () => {
             key={tab.href}
             href={tab.href}
             className={`pb-1 transition-colors border-b-2 ${isActive
-                ? 'border-white text-white font-semibold'
-                : 'border-transparent text-gray-400 hover:text-white hover:border-gray-500'
+              ? 'border-white text-white font-semibold'
+              : 'border-transparent text-gray-400 hover:text-white hover:border-gray-500'
               }`}
           >
             {tab.label}

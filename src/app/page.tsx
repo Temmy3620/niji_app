@@ -1,5 +1,5 @@
 import { fetchAllStats, ChannelData } from '@/lib/youtubeApi';
-import ClientHome from '@/components/ClientHome';
+import CurrentChannelStats from '@/components/CurrentChannelStats';
 import { GROUPS_CONFIG } from '@/constants/groupsConfig';
 
 export interface GroupData {
@@ -49,8 +49,7 @@ export default async function Home() {
   console.log(`[Server] ClientHome にデータを渡します。デフォルトタブ: ${defaultGroupKey}`);
 
   return (
-    // ClientHome に必要なデータを全て渡す
-    <ClientHome
+    <CurrentChannelStats
       allGroupData={allGroupData}
       groupsConfig={GROUPS_CONFIG}
       defaultGroupKey={defaultGroupKey}
