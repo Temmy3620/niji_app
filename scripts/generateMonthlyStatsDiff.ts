@@ -52,8 +52,8 @@ async function generateMonthlyStatsDiff() {
 
       return {
         id: aprilChannel.id,
-        subscribers: subDiff,
-        views: viewDiff,
+        subscriberDiff: subDiff,
+        viewDiff: viewDiff,
       };
     }).filter(Boolean);
   }
