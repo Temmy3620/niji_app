@@ -86,11 +86,11 @@ export default function CurrentChannelStats({ allGroupData, groupsConfig, defaul
                   : 'border-transparent opacity-50 hover:opacity-100'
                   } transition-all`}
               >
-                <div className="p-0.5 bg-white rounded-full w-full h-full">
+                <div className="bg-white rounded-full">
                   <img
                     src={group.iconUrl}
                     alt={group.name}
-                    className="object-cover w-full h-full scale-[1.3] rounded-full"
+                    className="object-cover w-full h-full scale-[1.5] rounded-full"
                   />
                 </div>
               </TabsTrigger>
