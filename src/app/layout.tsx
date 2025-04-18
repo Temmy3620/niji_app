@@ -23,7 +23,6 @@ export default function RootLayout({
       >
         <div className="bg-black text-white">
           <Header />
-          <NavTabs />
           {children}
         </div>
       </body>

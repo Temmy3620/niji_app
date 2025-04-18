@@ -107,7 +107,7 @@ export default function MonthlyViewTrend({ allGroupData, groupsConfig, defaultGr
               {sortedChannels.length > 0 ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {sortedChannels.map((channel) => (
-                    <ChannelCard key={channel.id} channel={channel} />
+                    <ChannelCard key={channel.id} channel={channel} currentTab="views" />
                   ))}
                 </div>
               ) : (

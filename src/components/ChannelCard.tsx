@@ -1,6 +1,6 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
+// Removed usePathname import as currentTab is now passed via props
 import { Card } from "@/components/ui/card";
 
 export type ChannelData = {
@@ -13,11 +13,10 @@ export type ChannelData = {
   viewDiff?: number;
 };
 
-export default function ChannelCard({ channel }: { channel: ChannelData }) {
-  const pathname = usePathname();
-  const isHomePage = pathname === '/';
-  const isMonthlySubscribersPage = pathname === '/MonthlySubscribers';
-  const isMonthlyViewsPage = pathname === '/MonthlyViews';
+export default function ChannelCard({ channel, currentTab }: { channel: ChannelData; currentTab: 'current' | 'subscribers' | 'views' }) {
+  const isCurrent = currentTab === 'current';
+  const isMonthlySubscribers = currentTab === 'subscribers';
+  const isMonthlyViews = currentTab === 'views';
 
   const subscriberText = channel.subscribers === '非公開'
     ? '非公開'
@@ -37,14 +36,14 @@ export default function ChannelCard({ channel }: { channel: ChannelData }) {
         <div className="flex-grow min-w-0">
           <h2 className="text-lg font-semibold truncate text-white" title={channel.title}>{channel.title}</h2>
 
-          {(isHomePage || isMonthlySubscribersPage) && (
+          {(isCurrent || isMonthlySubscribers) && (
             <p className="flex items-center gap-1 text-sm text-gray-300">
               <span role="img" aria-label="Subscribers">👥</span>
               {subscriberText}
             </p>
           )}
 
-          {isMonthlySubscribersPage && typeof channel.subscriberDiff === 'number' && (
+          {isMonthlySubscribers && typeof channel.subscriberDiff === 'number' && (
             <p
               className={`flex items-center gap-1 text-sm ${channel.subscriberDiff >= 0 ? 'text-green-400' : 'text-red-400'
                 }`}
@@ -55,14 +54,14 @@ export default function ChannelCard({ channel }: { channel: ChannelData }) {
             </p>
           )}
 
-          {(isHomePage || isMonthlyViewsPage) && (
+          {(isCurrent || isMonthlyViews) && (
             <p className="flex items-center gap-1 text-sm text-gray-300">
               <span role="img" aria-label="Views">▶️</span>
               {(Number(channel.views) || 0).toLocaleString()} 回
             </p>
           )}
 
-          {isMonthlyViewsPage && typeof channel.viewDiff === 'number' && (
+          {isMonthlyViews && typeof channel.viewDiff === 'number' && (
             <p
               className={`flex items-center gap-1 text-sm ${channel.viewDiff >= 0 ? 'text-green-400' : 'text-red-400'
                 }`}

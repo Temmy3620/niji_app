@@ -1,5 +1,6 @@
 import { fetchAllStats } from '@/lib/youtubeApi';
-import CurrentChannelStats from '@/components/CurrentChannelStats';
+import { loadDiffMap } from '@/lib/monthlyDiffLoader';
+import HomeClientView from '@/components/HomeClientView';
 import { GROUPS_CONFIG } from '@/constants/groupsConfig';
 import { ChannelData } from '@/types/ChannelData';
 
@@ -48,12 +49,14 @@ export default async function Home() {
 
   const defaultGroupKey = GROUPS_CONFIG.length > 0 ? GROUPS_CONFIG[0].key : '';
   console.log(`[Server] ClientHome にデータを渡します。デフォルトタブ: ${defaultGroupKey}`);
+  const diffMap = loadDiffMap();
 
   return (
-    <CurrentChannelStats
+    <HomeClientView
       allGroupData={allGroupData}
       groupsConfig={GROUPS_CONFIG}
       defaultGroupKey={defaultGroupKey}
+      diffMap={diffMap}
     />
   );
 }
