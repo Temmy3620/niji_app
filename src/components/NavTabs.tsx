@@ -18,10 +18,9 @@ const NavTabs = () => {
           <Link
             key={tab.href}
             href={tab.href}
-            className={`pb-1 transition-colors border-b-2 ${isActive
-              ? 'border-white text-white font-semibold'
-              : 'border-transparent text-gray-400 hover:text-white hover:border-gray-500'
-              }`}
+            className={`px-4 py-1 rounded-full border transition-colors duration-200 ${isActive
+              ? 'bg-white text-black font-semibold border-white'
+              : 'text-gray-300 border-gray-700 hover:bg-gray-700 hover:text-white hover:border-white'}`}
           >
             {tab.label}
           </Link>
