@@ -9,11 +9,44 @@ type Props = {
 
 export const AppViewTabs = ({ currentTab, onChange }: Props) => {
   return (
-    <Tabs value={currentTab} onValueChange={(value) => onChange(value as 'current' | 'subscribers' | 'views')} className="w-full justify-center mb-6 mt-2">
+    <Tabs value={currentTab} onValueChange={(value) => onChange(value as 'current' | 'subscribers' | 'views')} className="w-full justify-center mb-6 mt-2 pl-6">
       <TabsList className="flex gap-4">
-        <TabsTrigger value="current">登録者数・総再生数</TabsTrigger>
-        <TabsTrigger value="subscribers">月間登録者数推移</TabsTrigger>
-        <TabsTrigger value="views">月間総再生数推移</TabsTrigger>
+        <TabsTrigger
+          value="current"
+          className={`
+            px-4 py-2 rounded-full text-sm font-semibold
+            transition-colors duration-200
+            ${currentTab === 'current'
+              ? 'bg-gradient-to-r from-pink-500 to-purple-500 text-white shadow-md'
+              : 'bg-gray-800 text-gray-300 hover:bg-gray-700'}
+          `}
+        >
+          登録者数・総再生数
+        </TabsTrigger>
+        <TabsTrigger
+          value="subscribers"
+          className={`
+            px-4 py-2 rounded-full text-sm font-semibold
+            transition-colors duration-200
+            ${currentTab === 'subscribers'
+              ? 'bg-gradient-to-r from-pink-500 to-purple-500 text-white shadow-md'
+              : 'bg-gray-800 text-gray-300 hover:bg-gray-700'}
+          `}
+        >
+          月間登録者数推移Rank
+        </TabsTrigger>
+        <TabsTrigger
+          value="views"
+          className={`
+            px-4 py-2 rounded-full text-sm font-semibold
+            transition-colors duration-200
+            ${currentTab === 'views'
+              ? 'bg-gradient-to-r from-pink-500 to-purple-500 text-white shadow-md'
+              : 'bg-gray-800 text-gray-300 hover:bg-gray-700'}
+          `}
+        >
+          月間総再生数推移Rank
+        </TabsTrigger>
       </TabsList>
     </Tabs>
   );
