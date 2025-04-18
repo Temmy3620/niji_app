@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import ChannelCard from '@/components/ChannelCard';
+import { ChannelData } from '@/types/ChannelData';
 import { loadDiffMap } from '@/lib/monthlyDiffLoader';
 import {
   Tabs,
@@ -10,15 +11,6 @@ import {
   TabsTrigger,
 } from "@/components/ui/tabs";
 
-type ChannelData = {
-  id: string;
-  title: string;
-  thumbnail: string;
-  subscribers: string;
-  views: string;
-  subscriberDiff?: number;
-  viewDiff?: number;
-};
 interface GroupData {
   groupName: string;
   channels: ChannelData[];

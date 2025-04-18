@@ -1,5 +1,6 @@
-import { fetchAllStats, ChannelData } from '@/lib/youtubeApi';
+import { fetchAllStats } from '@/lib/youtubeApi';
 import { GroupKey } from '@/constants/channelIds';
+import { ChannelData } from '@/types/ChannelData';
 import MonthlySubscriberTrend from '@/components/MonthlySubscriberTrend';
 
 const GROUPS_CONFIG: { key: GroupKey; name: string; iconUrl: string }[] = [
@@ -33,7 +34,7 @@ export interface GroupDataMap {
   [groupKey: string]: GroupData;
 }
 
-export default async function Home() {
+export default async function MonthlySubscribers() {
   console.log('[Server] Home Component: データ取得開始');
 
   const groupDataPromises = GROUPS_CONFIG.map(async (group) => {

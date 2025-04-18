@@ -1,6 +1,7 @@
-import { fetchAllStats, ChannelData } from '@/lib/youtubeApi';
+import { fetchAllStats } from '@/lib/youtubeApi';
 import CurrentChannelStats from '@/components/CurrentChannelStats';
 import { GROUPS_CONFIG } from '@/constants/groupsConfig';
+import { ChannelData } from '@/types/ChannelData';
 
 export interface GroupData {
   groupName: string;

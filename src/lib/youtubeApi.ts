@@ -1,14 +1,6 @@
 // src/lib/youtubeApi.ts
 import { channelIds, GroupKey } from '@/constants/channelIds';
-
-// --- 型定義 ---
-export type ChannelData = {
-  id: string;
-  title: string;
-  thumbnail: string;
-  subscribers: string;
-  views: string;
-};
+import { ChannelData } from '@/types/ChannelData';
 
 // --- YouTube APIの items 配列要素の型定義 (必要なものだけ) ---
 // APIレスポンスに合わせて適宜調整してください
