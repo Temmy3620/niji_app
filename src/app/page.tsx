@@ -1,8 +1,8 @@
 import { fetchAllStats } from '@/lib/youtubeApi';
-import { loadDiffMap } from '@/lib/monthlyDiffLoader';
 import HomeClientView from '@/components/HomeClientView';
 import { GROUPS_CONFIG } from '@/constants/groupsConfig';
 import { ChannelData } from '@/types/ChannelData';
+import { getAvailableDates } from '@/lib/getAvailableDates';
 
 export interface GroupData {
   groupName: string;
@@ -47,16 +47,19 @@ export default async function Home() {
     return acc;
   }, {} as GroupDataMap);
 
+  const availableDatesObj = getAvailableDates();
   const defaultGroupKey = GROUPS_CONFIG.length > 0 ? GROUPS_CONFIG[0].key : '';
+  const availableDates = availableDatesObj.all;
+  const defaultDate = availableDatesObj.new_month;
   console.log(`[Server] ClientHome にデータを渡します。デフォルトタブ: ${defaultGroupKey}`);
-  const diffMap = loadDiffMap();
 
   return (
     <HomeClientView
       allGroupData={allGroupData}
       groupsConfig={GROUPS_CONFIG}
       defaultGroupKey={defaultGroupKey}
-      diffMap={diffMap}
+      availableDates={availableDates}
+      defaultDate={defaultDate}
     />
   );
 }

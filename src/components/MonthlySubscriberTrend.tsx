@@ -28,6 +28,8 @@ interface MonthlySubscriberTrendProps {
   allGroupData: GroupDataMap;
   groupsConfig: GroupConfig[];
   defaultGroupKey: string;
+  availableDates: string[];
+  defaultDate: string;
 }
 
 type SortByType = 'subscriberDiff';
@@ -35,7 +37,7 @@ interface SortState {
   [groupKey: string]: SortByType;
 }
 
-export default function MonthlySubscriberTrend({ allGroupData, groupsConfig, defaultGroupKey }: MonthlySubscriberTrendProps) {
+export default function MonthlySubscriberTrend({ allGroupData, groupsConfig, defaultGroupKey, availableDates, defaultDate }: MonthlySubscriberTrendProps) {
   console.log('[Client] MonthlySubscriberTrend Rendering. Groups:', groupsConfig.map(g => g.name));
 
   const initialSortState: SortState = groupsConfig.reduce((acc, group) => {
@@ -44,8 +46,7 @@ export default function MonthlySubscriberTrend({ allGroupData, groupsConfig, def
   }, {} as SortState);
   const [sortState, setSortState] = useState<SortState>(initialSortState);
   const [selectedGroupKey, setSelectedGroupKey] = useState(defaultGroupKey);
-  const [selectedDate, setSelectedDate] = useState('2025-04');
-  const availableDates = ['2025-04', '2025-03'];
+  const [selectedDate, setSelectedDate] = useState(defaultDate);
   const [diffMap, setDiffMap] = useState<Record<string, { subscriberDiff: number; viewDiff: number }>>({});
 
   useEffect(() => {

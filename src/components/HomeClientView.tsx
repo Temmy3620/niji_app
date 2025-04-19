@@ -23,10 +23,11 @@ interface Props {
   allGroupData: GroupDataMap;
   groupsConfig: GroupConfig[];
   defaultGroupKey: string;
-  diffMap: { [channelId: string]: { subscriberDiff?: number; viewDiff?: number } };
+  availableDates: string[];
+  defaultDate: string;
 }
 
-const HomeClientView = ({ allGroupData, groupsConfig, defaultGroupKey, diffMap }: Props) => {
+const HomeClientView = ({ allGroupData, groupsConfig, defaultGroupKey, availableDates, defaultDate }: Props) => {
   const [currentTab, setCurrentTab] = useState<'current' | 'subscribers' | 'views'>('current');
 
   return (
@@ -44,6 +45,8 @@ const HomeClientView = ({ allGroupData, groupsConfig, defaultGroupKey, diffMap }
           allGroupData={allGroupData}
           groupsConfig={groupsConfig}
           defaultGroupKey={defaultGroupKey}
+          availableDates={availableDates}
+          defaultDate={defaultDate}
         />
       )}
       {currentTab === 'views' && (
@@ -51,6 +54,8 @@ const HomeClientView = ({ allGroupData, groupsConfig, defaultGroupKey, diffMap }
           allGroupData={allGroupData}
           groupsConfig={groupsConfig}
           defaultGroupKey={defaultGroupKey}
+          availableDates={availableDates}
+          defaultDate={defaultDate}
         />
       )}
     </>

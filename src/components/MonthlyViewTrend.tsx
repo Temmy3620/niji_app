@@ -28,6 +28,8 @@ interface MonthlyViewTrendProps {
   allGroupData: GroupDataMap;
   groupsConfig: GroupConfig[];
   defaultGroupKey: string;
+  availableDates: string[];
+  defaultDate: string;
 }
 
 type SortByType = 'viewDiff';
@@ -35,7 +37,7 @@ interface SortState {
   [groupKey: string]: SortByType;
 }
 
-export default function MonthlyViewTrend({ allGroupData, groupsConfig, defaultGroupKey }: MonthlyViewTrendProps) {
+export default function MonthlyViewTrend({ allGroupData, groupsConfig, defaultGroupKey, availableDates, defaultDate }: MonthlyViewTrendProps) {
   console.log('[Client] MonthlyViewTrend Rendering. Groups:', groupsConfig.map(g => g.name));
 
   const initialSortState: SortState = groupsConfig.reduce((acc, group) => {
@@ -44,8 +46,7 @@ export default function MonthlyViewTrend({ allGroupData, groupsConfig, defaultGr
   }, {} as SortState);
   const [sortState, setSortState] = useState<SortState>(initialSortState);
   const [selectedGroupKey, setSelectedGroupKey] = useState(defaultGroupKey);
-  const [selectedDate, setSelectedDate] = useState('2025-04'); // Example date string
-  const availableDates = ['2025-04', '2025-03'];
+  const [selectedDate, setSelectedDate] = useState(defaultDate);
   const [diffMap, setDiffMap] = useState<Record<string, { subscriberDiff: number; viewDiff: number }>>({});
 
   useEffect(() => {
