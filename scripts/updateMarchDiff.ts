@@ -43,9 +43,9 @@ function loadTxtToMap(filePath: string): Map<string, number> {
   return map;
 }
 
-const sebFile = path.join(__dirname, '../data/memo/03_seb.txt');
-const viewFile = path.join(__dirname, '../data/memo/03_veiw.txt');
-const jsonFile = path.join(__dirname, '../data/youtube_diffs/2025-03_diff.json');
+const sebFile = path.join(__dirname, '../data/memo/11(2024)_seb.txt');
+const viewFile = path.join(__dirname, '../data/memo/11(2024)_view.txt');
+const jsonFile = path.join(__dirname, '../data/youtube_diffs/2024-11_diff.json');
 
 const subscriberMap = loadTxtToMap(sebFile);
 const viewMap = loadTxtToMap(viewFile);
@@ -68,7 +68,7 @@ for (const group in jsonData) {
 // 上書き保存
 fs.writeFileSync(jsonFile, JSON.stringify(jsonData, null, 2), 'utf-8');
 
-console.log('✅ JSON更新完了：2025-03_diff.json');
+console.log('✅ JSON更新完了：2024-11_diff.json');
 
 function dd(...args: any[]) {
   console.log(...args);
