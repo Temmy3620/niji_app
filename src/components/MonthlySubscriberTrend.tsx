@@ -99,28 +99,38 @@ export default function MonthlySubscriberTrend({ allGroupData, groupsConfig, def
               </TabsTrigger>
             ))}
           </TabsList>
-          <div className="ml-auto text-white">
-            <button
-              onClick={() => {
-                const idx = availableDates.indexOf(selectedDate);
-                if (idx > 0) setSelectedDate(availableDates[idx - 1]);
-              }}
-              disabled={availableDates.indexOf(selectedDate) === 0}
-              className="px-2 py-1 bg-gray-700 rounded disabled:opacity-50"
-            >
-              ←
-            </button>
-            <span className="text-lg">{selectedDate}</span>
-            <button
-              onClick={() => {
-                const idx = availableDates.indexOf(selectedDate);
-                if (idx < availableDates.length - 1) setSelectedDate(availableDates[idx + 1]);
-              }}
-              disabled={availableDates.indexOf(selectedDate) === availableDates.length - 1}
-              className="px-2 py-1 bg-gray-700 rounded disabled:opacity-50"
-            >
-              →
-            </button>
+          <div className="ml-auto">
+            <div className="flex items-center justify-center gap-2 text-white text-lg font-semibold">
+              <button
+                onClick={() => {
+                  const idx = availableDates.indexOf(selectedDate);
+                  if (idx > 0) setSelectedDate(availableDates[idx - 1]);
+                }}
+                disabled={availableDates.indexOf(selectedDate) === 0}
+                className={`w-10 h-10 flex items-center justify-center rounded-lg shadow-md transition-all duration-150
+                  ${availableDates.indexOf(selectedDate) === 0 ? 'bg-gray-800 border border-gray-500 text-gray-400 cursor-not-allowed' : 'bg-gray-800 hover:bg-purple-700'}
+                `}
+              >
+                ←
+              </button>
+
+              <span className="px-4 py-1 bg-muted text-muted-foreground border border-border rounded-md shadow-sm">
+                {selectedDate}
+              </span>
+
+              <button
+                onClick={() => {
+                  const idx = availableDates.indexOf(selectedDate);
+                  if (idx < availableDates.length - 1) setSelectedDate(availableDates[idx + 1]);
+                }}
+                disabled={availableDates.indexOf(selectedDate) === availableDates.length - 1}
+                className={`w-10 h-10 flex items-center justify-center rounded-lg shadow-md transition-all duration-150
+                  ${availableDates.indexOf(selectedDate) === availableDates.length - 1 ? 'bg-gray-800 border border-gray-500 text-gray-400 cursor-not-allowed' : 'bg-gray-800 hover:bg-purple-700'}
+                `}
+              >
+                →
+              </button>
+            </div>
           </div>
         </div>
 
