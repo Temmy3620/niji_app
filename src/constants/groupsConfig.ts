@@ -26,4 +26,19 @@ export const GROUPS_CONFIG: { key: GroupKey; name: string; iconUrl: string }[] =
     name: 'あおぎり高校',
     iconUrl: 'https://yt3.ggpht.com/dDxwoOXbmmqwlnt8MMon3wPQdy5pX-vt-x8Eyqf38Yk8Zi2CIbJDXpzkA2YxZ1yUeOUhkweqYg=s88-c-k-c0x00ffffff-no-rj',
   },
+  {
+    key: 'nanashiiInc',
+    name: 'ななしいんく',
+    iconUrl: 'https://yt3.ggpht.com/lz-XM1W5pDGXKjQG29KAL9essCugYeOc6RcNhhGmSXpv7EiWiBZdwZxocPKk1TlEkuc6R8ea0dg=s88-c-k-c0x00ffffff-no-rj',
+  },
+  {
+    key: 'noripro',
+    name: 'のりプロ',
+    iconUrl: './noripro.png',
+  },
+  {
+    key: 'dotlive',
+    name: '.LIVE',
+    iconUrl: 'https://yt3.ggpht.com/ytc/AIdro_kxJBXULpm-Fp1nFu5Af326mchWFZj3CP1SigBoaZKS9Q=s88-c-k-c0x00ffffff-no-rj',
+  }
 ];

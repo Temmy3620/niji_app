@@ -370,7 +370,48 @@ export const channelIds = {
     13: 'UCdi5pj0MDQ-3LFNUFIFmD8w',
     14: 'UCXXlhNCp1EPbDQ2pzmmy9aw',
     15: 'UCFG6teapZaN6J1oVXl7MYPA',
-  }
+  },
+  nanashiiInc: {
+    1: "UC0Owc36U9lOyi9Gx9Ic-4qg",
+    2: "UCwePpiw1ocZRSNSkpKvVISw",
+    3: "UC2hc-00y-MSR6eYA4eQ4tjQ",
+    4: "UC3EhsuKdEkI99TWZwZgWutg",
+    5: "UCXp7sNC0F_qkjickvlYkg-Q",
+    6: "UC2kyQhzGOB-JPgcQX9OMgEw",
+    7: "UCBJ6nejlzes6mm9UruaxQsA",
+    8: "UCW8WKciBixmaqaGqrlTITRQ",
+    9: "UCDh2bWI5EDu7PavqwICkVpA",
+    10: "UCYTz3uIgwVY3ZU-IQJS8r3A",
+    11: "UCJEpkwwDiTKS5lxwFttEbIQ"
+  },
+  noripro: {
+    1: "UC8NZiqKx6fsDT3AVcMiVFyA",
+    2: "UC16P6nSFhimmcjQKrdOx2IQ",
+    3: "UCLyTXfCZtl7dyhta9Jg3pZg",
+    4: "UCWIPfdcux1WxuX5yZLPJDww",
+    5: "UCle1cz6rcyH0a-xoMYwLlAg",
+    6: "UCJCzy0Fyrm0UhIrGQ7tHpjg",
+    7: "UCuycJ_IsA5ESbTYhe05ozqQ",
+    8: "UCMxIxoMdtcLkZ1wTq7qjztg",
+    9: "UCxrmkJf_X1Yhte_a4devFzA",
+    10: "UCCXME7oZmXB2VFHJbz5496A",
+    11: "UCJtDr_tuvwv-lfN4Gejd5hQ",
+    12: "UCDwPMymmju4GZV7kZcL2vIQ"
+  },
+  dotlive: {
+    0: "UCLhUvJ_wO9hOvv_yYENu4fQ",
+    1: "UCz6Gi81kE6p5cdW1rT0ixqw",
+    2: "UCyD-4021fig0lxKSYK9DL-g",
+    3: "UCP9ZgeIJ3Ri9En69R0kJc9Q",
+    4: "UCMzxQ58QL4NNbWghGymtHvw",
+    5: "UCXUtikLthPFa5DDmgT3naGA",
+    6: "UClhLb5qSZy0Gvn3c-HuaInQ",
+    7: "UCyb-cllCkMREr9de-hoiDrg",
+    8: "UCUZ5AlC3rTlM-rA2cj5RP6w",
+    9: "UC6TyfKcsrPwBsBnx2QobVLQ",
+    10: "UCGPSbXH61y4l85L9XTUl2mA",
+    11: "UCPxSh63XjfSYJbkBLxM3fSw",
+  },
 } as const;
 
 export type GroupKey = keyof typeof channelIds;
