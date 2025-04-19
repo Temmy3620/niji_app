@@ -45,6 +45,7 @@ export default function MonthlySubscriberTrend({ allGroupData, groupsConfig, def
   const [sortState, setSortState] = useState<SortState>(initialSortState);
   const [selectedGroupKey, setSelectedGroupKey] = useState(defaultGroupKey);
   const [selectedDate, setSelectedDate] = useState('2025-04');
+  const availableDates = ['2025-04', '2025-03'];
   const [diffMap, setDiffMap] = useState<Record<string, { subscriberDiff: number; viewDiff: number }>>({});
 
   useEffect(() => {
@@ -98,6 +99,29 @@ export default function MonthlySubscriberTrend({ allGroupData, groupsConfig, def
               </TabsTrigger>
             ))}
           </TabsList>
+          <div className="ml-auto text-white">
+            <button
+              onClick={() => {
+                const idx = availableDates.indexOf(selectedDate);
+                if (idx > 0) setSelectedDate(availableDates[idx - 1]);
+              }}
+              disabled={availableDates.indexOf(selectedDate) === 0}
+              className="px-2 py-1 bg-gray-700 rounded disabled:opacity-50"
+            >
+              ←
+            </button>
+            <span className="text-lg">{selectedDate}</span>
+            <button
+              onClick={() => {
+                const idx = availableDates.indexOf(selectedDate);
+                if (idx < availableDates.length - 1) setSelectedDate(availableDates[idx + 1]);
+              }}
+              disabled={availableDates.indexOf(selectedDate) === availableDates.length - 1}
+              className="px-2 py-1 bg-gray-700 rounded disabled:opacity-50"
+            >
+              →
+            </button>
+          </div>
         </div>
 
         {groupsConfig.map((group) => {
