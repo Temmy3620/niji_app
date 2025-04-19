@@ -29,7 +29,7 @@ async function generateMonthlyStatsDiff() {
 
   const prevPath = path.join(outputDir, previousFile);
   const diffDir = path.resolve(__dirname, '../data/youtube_diffs');
-  const prevYm = previousFile.split('_')[0]; // e.g. '2025-03-01'
+  const prevYm = previousFile.split('_')[0].slice(0, 7); // e.g. '2025-03'
   const diffOutPath = path.join(diffDir, `${prevYm}_diff.json`);
 
   const marchData = JSON.parse(fs.readFileSync(prevPath, 'utf-8'));

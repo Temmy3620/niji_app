@@ -1,27 +1,22 @@
-import diffData from '@/data/youtube_diffs/2025-03-01_diff.json';
+import { DiffEntry, DiffMap } from '@/types/loadDiffMap'; // Assuming types are defined in a separate file
 
-type DiffEntry = {
-  id: string;
-  subscriberDiff: number;
-  viewDiff: number;
-};
+export async function loadDiffMap(dateStr?: string): Promise<DiffMap> {
+  const safeDateStr = dateStr ?? '2025-04';
 
-type DiffMap = {
-  [channelId: string]: {
-    subscriberDiff: number;
-    viewDiff: number;
-  };
-};
+  try {
+    const data = await import(`@/data/youtube_diffs/${safeDateStr}_diff.json`);
+    const groups = Object.values(data.default as Record<string, DiffEntry[]>);
+    const merged: DiffMap = {};
 
-export function loadDiffMap(): DiffMap {
-  const groups = Object.values(diffData); // nijisanji, hololive, etc.
-  const merged: DiffMap = {};
-
-  groups.forEach((entries: DiffEntry[]) => {
-    entries.forEach(({ id, subscriberDiff, viewDiff }) => {
-      merged[id] = { subscriberDiff, viewDiff };
+    groups.forEach((entries: DiffEntry[]) => {
+      entries.forEach(({ id, subscriberDiff, viewDiff }) => {
+        merged[id] = { subscriberDiff, viewDiff };
+      });
     });
-  });
 
-  return merged;
+    return merged;
+  } catch (error) {
+    console.error(`[loadDiffMap] Failed to load ${safeDateStr}_diff.json`, error);
+    return {};
+  }
 }

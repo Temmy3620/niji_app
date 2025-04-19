@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import ChannelCard from '@/components/ChannelCard';
 import { ChannelData } from '@/types/ChannelData';
 import { loadDiffMap } from '@/lib/monthlyDiffLoader';
@@ -44,7 +44,12 @@ export default function MonthlyViewTrend({ allGroupData, groupsConfig, defaultGr
   }, {} as SortState);
   const [sortState, setSortState] = useState<SortState>(initialSortState);
   const [selectedGroupKey, setSelectedGroupKey] = useState(defaultGroupKey);
-  const diffMap = useMemo(() => loadDiffMap(), []);
+  const [selectedDate, setSelectedDate] = useState('2025-04'); // Example date string
+  const [diffMap, setDiffMap] = useState<Record<string, { subscriberDiff: number; viewDiff: number }>>({});
+
+  useEffect(() => {
+    loadDiffMap(selectedDate).then(setDiffMap);
+  }, [selectedDate]);
 
   const getSortedData = (groupKey: string): ChannelData[] => {
     const channels = allGroupData[groupKey]?.channels || [];
@@ -96,10 +101,7 @@ export default function MonthlyViewTrend({ allGroupData, groupsConfig, defaultGr
         </div>
 
         {groupsConfig.map((group) => {
-          const sortedChannels = useMemo(
-            () => getSortedData(group.key),
-            [allGroupData[group.key]?.channels, sortState[group.key]]
-          );
+          const sortedChannels = getSortedData(group.key);
           console.log(`[Client] Rendering content for "${group.key}". Channels: ${sortedChannels.length}`);
 
           return (
