@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import ChannelCard from '@/components/ChannelCard';
 import { loadDiffMap } from '@/lib/monthlyDiffLoader';
 import { ChannelData } from '@/types/ChannelData';
@@ -60,6 +60,14 @@ export default function MonthlySubscriberTrend({ allGroupData, groupsConfig, def
       });
   };
 
+  const memoizedSortedChannels = useMemo(() => {
+    const result: Record<string, ChannelData[]> = {};
+    groupsConfig.forEach(group => {
+      result[group.key] = getSortedData(group.key);
+    });
+    return result;
+  }, [allGroupData, diffMap, groupsConfig]);
+
   if (!groupsConfig || groupsConfig.length === 0) {
     return <main className="p-6"><p className="text-white text-center">表示可能なグループがありません。</p></main>;
   }
@@ -105,7 +113,7 @@ export default function MonthlySubscriberTrend({ allGroupData, groupsConfig, def
         </div>
 
         {groupsConfig.map((group) => {
-          const sortedChannels = getSortedData(group.key);
+          const sortedChannels = memoizedSortedChannels[group.key];
           console.log(`[Client] Rendering content for "${group.key}". Channels: ${sortedChannels.length}`);
 
           return (
