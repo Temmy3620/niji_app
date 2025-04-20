@@ -7,9 +7,7 @@ import { ChannelData } from '@/types/ChannelData';
 import GroupTabs from "@/components/GroupTabs";
 import {
   Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
+  TabsContent
 } from "@/components/ui/tabs";
 
 interface GroupData {
@@ -33,19 +31,9 @@ interface MonthlySubscriberTrendProps {
   defaultDate: string;
 }
 
-type SortByType = 'subscriberDiff';
-interface SortState {
-  [groupKey: string]: SortByType;
-}
-
 export default function MonthlySubscriberTrend({ allGroupData, groupsConfig, defaultGroupKey, availableDates, defaultDate }: MonthlySubscriberTrendProps) {
   console.log('[Client] MonthlySubscriberTrend Rendering. Groups:', groupsConfig.map(g => g.name));
 
-  const initialSortState: SortState = groupsConfig.reduce((acc, group) => {
-    acc[group.key] = 'subscriberDiff';
-    return acc;
-  }, {} as SortState);
-  const [sortState, setSortState] = useState<SortState>(initialSortState);
   const [selectedGroupKey, setSelectedGroupKey] = useState(defaultGroupKey);
   const [selectedDate, setSelectedDate] = useState(defaultDate);
   const [diffMap, setDiffMap] = useState<Record<string, { subscriberDiff: number; viewDiff: number }>>({});
@@ -56,7 +44,6 @@ export default function MonthlySubscriberTrend({ allGroupData, groupsConfig, def
 
   const getSortedData = (groupKey: string): ChannelData[] => {
     const channels = allGroupData[groupKey]?.channels || [];
-    const sortBy = sortState[groupKey] || 'subscribers';
 
     return [...channels]
       .map(channel => {

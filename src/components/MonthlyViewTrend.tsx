@@ -1,15 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import ChannelCard from '@/components/ChannelCard';
 import { ChannelData } from '@/types/ChannelData';
 import { loadDiffMap } from '@/lib/monthlyDiffLoader';
 import GroupTabs from "@/components/GroupTabs";
 import {
   Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
+  TabsContent
 } from "@/components/ui/tabs";
 
 interface GroupData {
@@ -33,19 +31,9 @@ interface MonthlyViewTrendProps {
   defaultDate: string;
 }
 
-type SortByType = 'viewDiff';
-interface SortState {
-  [groupKey: string]: SortByType;
-}
-
 export default function MonthlyViewTrend({ allGroupData, groupsConfig, defaultGroupKey, availableDates, defaultDate }: MonthlyViewTrendProps) {
   console.log('[Client] MonthlyViewTrend Rendering. Groups:', groupsConfig.map(g => g.name));
 
-  const initialSortState: SortState = groupsConfig.reduce((acc, group) => {
-    acc[group.key] = 'viewDiff';
-    return acc;
-  }, {} as SortState);
-  const [sortState, setSortState] = useState<SortState>(initialSortState);
   const [selectedGroupKey, setSelectedGroupKey] = useState(defaultGroupKey);
   const [selectedDate, setSelectedDate] = useState(defaultDate);
   const [diffMap, setDiffMap] = useState<Record<string, { subscriberDiff: number; viewDiff: number }>>({});
@@ -56,7 +44,6 @@ export default function MonthlyViewTrend({ allGroupData, groupsConfig, defaultGr
 
   const getSortedData = (groupKey: string): ChannelData[] => {
     const channels = allGroupData[groupKey]?.channels || [];
-    const sortBy = sortState[groupKey] || 'subscribers';
 
     return [...channels]
       .map(channel => {
@@ -68,10 +55,17 @@ export default function MonthlyViewTrend({ allGroupData, groupsConfig, defaultGr
         };
       })
       .sort((a, b) => {
-        const sortByValue = (ch: ChannelData) => ch.viewDiff ?? 0;
-        return sortByValue(b) - sortByValue(a);
+        return b.viewDiff - a.viewDiff;
       });
   };
+
+  const memoizedSortedChannels = useMemo(() => {
+    const result: Record<string, ChannelData[]> = {};
+    groupsConfig.forEach(group => {
+      result[group.key] = getSortedData(group.key);
+    });
+    return result;
+  }, [allGroupData, diffMap, groupsConfig]);
 
   if (!groupsConfig || groupsConfig.length === 0) {
     return <main className="p-6"><p className="text-white text-center">表示可能なグループがありません。</p></main>;
@@ -118,7 +112,7 @@ export default function MonthlyViewTrend({ allGroupData, groupsConfig, defaultGr
         </div>
 
         {groupsConfig.map((group) => {
-          const sortedChannels = getSortedData(group.key);
+          const sortedChannels = memoizedSortedChannels[group.key];
           console.log(`[Client] Rendering content for "${group.key}". Channels: ${sortedChannels.length}`);
 
           return (

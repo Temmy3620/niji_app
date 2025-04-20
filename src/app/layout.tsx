@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
-import NavTabs from '@/components/NavTabs';
 
 export const metadata: Metadata = {
   title: "VtubeTracker",

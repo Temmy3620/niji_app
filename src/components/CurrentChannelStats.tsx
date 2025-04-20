@@ -14,9 +14,7 @@ import {
 } from "@/components/ui/select";
 import {
   Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
+  TabsContent
 } from "@/components/ui/tabs";
 
 interface GroupData {
@@ -69,6 +67,14 @@ export default function CurrentChannelStats({ allGroupData, groupsConfig, defaul
     setSortState(prev => ({ ...prev, [groupKey]: value as SortByType }));
   };
 
+  const memoizedSortedChannels = useMemo(() => {
+    const result: Record<string, ChannelData[]> = {};
+    groupsConfig.forEach(group => {
+      result[group.key] = getSortedData(group.key);
+    });
+    return result;
+  }, [allGroupData, sortState, groupsConfig]);
+
   if (!groupsConfig || groupsConfig.length === 0) {
     return <main className="p-6"><p className="text-white text-center">表示可能なグループがありません。</p></main>;
   }
@@ -96,10 +102,7 @@ export default function CurrentChannelStats({ allGroupData, groupsConfig, defaul
         </div>
 
         {groupsConfig.map((group) => {
-          const sortedChannels = useMemo(
-            () => getSortedData(group.key),
-            [allGroupData[group.key]?.channels, sortState[group.key]]
-          );
+          const sortedChannels = memoizedSortedChannels[group.key];
           console.log(`[Client] Rendering content for "${group.key}". Channels: ${sortedChannels.length}`);
 
           return (

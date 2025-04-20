@@ -3,6 +3,7 @@
 // Removed usePathname import as currentTab is now passed via props
 import { Card } from "@/components/ui/card";
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export type ChannelData = {
   id: string;
@@ -38,13 +39,12 @@ export default function ChannelCard({ channel, currentTab, rank }: { channel: Ch
           </div>
         )}
         <div className="flex items-center gap-4">
-          <img
+          <Image
             src={channel.thumbnail}
             alt={`${channel.title} Thumbnail`}
             className="w-20 h-20 rounded-full ring-2 ring-offset-2 ring-indigo-500 object-cover flex-shrink-0"
-            loading="lazy"
-            width="80"
-            height="80"
+            width={80}
+            height={80}
           />
           <div className="flex-grow min-w-0">
             <h2 className="text-lg font-semibold truncate text-white" title={channel.title}>{channel.title}</h2>
