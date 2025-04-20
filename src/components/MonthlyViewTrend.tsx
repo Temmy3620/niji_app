@@ -143,8 +143,8 @@ export default function MonthlyViewTrend({ allGroupData, groupsConfig, defaultGr
             <TabsContent key={group.key} value={group.key} className="mt-4 focus-visible:ring-0 focus-visible:ring-offset-0">
               {sortedChannels.length > 0 ? (
                 <div className="grid gap-4 grid-cols-[repeat(auto-fit,_minmax(320px,_1fr))]">
-                  {sortedChannels.map((channel) => (
-                    <ChannelCard key={channel.id} channel={channel} currentTab="views" />
+                  {sortedChannels.map((channel, index) => (
+                    <ChannelCard key={channel.id} channel={channel} currentTab="views" rank={index} />
                   ))}
                 </div>
               ) : (

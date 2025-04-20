@@ -202,7 +202,9 @@ export const channelIds = {
     200: 'UCMzVa7B8UEdrvUGsPmSgyjA',
     201: 'UClS6k3w1sPwlVFqK3-yID5A',
     202: 'UCijNnZ-6m8g85UGaRAWuw7g',
-    203: 'UC_D2DNy-KUNQJ_NGMppgmyg'
+    203: 'UC_D2DNy-KUNQJ_NGMppgmyg',
+    204: 'UCiBBDZ-ndtBgE4xKbswlgXQ',
+    205: 'UCcyiT8QT7fo7LrxXe1oxOoA',
   },
   hololive: {
     1: 'UCoSrY_IQQVpmIRZ9Xf-y93g',

@@ -33,7 +33,7 @@ export const AppViewTabs = ({ currentTab, onChange }: Props) => {
               : 'bg-gray-800 text-gray-300 hover:bg-gray-700'}
           `}
         >
-          月間登録者数推移Rank
+          月別登録者数推移Rank
         </TabsTrigger>
         <TabsTrigger
           value="views"
@@ -45,7 +45,7 @@ export const AppViewTabs = ({ currentTab, onChange }: Props) => {
               : 'bg-gray-800 text-gray-300 hover:bg-gray-700'}
           `}
         >
-          月間総再生数推移Rank
+          月別総再生数推移Rank
         </TabsTrigger>
       </TabsList>
     </Tabs>

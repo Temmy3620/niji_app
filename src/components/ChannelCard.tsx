@@ -13,7 +13,7 @@ export type ChannelData = {
   viewDiff?: number;
 };
 
-export default function ChannelCard({ channel, currentTab }: { channel: ChannelData; currentTab: 'current' | 'subscribers' | 'views' }) {
+export default function ChannelCard({ channel, currentTab, rank }: { channel: ChannelData; currentTab: 'current' | 'subscribers' | 'views'; rank?: number }) {
   const isCurrent = currentTab === 'current';
   const isMonthlySubscribers = currentTab === 'subscribers';
   const isMonthlyViews = currentTab === 'views';
@@ -23,7 +23,12 @@ export default function ChannelCard({ channel, currentTab }: { channel: ChannelD
     : (Number(channel.subscribers) || 0).toLocaleString() + ' 人';
 
   return (
-    <Card key={channel.id} className="p-4 border border-gray-700 bg-gray-900 rounded shadow-2xl transition-transform hover:scale-[1.02] hover:border-indigo-500 overflow-hidden">
+    <Card key={channel.id} className="relative p-4 border border-gray-700 bg-gray-900 rounded shadow-2xl transition-transform hover:scale-[1.02] hover:border-indigo-500 overflow-hidden">
+      {typeof rank === 'number' && rank < 3 && (
+        <div className="absolute top-1 left-2 text-gray-400 font-bold z-10">
+          {rank + 1}
+        </div>
+      )}
       <div className="flex items-center gap-4">
         <img
           src={channel.thumbnail}
