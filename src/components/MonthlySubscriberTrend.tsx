@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import ChannelCard from '@/components/ChannelCard';
 import { loadDiffMap } from '@/lib/monthlyDiffLoader';
 import { ChannelData } from '@/types/ChannelData';
+import GroupTabs from "@/components/GroupTabs";
 import {
   Tabs,
   TabsContent,
@@ -80,26 +81,7 @@ export default function MonthlySubscriberTrend({ allGroupData, groupsConfig, def
     <main className="p-4 md:p-6">
       <Tabs value={selectedGroupKey} onValueChange={setSelectedGroupKey} className="w-full">
         <div className="flex justify-start items-center mb-4 gap-4 flex-wrap">
-          <TabsList className="flex gap-4">
-            {groupsConfig.map((group) => (
-              <TabsTrigger
-                key={group.key}
-                value={group.key}
-                className={`relative bg-white w-12 h-12 border-2 rounded-full overflow-hidden ${group.key === selectedGroupKey
-                  ? 'border-indigo-500'
-                  : 'border-transparent opacity-50 hover:opacity-100'
-                  } transition-all`}
-              >
-                <div className="bg-white rounded-full">
-                  <img
-                    src={group.iconUrl}
-                    alt={group.name}
-                    className="object-cover w-full h-full scale-[1.5] rounded-full"
-                  />
-                </div>
-              </TabsTrigger>
-            ))}
-          </TabsList>
+          <GroupTabs groupsConfig={groupsConfig} selectedGroupKey={selectedGroupKey} />
           <div className="ml-auto">
             <div className="flex items-center justify-center gap-2 text-white text-lg font-semibold">
               <button
