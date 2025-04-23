@@ -1,5 +1,5 @@
 // npx tsx scripts/test.ts
-import { getCurrentMonth } from '@/lib/getMonth'; // 仮に関数をlibに分けている前提
+import { getCurrentMonth } from '@/lib/monthUtils'; // 仮に関数をlibに分けている前提
 const sorted = getCurrentMonth();
 //
 //console.log(sorted);

@@ -3,7 +3,7 @@ import HomeClientView from '@/components/HomeClientView';
 import { GROUPS_CONFIG } from '@/constants/groupsConfig';
 import { ChannelData } from '@/types/ChannelData';
 import { getAvailableDates } from '@/lib/getAvailableDates';
-import { getCurrentMonth } from '@/lib/getMonth';
+import { getCurrentMonth } from '@/lib/monthUtils';
 import { checkStatsFileExists } from '@/lib/getJsonfilwExist';
 import { loadStatsJsonByPrefix } from '@/lib/monthlyStatsLoader';
 
@@ -59,7 +59,7 @@ export default async function Home() {
     availableDates.push(currentMonth);
     availableDates.sort((a, b) => b.localeCompare(a)); // Sort dates in descending order (e.g., 2025-04, 2025-03, ...)
   }
-  const { getPreviousMonth } = await import('@/lib/getMonth');
+  const { getPreviousMonth } = await import('@/lib/monthUtils');
   const statsExists = await checkStatsFileExists(currentMonth);
   const selectedDate = statsExists ? currentMonth : getPreviousMonth(currentMonth);
   const defaultStats = await loadStatsJsonByPrefix(selectedDate);

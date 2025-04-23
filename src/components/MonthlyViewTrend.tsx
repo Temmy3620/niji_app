@@ -9,7 +9,7 @@ import {
   Tabs,
   TabsContent
 } from "@/components/ui/tabs";
-import { getCurrentMonth } from '@/lib/getMonth';
+import { getCurrentMonth } from '@/lib/monthUtils';
 
 interface GroupData {
   groupName: string;
