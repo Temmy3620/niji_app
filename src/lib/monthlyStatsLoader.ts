@@ -5,7 +5,7 @@ export async function loadStatsJsonByPrefix(datePrefix: string): Promise<Record<
   const statsDir = path.join(process.cwd(), 'data', 'youtube_stats');
 
   try {
-    const files = fs.readdirSync(statsDir);
+    const files = await fs.promises.readdir(statsDir);
     const matchedFile = files.find(file => file.startsWith(`${datePrefix}`) && file.endsWith('.json'));
 
     if (!matchedFile) {
