@@ -70,7 +70,7 @@ export default function ChannelCard({ channel, currentTab, rank }: { channel: Ch
             {(isCurrent || isMonthlyViews) && (
               <p className="flex items-center gap-1 text-sm text-gray-300">
                 <span role="img" aria-label="Views">▶️</span>
-                {(Number(channel.views) || 0).toLocaleString()} 回
+                {(Number(channel.views)).toLocaleString()} 回
               </p>
             )}
 

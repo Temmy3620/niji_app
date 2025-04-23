@@ -1,5 +1,5 @@
 // npx tsx scripts/test.ts
-import { getCurrentMonth } from '@/lib/getCurrentMonth'; // 仮に関数をlibに分けている前提
+import { getCurrentMonth } from '@/lib/getMonth'; // 仮に関数をlibに分けている前提
 const sorted = getCurrentMonth();
 //
 //console.log(sorted);
@@ -18,14 +18,14 @@ const sorted = getCurrentMonth();
 //
 //run();
 
-import { loadStatsJsonByPrefix } from '@/lib/monthlyStatsLoader';
-
-async function run() {
-  const datePrefix = '2025-04'; // テストしたい月のプレフィックス
-  const result = await loadStatsJsonByPrefix(sorted);
-
-  console.log('--- 読み込んだデータ ---');
-  console.log(result);
-}
-
-run();
+//import { loadStatsJsonByPrefix } from '@/lib/monthlyStatsLoader';
+//
+//async function run() {
+//  const datePrefix = '2025-04'; // テストしたい月のプレフィックス
+//  const result = await loadStatsJsonByPrefix(sorted);
+//
+//  console.log('--- 読み込んだデータ ---');
+//  console.log(result);
+//}
+//
+//run();

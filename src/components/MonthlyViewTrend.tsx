@@ -9,7 +9,7 @@ import {
   Tabs,
   TabsContent
 } from "@/components/ui/tabs";
-import { getCurrentMonth } from '@/lib/getCurrentMonth';
+import { getCurrentMonth } from '@/lib/getMonth';
 
 interface GroupData {
   groupName: string;
@@ -30,13 +30,14 @@ interface MonthlyViewTrendProps {
   defaultGroupKey: string;
   availableDates: string[];
   defaultStats: Record<string, { subscribers: number; views: number }>;
+  defaultSelectedDate: string;
 }
 
-export default function MonthlyViewTrend({ allGroupData, groupsConfig, defaultGroupKey, availableDates, defaultStats }: MonthlyViewTrendProps) {
+export default function MonthlyViewTrend({ allGroupData, groupsConfig, defaultGroupKey, availableDates, defaultStats, defaultSelectedDate }: MonthlyViewTrendProps) {
   console.log('[Client] MonthlyViewTrend Rendering. Groups:', groupsConfig.map(g => g.name));
 
   const [selectedGroupKey, setSelectedGroupKey] = useState(defaultGroupKey);
-  const [selectedDate, setSelectedDate] = useState(getCurrentMonth());
+  const [selectedDate, setSelectedDate] = useState(defaultSelectedDate);
   const [diffMap, setDiffMap] = useState<Record<string, { subscriberDiff: number; viewDiff: number }>>({});
 
   useEffect(() => {

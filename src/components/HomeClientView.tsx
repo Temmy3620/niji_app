@@ -25,9 +25,10 @@ interface Props {
   defaultGroupKey: string;
   availableDates: string[];
   defaultStats: Record<string, { subscribers: number; views: number }>;
+  defaultSelectedDate: string;
 }
 
-const HomeClientView = ({ allGroupData, groupsConfig, defaultGroupKey, availableDates, defaultStats }: Props) => {
+const HomeClientView = ({ allGroupData, groupsConfig, defaultGroupKey, availableDates, defaultStats, defaultSelectedDate }: Props) => {
   const [currentTab, setCurrentTab] = useState<'current' | 'subscribers' | 'views'>('current');
 
   return (
@@ -47,6 +48,7 @@ const HomeClientView = ({ allGroupData, groupsConfig, defaultGroupKey, available
           defaultGroupKey={defaultGroupKey}
           availableDates={availableDates}
           defaultStats={defaultStats}
+          defaultSelectedDate={defaultSelectedDate}
         />
       )}
       {currentTab === 'views' && (
@@ -56,6 +58,7 @@ const HomeClientView = ({ allGroupData, groupsConfig, defaultGroupKey, available
           defaultGroupKey={defaultGroupKey}
           availableDates={availableDates}
           defaultStats={defaultStats}
+          defaultSelectedDate={defaultSelectedDate}
         />
       )}
     </>
