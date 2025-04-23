@@ -17,6 +17,11 @@ export default async function Home() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/channelStats`, {
     cache: 'no-store',
   });
+
+  if (!res.ok) {
+    console.error(`[Server] Failed to fetch channel stats: ${res.status} ${res.statusText}`);
+    throw new Error('Failed to fetch channel stats');
+  }
   const results: { key: string; data: GroupData }[] = await res.json();
 
   const allGroupData: GroupDataMap = results.reduce((acc, result) => {
