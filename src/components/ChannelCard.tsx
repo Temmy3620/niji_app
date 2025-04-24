@@ -20,10 +20,6 @@ export default function ChannelCard({ channel, currentTab, rank }: { channel: Ch
   const isMonthlySubscribers = currentTab === 'subscribers';
   const isMonthlyViews = currentTab === 'views';
 
-  const subscriberText = channel.subscribers === '非公開'
-    ? '非公開'
-    : (Number(channel.subscribers) || 0).toLocaleString() + ' 人';
-
   return (
     <motion.div
       layout
@@ -52,7 +48,9 @@ export default function ChannelCard({ channel, currentTab, rank }: { channel: Ch
             {(isCurrent || isMonthlySubscribers) && (
               <p className="flex items-center gap-1 text-sm text-gray-300">
                 <span role="img" aria-label="Subscribers">👥</span>
-                {subscriberText}
+                {(Number(channel.subscribers)
+                  ? `${Number(channel.subscribers).toLocaleString()} 人`
+                  : <span className="text-red-400">現在の数値をしゅとくできません</span>)}
               </p>
             )}
 
@@ -70,7 +68,9 @@ export default function ChannelCard({ channel, currentTab, rank }: { channel: Ch
             {(isCurrent || isMonthlyViews) && (
               <p className="flex items-center gap-1 text-sm text-gray-300">
                 <span role="img" aria-label="Views">▶️</span>
-                {(Number(channel.views) || 0).toLocaleString()} 回
+                {Number(channel.views)
+                  ? `${Number(channel.views).toLocaleString()} 回`
+                  : <span className="text-red-400">現在の数値を取得できません</span>}
               </p>
             )}
 

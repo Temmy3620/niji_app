@@ -9,6 +9,7 @@ import {
   Tabs,
   TabsContent
 } from "@/components/ui/tabs";
+import { getCurrentMonth } from '@/lib/monthUtils';
 
 interface GroupData {
   groupName: string;
@@ -28,35 +29,52 @@ interface MonthlyViewTrendProps {
   groupsConfig: GroupConfig[];
   defaultGroupKey: string;
   availableDates: string[];
-  defaultDate: string;
+  defaultStats: Record<string, { subscribers: number; views: number }>;
+  defaultSelectedDate: string;
 }
 
-export default function MonthlyViewTrend({ allGroupData, groupsConfig, defaultGroupKey, availableDates, defaultDate }: MonthlyViewTrendProps) {
+export default function MonthlyViewTrend({ allGroupData, groupsConfig, defaultGroupKey, availableDates, defaultStats, defaultSelectedDate }: MonthlyViewTrendProps) {
   console.log('[Client] MonthlyViewTrend Rendering. Groups:', groupsConfig.map(g => g.name));
 
   const [selectedGroupKey, setSelectedGroupKey] = useState(defaultGroupKey);
-  const [selectedDate, setSelectedDate] = useState(defaultDate);
+  const [selectedDate, setSelectedDate] = useState(defaultSelectedDate);
   const [diffMap, setDiffMap] = useState<Record<string, { subscriberDiff: number; viewDiff: number }>>({});
 
   useEffect(() => {
-    loadDiffMap(selectedDate).then(setDiffMap);
+    const currentMonth = getCurrentMonth();
+    if (selectedDate !== currentMonth) {
+      loadDiffMap(selectedDate).then(setDiffMap);
+    } else {
+      setDiffMap({});
+    }
   }, [selectedDate]);
 
   const getSortedData = (groupKey: string): ChannelData[] => {
     const channels = allGroupData[groupKey]?.channels || [];
+    const currentMonth = getCurrentMonth();
 
     return [...channels]
       .map(channel => {
-        const diff = diffMap[channel.id];
+        let subscriberDiff = 0;
+        let viewDiff = 0;
+
+        if (selectedDate === currentMonth) {
+          const base = defaultStats[channel.id];
+          subscriberDiff = base ? Number(channel.subscribers) - Number(base.subscribers) : 0;
+          viewDiff = base ? Number(channel.views) - Number(base.views) : 0;
+        } else {
+          const diff = diffMap[channel.id];
+          subscriberDiff = diff?.subscriberDiff ?? 0;
+          viewDiff = diff?.viewDiff ?? 0;
+        }
+
         return {
           ...channel,
-          subscriberDiff: diff?.subscriberDiff ?? 0,
-          viewDiff: diff?.viewDiff ?? 0,
+          subscriberDiff,
+          viewDiff,
         };
       })
-      .sort((a, b) => {
-        return b.viewDiff - a.viewDiff;
-      });
+      .sort((a, b) => b.viewDiff - a.viewDiff);
   };
 
   const memoizedSortedChannels = useMemo(() => {
