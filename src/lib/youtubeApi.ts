@@ -1,8 +1,7 @@
 // src/lib/youtubeApi.ts
 import { channelIds, GroupKey } from '@/constants/channelIds';
 import { ChannelData } from '@/types/ChannelData';
-import { getStatsById } from '@/lib/fileStatsUtils';
-import { copyStatsToTmp } from './copyStatsToTmp';
+import { getStatsByIdFromR2 } from '@/lib/fileStatsUtils';
 
 // --- YouTube APIの items 配列要素の型定義 (必要なものだけ) ---
 // APIレスポンスに合わせて適宜調整してください
@@ -39,7 +38,6 @@ const API_KEY = process.env.YOUTUBE_API_KEY;
 const API_URL = 'https://www.googleapis.com/youtube/v3/channels';
 
 export async function fetchAllStats(groupId: GroupKey): Promise<ChannelData[]> {
-  copyStatsToTmp();
   if (!API_KEY) {
     console.error("環境変数 YOUTUBE_API_KEY が設定されていません。");
     throw new Error("YouTube API key is missing.");
@@ -89,65 +87,59 @@ export async function fetchAllStats(groupId: GroupKey): Promise<ChannelData[]> {
       const data: { items?: YouTubeApiChannelItem[] } = await response.json();
 
       if (data.items && Array.isArray(data.items)) {
-        const formattedData: ChannelData[] = data.items
-          // ↓↓↓ ここで item の型を YouTubeApiChannelItem に指定 ↓↓↓
-          .map((item: YouTubeApiChannelItem): ChannelData | null => {
-            // item のプロパティに型安全にアクセスできる
-            if (!item.id || !item.snippet || !item.statistics) {
-              console.warn(`[データ警告] 不完全なデータのためスキップ (ID: ${item?.id})`);
-              return null;
-            }
-            // 安全なアクセス ?. とデフォルト値 ||
-            const thumbnail = item.snippet.thumbnails?.medium?.url
-              || item.snippet.thumbnails?.default?.url
-              || '/placeholder.png'; // プレースホルダー画像
+        const formattedData = (
+          await Promise.all(
+            data.items.map(async (item: YouTubeApiChannelItem): Promise<ChannelData | null> => {
+              if (!item.id || !item.snippet || !item.statistics) {
+                console.warn(`[データ警告] 不完全なデータのためスキップ (ID: ${item?.id})`);
+                return null;
+              }
 
-            let subscribers: string | number = item.statistics.hiddenSubscriberCount
-              ? '非公開'
-              : (item.statistics.subscriberCount || '0'); // subscriberCount が未定義の場合も考慮
-            let views: string | number = item.statistics.viewCount || '0'; // viewCount が未定義の場合も考慮
+              const thumbnail = item.snippet.thumbnails?.medium?.url
+                || item.snippet.thumbnails?.default?.url
+                || '/placeholder.png';
 
-            // 型ガード付きで比較: viewsが0や'0'ならキャッシュを参照
-            if (
-              subscribers !== '非公開' &&
-              (
-                (typeof views === 'string' && views == '0') ||
-                (typeof views === 'number' && views == 0)
-              )
-            ) {
-              const cached = getStatsById(item.id);
-              if (cached) {
-                // subscribers: 型ガード付きで0や'0'の場合のみキャッシュ
-                const validSubscribers =
-                  typeof subscribers === 'string' ? subscribers == '0' :
-                    typeof subscribers === 'number' ? subscribers == 0 :
-                      false;
+              let subscribers: string | number = item.statistics.hiddenSubscriberCount
+                ? '非公開'
+                : (item.statistics.subscriberCount || '0');
+              let views: string | number = item.statistics.viewCount || '0';
 
-                if (subscribers !== '非公開' && validSubscribers) {
-                  subscribers = String(cached.subscribers ?? '0');
-                }
+              if (
+                subscribers !== '非公開' &&
+                ((typeof views === 'string' && views === '0') || (typeof views === 'number' && views === 0))
+              ) {
+                const cached = await getStatsByIdFromR2(item.id);
+                if (cached) {
+                  const validSubscribers =
+                    typeof subscribers === 'string' ? subscribers === '0' :
+                      typeof subscribers === 'number' ? subscribers === 0 :
+                        false;
 
-                // views: 型ガード付きで0や'0'の場合のみキャッシュ
-                const validViews =
-                  typeof views === 'string' ? views == '0' :
-                    typeof views === 'number' ? views == 0 :
-                      false;
+                  if (validSubscribers) {
+                    subscribers = String(cached.subscribers ?? '0');
+                  }
 
-                if (validViews) {
-                  views = String(cached.views ?? '0');
+                  const validViews =
+                    typeof views === 'string' ? views === '0' :
+                      typeof views === 'number' ? views === 0 :
+                        false;
+
+                  if (validViews) {
+                    views = String(cached.views ?? '0');
+                  }
                 }
               }
-            }
 
-            return {
-              id: item.id,
-              title: item.snippet.title || 'タイトル不明',
-              thumbnail: thumbnail,
-              subscribers: subscribers,
-              views: views,
-            };
-          })
-          .filter((item): item is ChannelData => item !== null); // null を除去 (型ガード)
+              return {
+                id: item.id,
+                title: item.snippet.title || 'タイトル不明',
+                thumbnail,
+                subscribers,
+                views,
+              };
+            })
+          )
+        ).filter((item): item is ChannelData => item !== null);
 
         allChannelData.push(...formattedData);
       }
