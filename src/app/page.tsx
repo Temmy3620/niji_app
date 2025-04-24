@@ -1,8 +1,7 @@
-import { fetchAllStats } from '@/lib/youtubeApi';
 import HomeClientView from '@/components/HomeClientView';
 import { GROUPS_CONFIG } from '@/constants/groupsConfig';
 import { ChannelData } from '@/types/ChannelData';
-import { getAvailableDates } from '@/lib/getAvailableDates';
+import { getAvailableDates } from '@/lib/fileStatsUtils';
 
 export interface GroupData {
   groupName: string;
@@ -15,32 +14,15 @@ export interface GroupDataMap {
 export default async function Home() {
   console.log('[Server] Home Component: データ取得開始');
 
-  const groupDataPromises = GROUPS_CONFIG.map(async (group) => {
-    console.log(`[Server] ${group.name} のデータを取得中...`);
-    try {
-      const channels = await fetchAllStats(group.key);
-      console.log(`[Server] ${group.name} のデータ取得完了 (${channels.length} 件)`);
-      return {
-        key: group.key,
-        data: {
-          groupName: group.name,
-          channels: channels,
-        }
-      };
-    } catch (error) {
-      console.error(`[Server] ${group.name} のデータ取得に失敗しました:`, error);
-      // エラーが発生した場合でも、ページのレンダリングは継続できるよう空のデータを返す
-      return {
-        key: group.key,
-        data: {
-          groupName: group.name,
-          channels: [],
-        }
-      };
-    }
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/channelStats`, {
+    cache: 'no-store',
   });
 
-  const results = await Promise.all(groupDataPromises);
+  if (!res.ok) {
+    console.error(`[Server] Failed to fetch channel stats: ${res.status} ${res.statusText}`);
+    throw new Error('Failed to fetch channel stats');
+  }
+  const results: { key: string; data: GroupData }[] = await res.json();
 
   const allGroupData: GroupDataMap = results.reduce((acc, result) => {
     acc[result.key] = result.data;

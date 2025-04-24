@@ -1,6 +1,7 @@
 // src/lib/youtubeApi.ts
 import { channelIds, GroupKey } from '@/constants/channelIds';
 import { ChannelData } from '@/types/ChannelData';
+import { getStatsById } from '@/lib/fileStatsUtils';
 
 // --- YouTube APIの items 配列要素の型定義 (必要なものだけ) ---
 // APIレスポンスに合わせて適宜調整してください
@@ -99,11 +100,42 @@ export async function fetchAllStats(groupId: GroupKey): Promise<ChannelData[]> {
               || item.snippet.thumbnails?.default?.url
               || '/placeholder.png'; // プレースホルダー画像
 
-            const subscribers = item.statistics.hiddenSubscriberCount
+            let subscribers: string | number = item.statistics.hiddenSubscriberCount
               ? '非公開'
               : (item.statistics.subscriberCount || '0'); // subscriberCount が未定義の場合も考慮
+            let views: string | number = item.statistics.viewCount || '0'; // viewCount が未定義の場合も考慮
 
-            const views = item.statistics.viewCount || '0'; // viewCount が未定義の場合も考慮
+            // 型ガード付きで比較: viewsが0や'0'ならキャッシュを参照
+            if (
+              subscribers !== '非公開' &&
+              (
+                (typeof views === 'string' && views == '0') ||
+                (typeof views === 'number' && views == 0)
+              )
+            ) {
+              const cached = getStatsById(item.id);
+              if (cached) {
+                // subscribers: 型ガード付きで0や'0'の場合のみキャッシュ
+                const validSubscribers =
+                  typeof subscribers === 'string' ? subscribers == '0' :
+                    typeof subscribers === 'number' ? subscribers == 0 :
+                      false;
+
+                if (subscribers !== '非公開' && validSubscribers) {
+                  subscribers = String(cached.subscribers ?? '0');
+                }
+
+                // views: 型ガード付きで0や'0'の場合のみキャッシュ
+                const validViews =
+                  typeof views === 'string' ? views == '0' :
+                    typeof views === 'number' ? views == 0 :
+                      false;
+
+                if (validViews) {
+                  views = String(cached.views ?? '0');
+                }
+              }
+            }
 
             return {
               id: item.id,
