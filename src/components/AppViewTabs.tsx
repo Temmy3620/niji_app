@@ -21,7 +21,7 @@ export const AppViewTabs = ({ currentTab, onChange }: Props) => {
               : 'bg-gray-800 text-gray-300 hover:bg-gray-700'}
           `}
         >
-          登録者数・総再生数
+          🎖 現在のランキング
         </TabsTrigger>
         <TabsTrigger
           value="subscribers"
@@ -33,7 +33,7 @@ export const AppViewTabs = ({ currentTab, onChange }: Props) => {
               : 'bg-gray-800 text-gray-300 hover:bg-gray-700'}
           `}
         >
-          月別登録者数推移Rank
+          📈 登録者数の増加ランキング（月別）
         </TabsTrigger>
         <TabsTrigger
           value="views"
@@ -45,7 +45,7 @@ export const AppViewTabs = ({ currentTab, onChange }: Props) => {
               : 'bg-gray-800 text-gray-300 hover:bg-gray-700'}
           `}
         >
-          月別総再生数推移Rank
+          ▶️ 再生数の増加ランキング（月別）
         </TabsTrigger>
       </TabsList>
     </Tabs>
