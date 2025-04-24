@@ -1,6 +1,7 @@
 // src/lib/getAvailableDates.ts
 import fs from 'fs';
 import path from 'path';
+import { execSync } from 'child_process';
 
 import { ChannelData } from '@/types/ChannelData';
 
@@ -29,6 +30,11 @@ export function saveStatsToFile(channelData: ChannelData[]) {
   try {
     fs.writeFileSync(TMP_FILE_PATH, JSON.stringify(channelData, null, 2));
     console.log(`[Save] チャンネルデータを一時保存しました: ${TMP_FILE_PATH}`);
+
+    // 実行スクリプトパス
+    const copyScript = path.join(process.cwd(), 'scripts', 'copyStatsToTmp.ts');
+    execSync(`npx tsx ${copyScript}`);
+    console.log(`[Save] /tmp にもコピー完了しました`);
   } catch (error) {
     console.error(`[saveStatsToFile] 書き込みエラー:`, error);
   }
