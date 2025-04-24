@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 import { ChannelData } from '@/types/ChannelData';
+import { copyStatsToTmp } from './copyStatsToTmp';
 
 const TMP_FILE_PATH = path.join('/tmp', 'last_successful_stats.json');
 interface StatsEntry {
@@ -29,6 +30,8 @@ export function saveStatsToFile(channelData: ChannelData[]) {
   try {
     fs.writeFileSync(TMP_FILE_PATH, JSON.stringify(channelData, null, 2));
     console.log(`[Save] チャンネルデータを一時保存しました: ${TMP_FILE_PATH}`);
+
+    copyStatsToTmp();
   } catch (error) {
     console.error(`[saveStatsToFile] 書き込みエラー:`, error);
   }
