@@ -1,7 +1,7 @@
 import HomeClientView from '@/components/HomeClientView';
 import { GROUPS_CONFIG } from '@/constants/groupsConfig';
 import { ChannelData } from '@/types/ChannelData';
-import { getAvailableDates } from '@/lib/getAvailableDates';
+import { getAvailableDates } from '@/lib/fileStatsUtils';
 
 export interface GroupData {
   groupName: string;

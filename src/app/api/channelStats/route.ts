@@ -2,6 +2,7 @@
 import { fetchAllStats } from '@/lib/youtubeApi';
 import { GROUPS_CONFIG } from '@/constants/groupsConfig';
 import { NextResponse } from 'next/server';
+import { saveStatsToFile } from '@/lib/fileStatsUtils';
 
 export async function GET() {
   const results = await Promise.all(
@@ -28,5 +29,8 @@ export async function GET() {
     })
   );
 
+  // すべてのチャンネルデータを集約して保存
+  const allChannelData = results.flatMap(result => result.data.channels);
+  saveStatsToFile(allChannelData);
   return NextResponse.json(results);
 }
