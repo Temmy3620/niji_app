@@ -2,6 +2,7 @@
 import { channelIds, GroupKey } from '@/constants/channelIds';
 import { ChannelData } from '@/types/ChannelData';
 import { getStatsById } from '@/lib/fileStatsUtils';
+import { copyStatsToTmp } from './copyStatsToTmp';
 
 // --- YouTube APIの items 配列要素の型定義 (必要なものだけ) ---
 // APIレスポンスに合わせて適宜調整してください
@@ -38,6 +39,7 @@ const API_KEY = process.env.YOUTUBE_API_KEY;
 const API_URL = 'https://www.googleapis.com/youtube/v3/channels';
 
 export async function fetchAllStats(groupId: GroupKey): Promise<ChannelData[]> {
+  copyStatsToTmp();
   if (!API_KEY) {
     console.error("環境変数 YOUTUBE_API_KEY が設定されていません。");
     throw new Error("YouTube API key is missing.");
