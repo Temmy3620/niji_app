@@ -1,31 +1,11 @@
-// npx tsx scripts/test.ts
-import { getCurrentMonth } from '@/lib/monthUtils'; // 仮に関数をlibに分けている前提
-const sorted = getCurrentMonth();
-//
-//console.log(sorted);
+import { getStatsById } from '@/lib/fileStatsUtils';
 
-//import { GET } from '@/app/api/stats/[datePrefix]/route';
-//
-//async function run() {
-//  const dummyRequest = new Request('http://localhost'); // ダミー
-//  const dummyContext = { params: { datePrefix: '2025-04' } };
-//
-//  const res = await GET(dummyRequest, dummyContext);
-//  const json = await res.json();
-//
-//  console.log(json);
-//}
-//
-//run();
+const idToTest = 'UC9V3Y3_uzU5e-usObb6IE1w'; // テストしたいIDに置き換えてください
 
-//import { loadStatsJsonByPrefix } from '@/lib/monthlyStatsLoader';
-//
-//async function run() {
-//  const datePrefix = '2025-04'; // テストしたい月のプレフィックス
-//  const result = await loadStatsJsonByPrefix(sorted);
-//
-//  console.log('--- 読み込んだデータ ---');
-//  console.log(result);
-//}
-//
-//run();
+const result = getStatsById(idToTest);
+
+if (result) {
+  console.log(`✅ Found stats for ID ${idToTest}:`, result);
+} else {
+  console.warn(`❌ No stats found for ID ${idToTest}`);
+}

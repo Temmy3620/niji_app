@@ -4,6 +4,7 @@ import path from 'path';
 
 import { ChannelData } from '@/types/ChannelData';
 
+const TMP_FILE_PATH = path.join('/tmp', 'last_successful_stats.json');
 interface StatsEntry {
   id: string;
   subscribers: number;
@@ -25,28 +26,22 @@ export function getAvailableDates(): { all: string[]; new_month: string } {
 }
 
 export function saveStatsToFile(channelData: ChannelData[]) {
-  const filePath = path.join(process.cwd(), 'data', 'cache', 'last_successful_stats.json');
-  const dirPath = path.dirname(filePath);
-
-  // ディレクトリがなければ作成
-  if (!fs.existsSync(dirPath)) {
-    fs.mkdirSync(dirPath, { recursive: true });
+  try {
+    fs.writeFileSync(TMP_FILE_PATH, JSON.stringify(channelData, null, 2));
+    console.log(`[Save] チャンネルデータを一時保存しました: ${TMP_FILE_PATH}`);
+  } catch (error) {
+    console.error(`[saveStatsToFile] 書き込みエラー:`, error);
   }
-
-  // 上書き保存
-  fs.writeFileSync(filePath, JSON.stringify(channelData, null, 2));
-  console.log(`[Save] チャンネルデータを保存しました: ${filePath}`);
 }
 
 export function getStatsById(id: string): { subscribers: number; views: number } | null {
-  const filePath = path.join(process.cwd(), 'data', 'cache', 'last_successful_stats.json');
-
   try {
-    const fileContent = fs.readFileSync(filePath, 'utf-8');
+    const fileContent = fs.readFileSync(TMP_FILE_PATH, 'utf-8');
     const json = JSON.parse(fileContent);
-
+    console.log(TMP_FILE_PATH);
     for (const entry of Object.values(json) as StatsEntry[]) {
-      if (entry.id == id) {
+      if (entry.id === id) {
+        console.log(`[getStatsById] データを取得しました: ${entry}`);
         return {
           subscribers: Number(entry.subscribers),
           views: Number(entry.views),
@@ -56,7 +51,7 @@ export function getStatsById(id: string): { subscribers: number; views: number }
 
     return null;
   } catch (error) {
-    console.error(`[getStatsById] Error reading or parsing file:`, error);
+    console.error(`[getStatsById] 読み込み/解析エラー:`, error);
     return null;
   }
 }
