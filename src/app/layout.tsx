@@ -5,7 +5,7 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "VtubeTraker",
-  description: "Vtuberの登録者数・再生数推移を箱別・月別に確認できる無料Webアプリ。にじさんじ・ホロライブ・VSPOなど対応。",
+  description: "Vtuberの登録者数・再生数推移を箱別・月別に確認できる無料Webアプリ。にじさんじ・ホロライブ・ぶいすぽ・ネオポルテなど対応。",
   icons: {
     icon: "/tabIcon.png", // パスは public ディレクトリ基準
   },
