@@ -27,7 +27,6 @@ interface GroupConfig {
 interface MonthlyViewTrendProps {
   allGroupData: GroupDataMap;
   groupsConfig: GroupConfig[];
-  defaultGroupKey: string;
   availableDates: string[];
   defaultStats: Record<string, { subscribers: number; views: number }>;
   defaultSelectedDate: string;
@@ -38,7 +37,6 @@ interface MonthlyViewTrendProps {
 export default function MonthlyViewTrend({
   allGroupData,
   groupsConfig,
-  defaultGroupKey,
   availableDates,
   defaultStats,
   defaultSelectedDate,
@@ -47,7 +45,6 @@ export default function MonthlyViewTrend({
 }: MonthlyViewTrendProps) {
   console.log('[Client] MonthlyViewTrend Rendering. Groups:', groupsConfig.map(g => g.name));
 
-  //const [selectedGroupKey, setSelectedGroupKey] = useState(defaultGroupKey);
   const [selectedDate, setSelectedDate] = useState(defaultSelectedDate);
   const [diffMap, setDiffMap] = useState<Record<string, { subscriberDiff: number; viewDiff: number }>>({});
 

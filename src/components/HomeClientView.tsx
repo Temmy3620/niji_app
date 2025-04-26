@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { ChannelData } from '@/types/ChannelData';
 import { AppViewTabs } from './AppViewTabs';
 import CurrentChannelStats from './CurrentChannelStats';
@@ -30,7 +30,6 @@ interface Props {
 }
 
 const HomeClientView = ({ allGroupData, groupsConfig, defaultGroupKey, availableDates, defaultStats, defaultSelectedDate }: Props) => {
-  const router = useRouter();
   const pathname = usePathname();
 
   const [selectedGroupKey, setSelectedGroupKey] = useState<string>(() => {
@@ -65,7 +64,6 @@ const HomeClientView = ({ allGroupData, groupsConfig, defaultGroupKey, available
         <CurrentChannelStats
           allGroupData={allGroupData}
           groupsConfig={groupsConfig}
-          defaultGroupKey={defaultGroupKey}
           selectedGroupKey={selectedGroupKey}
           setSelectedGroupKey={setSelectedGroupKey}
         />
@@ -74,7 +72,6 @@ const HomeClientView = ({ allGroupData, groupsConfig, defaultGroupKey, available
         <MonthlySubscriberTrend
           allGroupData={allGroupData}
           groupsConfig={groupsConfig}
-          defaultGroupKey={defaultGroupKey}
           availableDates={availableDates}
           defaultStats={defaultStats}
           defaultSelectedDate={defaultSelectedDate}
@@ -86,7 +83,6 @@ const HomeClientView = ({ allGroupData, groupsConfig, defaultGroupKey, available
         <MonthlyViewTrend
           allGroupData={allGroupData}
           groupsConfig={groupsConfig}
-          defaultGroupKey={defaultGroupKey}
           availableDates={availableDates}
           defaultStats={defaultStats}
           defaultSelectedDate={defaultSelectedDate}

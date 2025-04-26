@@ -33,7 +33,6 @@ interface GroupConfig {
 interface CurrentChannelStatsProps {
   allGroupData: GroupDataMap;
   groupsConfig: GroupConfig[];
-  defaultGroupKey: string;
   selectedGroupKey: string;
   setSelectedGroupKey: (key: string) => void;
 }
@@ -46,7 +45,6 @@ interface SortState {
 export default function CurrentChannelStats({
   allGroupData,
   groupsConfig,
-  defaultGroupKey,
   selectedGroupKey,
   setSelectedGroupKey,
 }: CurrentChannelStatsProps) {
@@ -57,7 +55,6 @@ export default function CurrentChannelStats({
     return acc;
   }, {} as SortState);
   const [sortState, setSortState] = useState<SortState>(initialSortState);
-  //const [selectedGroupKey, setSelectedGroupKey] = useState(defaultGroupKey);
 
   const getSortedData = (groupKey: string): ChannelData[] => {
     const channels = allGroupData[groupKey]?.channels || [];
