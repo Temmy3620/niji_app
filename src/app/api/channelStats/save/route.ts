@@ -1,5 +1,6 @@
-// src/app/api/channelStats/route.ts
+// src/app/api/channelStats/save/route.ts
 import { fetchAllStats } from '@/lib/youtubeApi';
+import { saveStatsToR2 } from '@/lib/fileStatsUtils';
 import { GROUPS_CONFIG } from '@/constants/groupsConfig';
 import { NextResponse } from 'next/server';
 
@@ -28,5 +29,10 @@ export async function GET() {
     })
   );
 
-  return NextResponse.json(results);
+  const allChannelData = results.flatMap(result => result.data.channels);
+
+  await saveStatsToR2(allChannelData);
+  console.log('[Save] Cloudflare R2にチャンネルデータを保存しました');
+
+  return NextResponse.json({ message: 'チャンネルデータを保存しました', totalChannels: allChannelData.length });
 }

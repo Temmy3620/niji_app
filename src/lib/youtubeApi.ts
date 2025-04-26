@@ -99,7 +99,7 @@ export async function fetchAllStats(groupId: GroupKey): Promise<ChannelData[]> {
                 || item.snippet.thumbnails?.default?.url
                 || '/placeholder.png';
 
-              let subscribers: string | number = item.statistics.hiddenSubscriberCount
+              const subscribers: string | number = item.statistics.hiddenSubscriberCount
                 ? '非公開'
                 : (item.statistics.subscriberCount || '0');
               let views: string | number = item.statistics.viewCount || '0';
@@ -110,23 +110,17 @@ export async function fetchAllStats(groupId: GroupKey): Promise<ChannelData[]> {
               ) {
                 const cached = await getStatsByIdFromR2(item.id);
                 if (cached) {
-                  const validSubscribers =
-                    typeof subscribers === 'string' ? subscribers === '0' :
-                      typeof subscribers === 'number' ? subscribers === 0 :
-                        false;
+                  //今のところ登録者がかける現象は見られないので、一旦コメントアウト
+                  //const validSubscribers =
+                  //  typeof subscribers === 'string' ? subscribers === '0' :
+                  //    typeof subscribers === 'number' ? subscribers === 0 :
+                  //      false;
+                  //
+                  //if (validSubscribers) {
+                  //  subscribers = String(cached.subscribers ?? '0');
+                  //}
 
-                  if (validSubscribers) {
-                    subscribers = String(cached.subscribers ?? '0');
-                  }
-
-                  const validViews =
-                    typeof views === 'string' ? views === '0' :
-                      typeof views === 'number' ? views === 0 :
-                        false;
-
-                  if (validViews) {
-                    views = String(cached.views ?? '0');
-                  }
+                  views = String(cached.views ?? '0');
                 }
               }
 
