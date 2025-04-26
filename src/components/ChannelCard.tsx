@@ -29,7 +29,7 @@ export default function ChannelCard({ channel, currentTab, rank }: { channel: Ch
       transition={{ duration: 0.4, ease: 'easeOut' }}
     >
       <Card className="relative p-4 border border-gray-700 bg-gray-900 rounded shadow-2xl transition-transform hover:scale-[1.02] hover:border-indigo-500 overflow-hidden">
-        {typeof rank === 'number' && rank < 3 && (
+        {typeof rank === 'number' && rank < 20 && (
           <div className="absolute top-1 left-2 text-gray-400 font-bold z-10">
             {rank + 1}
           </div>
