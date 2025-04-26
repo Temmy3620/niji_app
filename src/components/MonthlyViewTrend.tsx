@@ -31,12 +31,23 @@ interface MonthlyViewTrendProps {
   availableDates: string[];
   defaultStats: Record<string, { subscribers: number; views: number }>;
   defaultSelectedDate: string;
+  selectedGroupKey: string;
+  setSelectedGroupKey: (key: string) => void;
 }
 
-export default function MonthlyViewTrend({ allGroupData, groupsConfig, defaultGroupKey, availableDates, defaultStats, defaultSelectedDate }: MonthlyViewTrendProps) {
+export default function MonthlyViewTrend({
+  allGroupData,
+  groupsConfig,
+  defaultGroupKey,
+  availableDates,
+  defaultStats,
+  defaultSelectedDate,
+  selectedGroupKey,
+  setSelectedGroupKey,
+}: MonthlyViewTrendProps) {
   console.log('[Client] MonthlyViewTrend Rendering. Groups:', groupsConfig.map(g => g.name));
 
-  const [selectedGroupKey, setSelectedGroupKey] = useState(defaultGroupKey);
+  //const [selectedGroupKey, setSelectedGroupKey] = useState(defaultGroupKey);
   const [selectedDate, setSelectedDate] = useState(defaultSelectedDate);
   const [diffMap, setDiffMap] = useState<Record<string, { subscriberDiff: number; viewDiff: number }>>({});
 
