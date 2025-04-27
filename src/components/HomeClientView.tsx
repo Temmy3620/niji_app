@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { ChannelData } from '@/types/ChannelData';
 import { AppViewTabs } from './AppViewTabs';
 import CurrentChannelStats from './CurrentChannelStats';
@@ -29,7 +30,32 @@ interface Props {
 }
 
 const HomeClientView = ({ allGroupData, groupsConfig, defaultGroupKey, availableDates, defaultStats, defaultSelectedDate }: Props) => {
-  const [currentTab, setCurrentTab] = useState<'current' | 'subscribers' | 'views'>('current');
+  const pathname = usePathname();
+
+  const [selectedGroupKey, setSelectedGroupKey] = useState<string>(() => {
+    const parts = pathname.split('/');
+    if (parts.length >= 3 && parts[2]) {
+      return parts[2];
+    }
+    return defaultGroupKey;
+  });
+
+  const [currentTab, setCurrentTab] = useState<'current' | 'subscribers' | 'views'>(() => {
+    const parts = pathname.split('/');
+    const tab = parts[1] as 'current' | 'subscribers' | 'views';
+    if (tab === 'current' || tab === 'subscribers' || tab === 'views') {
+      return tab;
+    }
+    return 'current';
+  });
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      const newUrl = `/${currentTab}/${selectedGroupKey}`;
+      window.history.pushState(null, '', newUrl);
+    }, 0);
+    return () => clearTimeout(timeout);
+  }, [currentTab, selectedGroupKey]);
 
   return (
     <>
@@ -38,27 +64,30 @@ const HomeClientView = ({ allGroupData, groupsConfig, defaultGroupKey, available
         <CurrentChannelStats
           allGroupData={allGroupData}
           groupsConfig={groupsConfig}
-          defaultGroupKey={defaultGroupKey}
+          selectedGroupKey={selectedGroupKey}
+          setSelectedGroupKey={setSelectedGroupKey}
         />
       )}
       {currentTab === 'subscribers' && (
         <MonthlySubscriberTrend
           allGroupData={allGroupData}
           groupsConfig={groupsConfig}
-          defaultGroupKey={defaultGroupKey}
           availableDates={availableDates}
           defaultStats={defaultStats}
           defaultSelectedDate={defaultSelectedDate}
+          selectedGroupKey={selectedGroupKey}
+          setSelectedGroupKey={setSelectedGroupKey}
         />
       )}
       {currentTab === 'views' && (
         <MonthlyViewTrend
           allGroupData={allGroupData}
           groupsConfig={groupsConfig}
-          defaultGroupKey={defaultGroupKey}
           availableDates={availableDates}
           defaultStats={defaultStats}
           defaultSelectedDate={defaultSelectedDate}
+          selectedGroupKey={selectedGroupKey}
+          setSelectedGroupKey={setSelectedGroupKey}
         />
       )}
     </>

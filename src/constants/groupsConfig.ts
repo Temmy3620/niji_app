@@ -34,7 +34,7 @@ export const GROUPS_CONFIG: { key: GroupKey; name: string; iconUrl: string }[] =
   {
     key: 'noripro',
     name: 'のりプロ',
-    iconUrl: './noripro.png',
+    iconUrl: '/noripro.png',
   },
   {
     key: 'dotlive',
