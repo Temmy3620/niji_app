@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- トップページ（リダイレクトされるが一応記載） -->
   <url>
     <loc>https://vtubertracker.info/</loc>
   </url>
 
-  <!-- 現在のランキング（current） -->
   <url>
     <loc>https://vtubertracker.info/current/nijisanji</loc>
   </url>
@@ -32,7 +30,6 @@
     <loc>https://vtubertracker.info/current/dotlive</loc>
   </url>
 
-  <!-- 月別登録者数ランキング（subscribers） -->
   <url>
     <loc>https://vtubertracker.info/subscribers/nijisanji</loc>
   </url>
@@ -58,7 +55,6 @@
     <loc>https://vtubertracker.info/subscribers/dotlive</loc>
   </url>
 
-  <!-- 月別再生数ランキング（views） -->
   <url>
     <loc>https://vtubertracker.info/views/nijisanji</loc>
   </url>
