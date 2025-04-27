@@ -5,6 +5,9 @@ import { getAvailableDates } from '@/lib/fileStatsUtils';
 import { getCurrentMonth, getTwoMonthsAgo, getLatestMonth } from '@/lib/monthUtils';
 import { checkStatsFileExists } from '@/lib/getJsonFileExist';
 import { loadStatsJsonByPrefix } from '@/lib/monthlyStatsLoader';
+import { fetchChannelStats } from '@/app/channelStats/actions';
+
+export const revalidate = 43200;
 
 export interface GroupData {
   groupName: string;
@@ -17,15 +20,7 @@ export interface GroupDataMap {
 export default async function Home() {
   console.log('[Server] Home Component: データ取得開始');
 
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/channelStats`, {
-    cache: 'no-store',
-  });
-
-  if (!res.ok) {
-    console.error(`[Server] Failed to fetch channel stats: ${res.status} ${res.statusText}`);
-    throw new Error('Failed to fetch channel stats');
-  }
-  const results: { key: string; data: GroupData }[] = await res.json();
+  const results: { key: string; data: GroupData }[] = await fetchChannelStats();
 
   const allGroupData: GroupDataMap = results.reduce((acc, result) => {
     acc[result.key] = result.data;

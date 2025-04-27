@@ -1,9 +1,9 @@
-// src/app/api/channelStats/route.ts
+'use server';
+
 import { fetchAllStats } from '@/lib/youtubeApi';
 import { GROUPS_CONFIG } from '@/constants/groupsConfig';
-import { NextResponse } from 'next/server';
 
-export async function GET() {
+export async function fetchChannelStats() {
   const results = await Promise.all(
     GROUPS_CONFIG.map(async (group) => {
       try {
@@ -21,12 +21,11 @@ export async function GET() {
           key: group.key,
           data: {
             groupName: group.name,
-            channels: [], // Fallback to an empty array
+            channels: [], // fallback
           }
         };
       }
     })
   );
-
-  return NextResponse.json(results);
+  return results;
 }
