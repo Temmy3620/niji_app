@@ -3,7 +3,7 @@ import { GROUPS_CONFIG } from '@/constants/groupsConfig';
 import { ChannelData } from '@/types/ChannelData';
 import { getAvailableDates } from '@/lib/fileStatsUtils';
 import { getCurrentMonth, getTwoMonthsAgo, getLatestMonth } from '@/lib/monthUtils';
-import { checkStatsFileExists } from '@/lib/getJsonfilwExist';
+import { checkStatsFileExists } from '@/lib/getJsonFileExist';
 import { loadStatsJsonByPrefix } from '@/lib/monthlyStatsLoader';
 
 export interface GroupData {
