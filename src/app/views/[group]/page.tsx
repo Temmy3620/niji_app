@@ -6,6 +6,7 @@ import { getCurrentMonth, getTwoMonthsAgo, getLatestMonth } from '@/lib/monthUti
 import { checkStatsFileExists } from '@/lib/getJsonFileExist';
 import { loadStatsJsonByPrefix } from '@/lib/monthlyStatsLoader';
 import { fetchChannelStats } from '@/app/channelStats/actions';
+import { generateGroupMetadata } from '@/lib/generateGroupMetadata';
 
 export const revalidate = 43200;;
 
@@ -51,4 +52,9 @@ export default async function Home() {
       defaultSelectedDate={selectedDate}
     />
   );
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ group: string }> }) {
+  const awaitedParams = await params;
+  return generateGroupMetadata({ group: awaitedParams.group });
 }
