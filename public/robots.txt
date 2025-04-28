@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vtubertracker.info/api/sitemap.xml
