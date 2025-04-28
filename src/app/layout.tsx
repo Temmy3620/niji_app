@@ -9,6 +9,26 @@ export const metadata: Metadata = {
   icons: {
     icon: "/tabIcon.png", // パスは public ディレクトリ基準
   },
+  openGraph: {
+    title: "VtubeTracker - にじさんじ・ホロライブ登録者数推移",
+    description: "Vtuberの登録者数・再生数推移を箱別・月別に確認できる無料Webアプリ。",
+    url: "https://vtubertracker.info",
+    type: "website",
+    images: [
+      {
+        url: "/ogp.png",
+        width: 1200,
+        height: 630,
+        alt: "VtubeTrackerのOGP画像",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "VtubeTracker - Vtuber登録者数推移まとめ",
+    description: "Vtuberの登録者数・再生数推移を箱別・月別に確認できる無料Webアプリ。",
+    images: ["/ogp.png"],
+  }
 };
 
 export default function RootLayout({
