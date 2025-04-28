@@ -20,7 +20,7 @@ export async function generateGroupMetadata({ group }: { group: string }): Promi
       description,
       images: [
         {
-          url: '/ogp.png',
+          url: 'https://vtubertracker.info/ogp.png',
           width: 1200,
           height: 630,
           alt: 'VtubeTrackerのOGP画像',
@@ -32,7 +32,7 @@ export async function generateGroupMetadata({ group }: { group: string }): Promi
       description,
       images: [
         {
-          url: '/ogp.png',
+          url: 'https://vtubertracker.info/ogp.png',
           width: 1200,
           height: 630,
           alt: 'VtubeTrackerのOGP画像',
