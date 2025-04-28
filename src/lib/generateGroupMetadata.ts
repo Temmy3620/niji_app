@@ -18,10 +18,26 @@ export async function generateGroupMetadata({ group }: { group: string }): Promi
     openGraph: {
       title,
       description,
+      images: [
+        {
+          url: '/ogp.png',
+          width: 1200,
+          height: 630,
+          alt: 'VtubeTrackerのOGP画像',
+        },
+      ],
     },
     twitter: {
       title,
       description,
+      images: [
+        {
+          url: '/ogp.png',
+          width: 1200,
+          height: 630,
+          alt: 'VtubeTrackerのOGP画像',
+        },
+      ],
     },
   };
 }
