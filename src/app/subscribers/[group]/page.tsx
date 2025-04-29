@@ -8,7 +8,7 @@ import { loadStatsJsonByPrefix } from '@/lib/monthlyStatsLoader';
 import { fetchChannelStats } from '@/app/channelStats/actions';
 import { generateGroupMetadata } from '@/lib/generateGroupMetadata';
 
-export const revalidate = 43200;
+export const revalidate = 3600;
 
 export interface GroupData {
   groupName: string;
