@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "VtubeTracker - Vtuber登録者数推移まとめ",
     description: "Vtuberの登録者数・再生数推移を箱別・月別に確認できる無料Webアプリ。",
-    images: ["/ogp.png"],
+    images: ["https://vtubertracker.info/ogp.png"],
   }
 };
 

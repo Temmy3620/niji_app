@@ -13,6 +13,7 @@
     "@aws-sdk/credential-provider-env": "^3.775.0",
     "@aws-sdk/node-config-provider": "^3.370.0",
     "@aws-sdk/types": "^3.775.0",
+    "@radix-ui/react-dialog": "^1.1.11",
     "@radix-ui/react-scroll-area": "^1.2.5",
     "@radix-ui/react-select": "^2.1.7",
     "@radix-ui/react-tabs": "^1.1.4",
