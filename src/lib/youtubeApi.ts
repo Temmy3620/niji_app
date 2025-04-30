@@ -135,6 +135,7 @@ export async function fetchAllStats(groupId: GroupKey): Promise<ChannelData[]> {
                 thumbnail,
                 subscribers,
                 views,
+                videoCount: item.statistics.videoCount ?? 0,
               };
             })
           )

@@ -33,6 +33,7 @@ export async function saveMonthlyStats(): Promise<{ outputPath: string }> {
       id: c.id,
       subscribers: parseInt(c.subscribers.replace(/[^0-9]/g, '')) || 0,
       views: parseInt(c.views.replace(/[^0-9]/g, '')) || 0,
+      videoCount: parseInt(c.videoCount.replace(/[^0-9]/g, '')) || 0,
     }));
   }
 
