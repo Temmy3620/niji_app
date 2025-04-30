@@ -77,8 +77,9 @@ export async function fetchAllStats(groupId: GroupKey): Promise<ChannelData[]> {
       console.log(`[API] Chunk ${currentChunk}/${totalChunks} を取得中 (${chunkIds.length} IDs)`);
       const response = await fetch(`${API_URL}?${params.toString()}`, {
         next: {
-          revalidate: 43200, // 12時間ごとに再フェッチ
+          revalidate: 3600, // 12時間ごとに再フェッチ
         },
+        cache: 'no-store',
       });
 
       if (!response.ok) {
