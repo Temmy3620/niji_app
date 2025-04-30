@@ -79,7 +79,7 @@ export async function fetchAllStats(groupId: GroupKey): Promise<ChannelData[]> {
         next: {
           revalidate: 3600, // 12時間ごとに再フェッチ
         },
-        cache: 'no-store',
+        cache: 'force-cache',
       });
 
       if (!response.ok) {
