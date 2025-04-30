@@ -13,7 +13,6 @@ export const channelIds = {
     11: 'UC6wvdADTJ88OfIbJYIpAaDA',
     12: 'UC7Gb7Uawe20QyFibhLl1lzA',
     13: 'UCG0rzBZV_QMP4MtWg6IjhEA',
-    14: 'UC4yNIKGvy-YUrwYupVdLDXA',
     15: 'UCsg-YqdqQ-KFF0LNk23BY4A',
     16: 'UCZ1xuCK1kNmn5RzPYIZop3w',
     17: 'UCHVXbQzkl3rDfsXWo8xi2qw',
