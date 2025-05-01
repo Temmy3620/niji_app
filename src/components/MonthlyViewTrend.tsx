@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useMemo } from 'react';
+import { useSearchParams, useRouter } from 'next/navigation';
 import ChannelCard from '@/components/ChannelCard';
 import { ChannelData } from '@/types/ChannelData';
 import { loadDiffMap } from '@/lib/monthlyDiffLoader';
@@ -45,8 +46,18 @@ export default function MonthlyViewTrend({
 }: MonthlyViewTrendProps) {
   console.log('[Client] MonthlyViewTrend Rendering. Groups:', groupsConfig.map(g => g.name));
 
-  const [selectedDate, setSelectedDate] = useState(defaultSelectedDate);
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const urlDate = searchParams.get('date');
+  const [selectedDate, setSelectedDate] = useState(urlDate ?? defaultSelectedDate);
   const [diffMap, setDiffMap] = useState<Record<string, { subscriberDiff: number; viewDiff: number }>>({});
+
+  const updateSelectedDate = (newDate: string) => {
+    setSelectedDate(newDate);
+    const current = new URLSearchParams(Array.from(searchParams.entries()));
+    current.set('date', newDate);
+    router.push(`?${current.toString()}`);
+  };
 
   useEffect(() => {
     const currentMonth = getCurrentMonth();
@@ -107,7 +118,7 @@ export default function MonthlyViewTrend({
               <button
                 onClick={() => {
                   const idx = availableDates.indexOf(selectedDate);
-                  if (idx > 0) setSelectedDate(availableDates[idx - 1]);
+                  if (idx > 0) updateSelectedDate(availableDates[idx - 1]);
                 }}
                 disabled={availableDates.indexOf(selectedDate) === 0}
                 className={`w-10 h-10 flex items-center justify-center rounded-lg shadow-md transition-all duration-150
@@ -124,7 +135,7 @@ export default function MonthlyViewTrend({
               <button
                 onClick={() => {
                   const idx = availableDates.indexOf(selectedDate);
-                  if (idx < availableDates.length - 1) setSelectedDate(availableDates[idx + 1]);
+                  if (idx < availableDates.length - 1) updateSelectedDate(availableDates[idx + 1]);
                 }}
                 disabled={availableDates.indexOf(selectedDate) === availableDates.length - 1}
                 className={`w-10 h-10 flex items-center justify-center rounded-lg shadow-md transition-all duration-150
