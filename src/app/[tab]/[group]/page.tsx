@@ -1,3 +1,5 @@
+
+
 import HomeClientView from '@/components/HomeClientView';
 import { GROUPS_CONFIG } from '@/constants/groupsConfig';
 import { ChannelData } from '@/types/ChannelData';
@@ -32,14 +34,16 @@ export default async function Home() {
   const defaultGroupKey = GROUPS_CONFIG.length > 0 ? GROUPS_CONFIG[0].key : '';
   const availableDates = availableDatesObj.all;
   const currentMonth = getCurrentMonth();
-  // Only add currentMonth if JSON exists
+
   if (await checkStatsFileExists(currentMonth)) {
     availableDates.push(currentMonth);
-    availableDates.sort((a, b) => b.localeCompare(a)); // Sort dates in descending order (e.g., 2025-04, 2025-03, ...)
+    availableDates.sort((a, b) => b.localeCompare(a));
   }
+
   const statsExists = await checkStatsFileExists(currentMonth);
   const selectedDate = statsExists ? currentMonth : getLatestMonth(availableDates) ?? getTwoMonthsAgo(currentMonth);
   const defaultStats = await loadStatsJsonByPrefix(selectedDate);
+
   console.log(`[Server] ClientHome にデータを渡します。デフォルトタブ: ${defaultGroupKey}`);
 
   return (
