@@ -37,7 +37,7 @@ export default async function Home() {
 
   if (await checkStatsFileExists(currentMonth)) {
     availableDates.push(currentMonth);
-    availableDates.sort((a, b) => b.localeCompare(a));
+    availableDates.sort();
   }
 
   const statsExists = await checkStatsFileExists(currentMonth);

@@ -51,7 +51,14 @@ const HomeClientView = ({ allGroupData, groupsConfig, defaultGroupKey, available
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      const newUrl = `/${currentTab}/${selectedGroupKey}`;
+      let newUrl = `/${currentTab}/${selectedGroupKey}`;
+      if (currentTab !== 'current') {
+        const currentParams = new URLSearchParams(window.location.search);
+        const queryString = currentParams.toString();
+        if (queryString) {
+          newUrl += `?${queryString}`;
+        }
+      }
       window.history.pushState(null, '', newUrl);
     }, 0);
     return () => clearTimeout(timeout);
