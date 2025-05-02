@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
+import { notFound } from 'next/navigation';
 import ChannelCard from '@/components/ChannelCard';
 import { ChannelData } from '@/types/ChannelData';
 import { loadDiffMap } from '@/lib/monthlyDiffLoader';
@@ -31,6 +32,14 @@ export default function MonthlyTrendBase({
   const router = useRouter();
   const urlDate = searchParams.get('date');
   const [selectedDate, setSelectedDate] = useState(urlDate ?? defaultSelectedDate);
+
+  const isInAvailableDates = availableDates.includes(selectedDate);
+
+  if (!isInAvailableDates) {
+    notFound();
+  }
+
+
   const [diffMap, setDiffMap] = useState<Record<string, { subscriberDiff: number; viewDiff: number }>>({});
 
   const updateSelectedDate = (newDate: string) => {
