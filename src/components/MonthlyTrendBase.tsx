@@ -1,18 +1,12 @@
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
-import { useSearchParams, useRouter } from 'next/navigation';
-import { notFound } from 'next/navigation';
-import ChannelCard from '@/components/ChannelCard';
-import { ChannelData } from '@/types/ChannelData';
-import { loadDiffMap } from '@/lib/monthlyDiffLoader';
-import GroupTabs from "@/components/GroupTabs";
-import {
-  Tabs,
-  TabsContent
-} from "@/components/ui/tabs";
+import { useState, useEffect } from 'react';
+import { useSearchParams, useRouter, notFound } from 'next/navigation';
 import { getCurrentMonth } from '@/lib/monthUtils';
+import { loadDiffMap } from '@/lib/monthlyDiffLoader';
+import { ChannelData } from '@/types/ChannelData';
 import { MonthlyTrendPropsBase } from '@/types/MonthlyTrend';
+import ChannelListWithTabs from '@/components/ChannelListWithTabs';
 
 interface MonthlyTrendBaseProps extends MonthlyTrendPropsBase {
   sortKey: 'subscribers' | 'views';
@@ -94,79 +88,48 @@ export default function MonthlyTrendBase({
       );
   };
 
-  const memoizedSortedChannels = useMemo(() => {
-    const result: Record<string, ChannelData[]> = {};
-    groupsConfig.forEach(group => {
-      result[group.key] = getSortedData(group.key);
-    });
-    return result;
-  }, [allGroupData, diffMap, groupsConfig, selectedDate]);
+  const headerRight = (
+    <div className="flex items-center justify-center gap-2 text-white text-lg font-semibold">
+      <button
+        onClick={() => {
+          const idx = availableDates.indexOf(selectedDate);
+          if (idx > 0) updateSelectedDate(availableDates[idx - 1]);
+        }}
+        disabled={availableDates.indexOf(selectedDate) === 0}
+        className={`w-10 h-10 flex items-center justify-center rounded-lg shadow-md transition-all duration-150
+          ${availableDates.indexOf(selectedDate) === 0 ? 'bg-gray-800 border border-gray-500 text-gray-400 cursor-not-allowed' : 'bg-gray-800 hover:bg-purple-700'}
+        `}
+      >
+        ←
+      </button>
+
+      <span className="px-4 py-1 bg-muted text-muted-foreground border border-border rounded-md shadow-sm">
+        {selectedDate}
+      </span>
+
+      <button
+        onClick={() => {
+          const idx = availableDates.indexOf(selectedDate);
+          if (idx < availableDates.length - 1) updateSelectedDate(availableDates[idx + 1]);
+        }}
+        disabled={availableDates.indexOf(selectedDate) === availableDates.length - 1}
+        className={`w-10 h-10 flex items-center justify-center rounded-lg shadow-md transition-all duration-150
+          ${availableDates.indexOf(selectedDate) === availableDates.length - 1 ? 'bg-gray-800 border border-gray-500 text-gray-400 cursor-not-allowed' : 'bg-gray-800 hover:bg-purple-700'}
+        `}
+      >
+        →
+      </button>
+    </div>
+  );
 
   return (
-    <main className="p-4 md:p-6">
-      <Tabs value={selectedGroupKey} onValueChange={setSelectedGroupKey} className="w-full">
-        <div className="flex justify-start items-center mb-4 gap-4 flex-wrap">
-          <GroupTabs groupsConfig={groupsConfig} selectedGroupKey={selectedGroupKey} />
-          <div className="ml-auto">
-            <div className="flex items-center justify-center gap-2 text-white text-lg font-semibold">
-              <button
-                onClick={() => {
-                  const idx = availableDates.indexOf(selectedDate);
-                  if (idx > 0) updateSelectedDate(availableDates[idx - 1]);
-                }}
-                disabled={availableDates.indexOf(selectedDate) === 0}
-                className={`w-10 h-10 flex items-center justify-center rounded-lg shadow-md transition-all duration-150
-                  ${availableDates.indexOf(selectedDate) === 0 ? 'bg-gray-800 border border-gray-500 text-gray-400 cursor-not-allowed' : 'bg-gray-800 hover:bg-purple-700'}
-                `}
-              >
-                ←
-              </button>
-
-              <span className="px-4 py-1 bg-muted text-muted-foreground border border-border rounded-md shadow-sm">
-                {selectedDate}
-              </span>
-
-              <button
-                onClick={() => {
-                  const idx = availableDates.indexOf(selectedDate);
-                  if (idx < availableDates.length - 1) updateSelectedDate(availableDates[idx + 1]);
-                }}
-                disabled={availableDates.indexOf(selectedDate) === availableDates.length - 1}
-                className={`w-10 h-10 flex items-center justify-center rounded-lg shadow-md transition-all duration-150
-                  ${availableDates.indexOf(selectedDate) === availableDates.length - 1 ? 'bg-gray-800 border border-gray-500 text-gray-400 cursor-not-allowed' : 'bg-gray-800 hover:bg-purple-700'}
-                `}
-              >
-                →
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {groupsConfig.map((group) => {
-          const sortedChannels = memoizedSortedChannels[group.key];
-
-          return (
-            <TabsContent key={group.key} value={group.key} className="mt-4 focus-visible:ring-0 focus-visible:ring-offset-0">
-              {sortedChannels.length > 0 ? (
-                <div className="grid gap-4 grid-cols-[repeat(auto-fit,_minmax(320px,_1fr))]">
-                  {sortedChannels.map((channel, index) => (
-                    <ChannelCard
-                      key={channel.id}
-                      channel={channel}
-                      currentTab={sortKey}
-                      rank={index}
-                    />
-                  ))}
-                </div>
-              ) : (
-                <p className="text-center text-gray-400 mt-8">
-                  チャンネルデータが見つかりません。
-                </p>
-              )}
-            </TabsContent>
-          );
-        })}
-      </Tabs>
-    </main>
+    <ChannelListWithTabs
+      groupsConfig={groupsConfig}
+      selectedGroupKey={selectedGroupKey}
+      setSelectedGroupKey={setSelectedGroupKey}
+      getSortedData={getSortedData}
+      sortKey={sortKey}
+      headerRight={headerRight}
+    />
   );
 }
