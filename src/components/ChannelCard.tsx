@@ -4,16 +4,7 @@
 import { Card } from "@/components/ui/card";
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-
-export type ChannelData = {
-  id: string;
-  title: string;
-  thumbnail: string;
-  subscribers: string;
-  views: string;
-  subscriberDiff?: number;
-  viewDiff?: number;
-};
+import { ChannelData } from "@/types/ChannelData";
 
 export default function ChannelCard({ channel, currentTab, rank }: { channel: ChannelData; currentTab: 'current' | 'subscribers' | 'views'; rank?: number }) {
   const isCurrent = currentTab === 'current';

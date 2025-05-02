@@ -55,17 +55,21 @@ export default function MonthlyTrendBase({
 
     return [...channels]
       .map(channel => {
-        let subscriberDiff = 0;
-        let viewDiff = 0;
+        let subscriberDiff: number | null = null;
+        let viewDiff: number | null = null;
 
         if (selectedDate === currentMonth) {
           const base = defaultStats[channel.id];
-          subscriberDiff = base ? Number(channel.subscribers) - Number(base.subscribers) : 0;
-          viewDiff = base ? Number(channel.views) - Number(base.views) : 0;
+          if (base) {
+            subscriberDiff = Number(channel.subscribers) - Number(base.subscribers);
+            viewDiff = Number(channel.views) - Number(base.views);
+          }
         } else {
           const diff = diffMap[channel.id];
-          subscriberDiff = diff?.subscriberDiff ?? 0;
-          viewDiff = diff?.viewDiff ?? 0;
+          if (diff) {
+            subscriberDiff = diff.subscriberDiff;
+            viewDiff = diff.viewDiff;
+          }
         }
 
         return {
@@ -75,7 +79,9 @@ export default function MonthlyTrendBase({
         };
       })
       .sort((a, b) =>
-        sortKey === 'subscribers' ? b.subscriberDiff - a.subscriberDiff : b.viewDiff - a.viewDiff
+        sortKey === 'subscribers'
+          ? (b.subscriberDiff ?? -Infinity) - (a.subscriberDiff ?? -Infinity)
+          : (b.viewDiff ?? -Infinity) - (a.viewDiff ?? -Infinity)
       );
   };
 
