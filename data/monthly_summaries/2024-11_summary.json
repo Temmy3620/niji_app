@@ -1,0 +1,50 @@
+{
+  "nijisanji": {
+    "totalSubscribers": 705000,
+    "totalViews": 383194926,
+    "negativeSubscribers": -8000,
+    "negativeViews": 0
+  },
+  "hololive": {
+    "totalSubscribers": 1621100,
+    "totalViews": 490986397,
+    "negativeSubscribers": 0,
+    "negativeViews": 0
+  },
+  "vspo": {
+    "totalSubscribers": 363600,
+    "totalViews": 48081360,
+    "negativeSubscribers": 0,
+    "negativeViews": 0
+  },
+  "neoporte": {
+    "totalSubscribers": 26300,
+    "totalViews": 15542365,
+    "negativeSubscribers": -2000,
+    "negativeViews": 0
+  },
+  "aogiri": {
+    "totalSubscribers": 34100,
+    "totalViews": 33144173,
+    "negativeSubscribers": 0,
+    "negativeViews": 0
+  },
+  "nanashiiInc": {
+    "totalSubscribers": 13000,
+    "totalViews": 14303891,
+    "negativeSubscribers": 0,
+    "negativeViews": 0
+  },
+  "noripro": {
+    "totalSubscribers": 14700,
+    "totalViews": 9404090,
+    "negativeSubscribers": -2200,
+    "negativeViews": 0
+  },
+  "dotlive": {
+    "totalSubscribers": 27146,
+    "totalViews": 1692730,
+    "negativeSubscribers": -1300,
+    "negativeViews": -196362
+  }
+}
