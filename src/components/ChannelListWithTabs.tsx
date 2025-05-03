@@ -4,6 +4,8 @@ import { Tabs, TabsContent } from '@/components/ui/tabs';
 import GroupTabs from '@/components/GroupTabs';
 import ChannelCard from '@/components/ChannelCard';
 import TotalStatsPanel from '@/components/TotalStatsPanel';
+import SubscriberGrowthPanel from '@/components/SubscriberGrowthPanel';
+import ViewGrowthPanel from '@/components/ViewGrowthPanel';
 import { ChannelData } from '@/types/ChannelData';
 import { GroupConfig } from '@/types/MonthlyTrend';
 
@@ -32,10 +34,19 @@ export default function ChannelListWithTabs({
           {headerRight && <div className="ml-auto">{headerRight}</div>}
         </div>
         <div className='mt-4'>
-          <TotalStatsPanel groupKey={selectedGroupKey} allGroupData={Object.fromEntries(
-            groupsConfig.map(group => [group.key, { groupName: group.name, channels: getSortedData(group.key) }]),
+          {sortKey === 'current' && (
+            <TotalStatsPanel groupKey={selectedGroupKey} allGroupData={Object.fromEntries(
+              groupsConfig.map(group => [group.key, { groupName: group.name, channels: getSortedData(group.key) }]),
+            )} />
           )}
-          />
+
+          {sortKey === 'subscribers' && (
+            <SubscriberGrowthPanel groupKey={selectedGroupKey} />
+          )}
+
+          {sortKey === 'views' && (
+            <ViewGrowthPanel groupKey={selectedGroupKey} />
+          )}
         </div>
 
         {groupsConfig.map((group) => {
