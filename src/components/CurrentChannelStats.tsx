@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/select";
 import { MonthlyTrendPropsBase } from '@/types/MonthlyTrend';
 
-interface CurrentChannelStatsProps extends Pick<MonthlyTrendPropsBase, 'allGroupData' | 'groupsConfig' | 'selectedGroupKey' | 'setSelectedGroupKey'> { }
+type CurrentChannelStatsProps = Pick<MonthlyTrendPropsBase, 'allGroupData' | 'groupsConfig' | 'selectedGroupKey' | 'setSelectedGroupKey'>;
 
 type SortByType = 'subscribers' | 'views';
 interface SortState {

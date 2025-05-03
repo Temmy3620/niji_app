@@ -3,7 +3,7 @@
 import MonthlyTrendBase from '@/components/MonthlyTrendBase';
 import { MonthlyTrendPropsBase } from '@/types/MonthlyTrend';
 
-interface MonthlySubscriberTrendProps extends MonthlyTrendPropsBase { }
+type MonthlySubscriberTrendProps = MonthlyTrendPropsBase;
 
 export default function MonthlySubscriberTrend(props: MonthlySubscriberTrendProps) {
   return <MonthlyTrendBase {...props} sortKey="subscribers" />;
