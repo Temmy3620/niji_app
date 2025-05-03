@@ -65,13 +65,15 @@ export default function CurrentChannelStats({
   );
 
   return (
-    <ChannelListWithTabs
-      groupsConfig={groupsConfig}
-      selectedGroupKey={selectedGroupKey}
-      setSelectedGroupKey={setSelectedGroupKey}
-      getSortedData={getSortedData}
-      sortKey="current"
-      headerRight={headerRight}
-    />
+    <>
+      <ChannelListWithTabs
+        groupsConfig={groupsConfig}
+        selectedGroupKey={selectedGroupKey}
+        setSelectedGroupKey={setSelectedGroupKey}
+        getSortedData={getSortedData}
+        sortKey="current"
+        headerRight={headerRight}
+      />
+    </>
   );
 }
