@@ -20,7 +20,8 @@ export default function MonthlyTrendBase({
   defaultSelectedDate,
   selectedGroupKey,
   setSelectedGroupKey,
-  sortKey
+  sortKey,
+  monthlyStatsMap
 }: MonthlyTrendBaseProps) {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -130,6 +131,7 @@ export default function MonthlyTrendBase({
       getSortedData={getSortedData}
       sortKey={sortKey}
       headerRight={headerRight}
+      monthlyStatsMap={monthlyStatsMap}
     />
   );
 }

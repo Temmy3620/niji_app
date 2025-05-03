@@ -23,4 +23,13 @@ export interface MonthlyTrendPropsBase {
   defaultSelectedDate: string;
   selectedGroupKey: string;
   setSelectedGroupKey: (key: string) => void;
+  monthlyStatsMap: Record<string, GroupStats[]>;
+}
+
+export interface GroupStats {
+  totalSubscribers: number;
+  totalViews: number;
+  negativeSubscribers: number;
+  negativeViews: number;
+  month: string;
 }

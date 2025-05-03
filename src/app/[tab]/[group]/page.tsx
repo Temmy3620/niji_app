@@ -7,6 +7,7 @@ import { checkStatsFileExists } from '@/lib/getJsonFileExist';
 import { loadStatsJsonByPrefix } from '@/lib/monthlyStatsLoader';
 import { fetchChannelStats } from '@/app/channelStats/actions';
 import { generateGroupMetadata } from '@/lib/generateGroupMetadata';
+import { getMonthlyGroupData } from '@/lib/getMonthlyGroupData';
 
 export const revalidate = 3600;
 
@@ -44,6 +45,11 @@ export default async function Home() {
 
   console.log(`[Server] ClientHome にデータを渡します。デフォルトタブ: ${defaultGroupKey}`);
 
+  // 各グループの monthlyStats をまとめる
+  const monthlyStatsMap = Object.fromEntries(
+    GROUPS_CONFIG.map(group => [group.key, getMonthlyGroupData(group.key)])
+  );
+
   return (
     <HomeClientView
       allGroupData={allGroupData}
@@ -52,6 +58,7 @@ export default async function Home() {
       availableDates={availableDates}
       defaultStats={defaultStats}
       defaultSelectedDate={selectedDate}
+      monthlyStatsMap={monthlyStatsMap}
     />
   );
 }

@@ -7,7 +7,7 @@ import TotalStatsPanel from '@/components/TotalStatsPanel';
 import SubscriberGrowthPanel from '@/components/SubscriberGrowthPanel';
 import ViewGrowthPanel from '@/components/ViewGrowthPanel';
 import { ChannelData } from '@/types/ChannelData';
-import { GroupConfig } from '@/types/MonthlyTrend';
+import { GroupConfig, GroupStats } from '@/types/MonthlyTrend';
 
 interface ChannelListWithTabsProps {
   groupsConfig: GroupConfig[];
@@ -16,6 +16,7 @@ interface ChannelListWithTabsProps {
   getSortedData: (groupKey: string) => ChannelData[];
   sortKey: 'subscribers' | 'views' | 'current';
   headerRight?: React.ReactNode;
+  monthlyStatsMap: Record<string, GroupStats[]>;
 }
 
 export default function ChannelListWithTabs({
@@ -25,6 +26,7 @@ export default function ChannelListWithTabs({
   getSortedData,
   sortKey,
   headerRight,
+  monthlyStatsMap,
 }: ChannelListWithTabsProps) {
   return (
     <main className="p-4 md:p-6">
@@ -41,11 +43,11 @@ export default function ChannelListWithTabs({
           )}
 
           {sortKey === 'subscribers' && (
-            <SubscriberGrowthPanel groupKey={selectedGroupKey} />
+            <SubscriberGrowthPanel groupKey={selectedGroupKey} monthlyStats={monthlyStatsMap[selectedGroupKey]} />
           )}
 
           {sortKey === 'views' && (
-            <ViewGrowthPanel groupKey={selectedGroupKey} />
+            <ViewGrowthPanel groupKey={selectedGroupKey} monthlyStats={monthlyStatsMap[selectedGroupKey]} />
           )}
         </div>
 

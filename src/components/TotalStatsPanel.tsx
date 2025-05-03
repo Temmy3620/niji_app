@@ -1,4 +1,3 @@
-'use client';
 import { ChannelData } from '@/types/ChannelData';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from 'framer-motion';

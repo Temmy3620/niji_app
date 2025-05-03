@@ -7,6 +7,7 @@ import { AppViewTabs } from './AppViewTabs';
 import CurrentChannelStats from './CurrentChannelStats';
 import MonthlySubscriberTrend from './MonthlySubscriberTrend';
 import MonthlyViewTrend from './MonthlyViewTrend';
+import { GroupStats } from '@/types/MonthlyTrend';
 
 interface GroupData {
   groupName: string;
@@ -27,9 +28,10 @@ interface Props {
   availableDates: string[];
   defaultStats: Record<string, { subscribers: number; views: number }>;
   defaultSelectedDate: string;
+  monthlyStatsMap: Record<string, GroupStats[]>;
 }
 
-const HomeClientView = ({ allGroupData, groupsConfig, defaultGroupKey, availableDates, defaultStats, defaultSelectedDate }: Props) => {
+const HomeClientView = ({ allGroupData, groupsConfig, defaultGroupKey, availableDates, defaultStats, defaultSelectedDate, monthlyStatsMap }: Props) => {
   const pathname = usePathname();
 
   const [selectedGroupKey, setSelectedGroupKey] = useState<string>(() => {
@@ -84,6 +86,7 @@ const HomeClientView = ({ allGroupData, groupsConfig, defaultGroupKey, available
           defaultSelectedDate={defaultSelectedDate}
           selectedGroupKey={selectedGroupKey}
           setSelectedGroupKey={setSelectedGroupKey}
+          monthlyStatsMap={monthlyStatsMap}
         />
       )}
       {currentTab === 'views' && (
@@ -95,6 +98,7 @@ const HomeClientView = ({ allGroupData, groupsConfig, defaultGroupKey, available
           defaultSelectedDate={defaultSelectedDate}
           selectedGroupKey={selectedGroupKey}
           setSelectedGroupKey={setSelectedGroupKey}
+          monthlyStatsMap={monthlyStatsMap}
         />
       )}
     </>
