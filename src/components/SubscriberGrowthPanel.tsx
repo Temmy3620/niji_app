@@ -16,13 +16,13 @@ export default function SubscriberGrowthPanel({ groupKey, monthlyStats }: Props)
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      <Card className="relative p-2 border border-indigo-400 bg-gray-900 rounded shadow-2xl transition-transform hover:scale-[1.001] overflow-hidden">
+      <Card className="relative p-2 border border-gray-700 bg-gray-900 rounded shadow-2xl transition-transform hover:scale-[1.001] overflow-hidden">
         <CardHeader>
           <CardTitle className="text-xl font-bold tracking-wide text-white">
-            {groupKey} の登録者数増加比率
+            {groupKey} 全体の登録者数増加比率
           </CardTitle>
         </CardHeader>
-        <CardContent className="h-[260px] w-full">
+        <CardContent className="h-[180px] w-full">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart
               data={monthlyStats}

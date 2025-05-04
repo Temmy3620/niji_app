@@ -27,9 +27,9 @@ export const AppViewTabs = ({ currentTab, onChange }: Props) => {
                 : 'bg-gray-700 text-cyan-200 hover:bg-gray-600'}
             `}
           >
-            {tab === 'current' && '🎖 現在のランキング'}
-            {tab === 'subscribers' && '📈 登録者数の増加ランキング（月別）'}
-            {tab === 'views' && '▶️ 再生数の増加ランキング（月別）'}
+            {tab === 'current' && '🎖 現登録・総再生数'}
+            {tab === 'subscribers' && '📈 登録者数の増加数（月別）'}
+            {tab === 'views' && '▶️ 再生数の増加数（月別）'}
           </TabsTrigger>
         ))}
       </TabsList>

@@ -8,6 +8,7 @@ import SubscriberGrowthPanel from '@/components/SubscriberGrowthPanel';
 import ViewGrowthPanel from '@/components/ViewGrowthPanel';
 import { ChannelData } from '@/types/ChannelData';
 import { GroupConfig, GroupStats } from '@/types/MonthlyTrend';
+import { Label } from 'recharts';
 
 interface ChannelListWithTabsProps {
   groupsConfig: GroupConfig[];
@@ -56,6 +57,7 @@ export default function ChannelListWithTabs({
 
           return (
             <TabsContent key={group.key} value={group.key} className="mt-4 focus-visible:ring-0 focus-visible:ring-offset-0">
+              <h2 className="text-xl font-bold mb-4">各チャンネルごとのランキング</h2>
               {sortedChannels.length > 0 ? (
                 <div className="grid gap-4 grid-cols-[repeat(auto-fit,_minmax(320px,_1fr))]">
                   {sortedChannels.map((channel, index) => (

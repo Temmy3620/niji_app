@@ -28,7 +28,7 @@ export default function TotalStatsPanel({ groupKey, allGroupData }: Props) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      <Card className="relative p-2 border border-indigo-400 bg-gray-900 rounded shadow-2xl transition-transform hover:scale-[1.001] overflow-hidden">
+      <Card className="relative p-2 border border-gray-700 bg-gray-900 rounded shadow-2xl transition-transform hover:scale-[1.001] overflow-hidden">
         <CardHeader>
           <CardTitle className="text-xl font-bold tracking-wide text-white">
             {allGroupData[groupKey]?.groupName} 全体の合計データ
