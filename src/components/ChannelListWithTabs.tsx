@@ -18,6 +18,7 @@ interface ChannelListWithTabsProps {
   sortKey: 'subscribers' | 'views' | 'current';
   headerRight?: React.ReactNode;
   monthlyStatsMap: Record<string, GroupStats[]>;
+  selectedDate: string; // ← add this line
 }
 
 export default function ChannelListWithTabs({
@@ -28,6 +29,7 @@ export default function ChannelListWithTabs({
   sortKey,
   headerRight,
   monthlyStatsMap,
+  selectedDate, // ← add this line
 }: ChannelListWithTabsProps) {
   return (
     <main className="p-4 md:p-6">
@@ -44,11 +46,11 @@ export default function ChannelListWithTabs({
           )}
 
           {sortKey === 'subscribers' && (
-            <SubscriberGrowthPanel groupKey={selectedGroupKey} monthlyStats={monthlyStatsMap[selectedGroupKey]} />
+            <SubscriberGrowthPanel groupKey={selectedGroupKey} monthlyStats={monthlyStatsMap[selectedGroupKey]} selectedDate={selectedDate} />
           )}
 
           {sortKey === 'views' && (
-            <ViewGrowthPanel groupKey={selectedGroupKey} monthlyStats={monthlyStatsMap[selectedGroupKey]} />
+            <ViewGrowthPanel groupKey={selectedGroupKey} monthlyStats={monthlyStatsMap[selectedGroupKey]} selectedDate={selectedDate} />
           )}
         </div>
 

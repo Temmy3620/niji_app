@@ -1,4 +1,3 @@
-import { ChannelData } from '@/types/ChannelData';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from 'framer-motion';
 import { GroupStats } from '@/types/MonthlyTrend';
@@ -7,10 +6,10 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 interface Props {
   groupKey: string;
   monthlyStats: GroupStats[];
+  selectedDate: string;
 }
 
-export default function ViewGrowthPanel({ groupKey, monthlyStats }: Props) {
-
+export default function ViewGrowthPanel({ groupKey, monthlyStats, selectedDate }: Props) {
   return (
     <motion.div
       key={groupKey}
@@ -30,11 +29,31 @@ export default function ViewGrowthPanel({ groupKey, monthlyStats }: Props) {
               data={monthlyStats}
               margin={{ top: 10, right: 20, bottom: 10, left: 50 }}
             >
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="month" />
-              <YAxis />
-              <Tooltip />
-              <Line type="monotone" dataKey="totalViews" stroke="#8884d8" strokeWidth={2} />
+              <CartesianGrid stroke="#334155" strokeDasharray="3 3" />
+              <XAxis dataKey="month" stroke="#cbd5e1" />
+              <YAxis stroke="#cbd5e1" />
+              <Tooltip
+                formatter={(value: number) => [`+${value.toLocaleString()}`, '増加数合計']}
+                contentStyle={{
+                  backgroundColor: '#0f172a',
+                  color: '#e2e8f0',
+                  border: '1px solid #64748b',
+                  borderRadius: '6px',
+                  padding: '6px 10px',
+                  fontSize: '13px',
+                  boxShadow: '0 4px 10px rgba(0,0,0,0.4)',
+                }}
+                itemStyle={{ color: '#a5b4fc' }}
+                labelStyle={{ color: '#f1f5f9' }}
+              />
+              <Line
+                type="monotone"
+                dataKey="totalViews"
+                stroke="#60a5fa"
+                strokeWidth={2.5}
+                dot={{ r: 3, stroke: '#93c5fd', strokeWidth: 2, fill: '#1e40af' }}
+                activeDot={{ r: 5 }}
+              />
             </LineChart>
           </ResponsiveContainer>
         </CardContent>

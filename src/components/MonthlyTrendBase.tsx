@@ -5,7 +5,7 @@ import { useSearchParams, useRouter, notFound } from 'next/navigation';
 import { getCurrentMonth } from '@/lib/monthUtils';
 import { loadDiffMap } from '@/lib/monthlyDiffLoader';
 import { ChannelData } from '@/types/ChannelData';
-import { MonthlyTrendPropsBase } from '@/types/MonthlyTrend';
+import { MonthlyTrendPropsBase, GroupStats } from '@/types/MonthlyTrend';
 import ChannelListWithTabs from '@/components/ChannelListWithTabs';
 
 interface MonthlyTrendBaseProps extends MonthlyTrendPropsBase {
@@ -29,6 +29,39 @@ export default function MonthlyTrendBase({
   const [selectedDate, setSelectedDate] = useState(urlDate ?? defaultSelectedDate);
 
   const isInAvailableDates = availableDates.includes(selectedDate);
+
+  // Always inject current month's diff summary into monthlyStatsMap
+  const currentMonth = getCurrentMonth();
+  const groupChannels = allGroupData[selectedGroupKey]?.channels || [];
+  let totalSubscribers = 0;
+  let totalViews = 0;
+  let negativeSubscribers = 0;
+  let negativeViews = 0;
+
+  for (const channel of groupChannels) {
+    const base = defaultStats[channel.id];
+    const subDiff = base ? Number(channel.subscribers) - Number(base.subscribers) : 0;
+    const viewDiff = base ? Number(channel.views) - Number(base.views) : 0;
+
+    totalSubscribers += subDiff;
+    totalViews += viewDiff;
+  }
+
+  const currentStats: GroupStats = {
+    month: currentMonth,
+    totalSubscribers,
+    totalViews,
+    negativeSubscribers,
+    negativeViews
+  };
+
+  if (!monthlyStatsMap[selectedGroupKey]) {
+    monthlyStatsMap[selectedGroupKey] = [];
+  }
+
+  if (!monthlyStatsMap[selectedGroupKey].some(stats => stats.month === currentMonth)) {
+    monthlyStatsMap[selectedGroupKey].push(currentStats);
+  }
 
   if (!isInAvailableDates) {
     notFound();
@@ -132,6 +165,7 @@ export default function MonthlyTrendBase({
       sortKey={sortKey}
       headerRight={headerRight}
       monthlyStatsMap={monthlyStatsMap}
+      selectedDate={selectedDate}
     />
   );
 }
