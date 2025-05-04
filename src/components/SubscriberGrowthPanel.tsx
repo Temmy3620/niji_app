@@ -1,22 +1,41 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from 'framer-motion';
-import { GroupStats } from '@/types/MonthlyTrend';
+import { GroupStats } from '@/types/MonthlyTrend'; // GroupStats の型定義をインポート (totalSubscribers を含む想定)
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { useEffect, useState } from 'react';
 import { GROUPS_CONFIG } from '@/constants/groupsConfig';
 
+// formattedDataの各要素の型を定義 (GroupStatsを拡張)
+interface FormattedSubscriberDataPoint extends GroupStats {
+  prevValue: number | null;
+  diffValue: number | null;
+  diffRatio: number | null;
+}
+
+// CustomizedDotコンポーネントのPropsの型を定義
+interface CustomizedDotProps {
+  cx?: number; // rechartsから渡されるx座標 (通常は存在するが念のためoptional)
+  cy?: number; // rechartsから渡されるy座標 (通常は存在するが念のためoptional)
+  index?: number; // rechartsから渡されるデータ配列のインデックス
+  payload?: FormattedSubscriberDataPoint; // rechartsから渡される、この点に対応するデータオブジェクト
+  // あなたが明示的に渡しているプロパティ
+  data: FormattedSubscriberDataPoint[];
+}
+
+
 interface Props {
   groupKey: string;
-  monthlyStats: GroupStats[];
+  monthlyStats: GroupStats[]; // GroupStats[] は totalSubscribers を含むオブジェクトの配列と想定
   selectedDate: string;
 }
 
 export default function SubscriberGrowthPanel({ groupKey, monthlyStats, selectedDate }: Props) {
   console.log('selectedDate :', selectedDate);
-  const [yAxisWidth, setYAxisWidth] = useState(60);
+  const [yAxisWidth, setYAxisWidth] = useState(60); // 初期値は適切に設定してください
 
   useEffect(() => {
     const handleResize = () => {
+      // Y軸の幅を調整 (値は元のコードから)
       setYAxisWidth(window.innerWidth < 640 ? 30 : 40);
     };
     handleResize();
@@ -26,9 +45,10 @@ export default function SubscriberGrowthPanel({ groupKey, monthlyStats, selected
 
   const groupName = GROUPS_CONFIG.find(group => group.key === groupKey)?.name ?? groupKey;
 
-  const formattedData = monthlyStats.map((item, index, array) => {
-    const prev = array[index - 1]?.totalSubscribers ?? null;
-    const diff = prev !== null ? item.totalSubscribers - prev : null;
+  // formattedDataの型を明示的に指定
+  const formattedData: FormattedSubscriberDataPoint[] = monthlyStats.map((item, index, array) => {
+    const prev = array[index - 1]?.totalSubscribers ?? null; // totalSubscribers を使用
+    const diff = prev !== null ? item.totalSubscribers - prev : null; // totalSubscribers を使用
     const ratio = prev && prev !== 0 && diff !== null ? ((diff / prev) * 100) : null;
     return {
       ...item,
@@ -38,9 +58,16 @@ export default function SubscriberGrowthPanel({ groupKey, monthlyStats, selected
     };
   });
 
-  // CustomizedDot for final marker
-  const CustomizedDot = (props: any) => {
+  // CustomizedDot コンポーネントで定義したPropsの型を使用
+  const CustomizedDot = (props: CustomizedDotProps) => {
+    // propsから必要な値を取り出す (存在しない可能性も考慮)
     const { cx, cy, index, data } = props;
+
+    // cx, cy, index が undefined の場合のデフォルト値やエラーハンドリング
+    if (cx === undefined || cy === undefined || index === undefined) {
+      return null; // または適切なフォールバック表示
+    }
+
     const isLast = index === data.length - 1;
     return (
       <circle
@@ -72,10 +99,12 @@ export default function SubscriberGrowthPanel({ groupKey, monthlyStats, selected
         </CardHeader>
         <CardContent className="h-[220px] sm:h-[180px] w-full text-white">
           <ResponsiveContainer width="100%" height="100%">
+            {/* LineChartのdataプロパティには型付けされたformattedDataを渡す */}
             <LineChart
               data={formattedData}
-              margin={{ top: 10, right: 20, bottom: 10, left: 10 }}
+              margin={{ top: 10, right: 20, bottom: 10, left: 10 }} // left margin調整
             >
+              {/* ... (defs, CartesianGrid, XAxis, YAxis) */}
               <defs>
                 <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
                   <feGaussianBlur stdDeviation="3" result="coloredBlur" />
@@ -104,11 +133,13 @@ export default function SubscriberGrowthPanel({ groupKey, monthlyStats, selected
                 tick={{ fill: '#5eead4', fontSize: 12, fontFamily: 'monospace' }}
                 tickLine={{ stroke: '#5eead4', strokeWidth: 0.3 }}
                 axisLine={{ stroke: '#5eead4', strokeWidth: 0.3 }}
-                width={yAxisWidth}
+                width={yAxisWidth} // stateからY軸幅を設定
               />
               <Tooltip
                 formatter={(value, name, props) => {
-                  const data = props.payload;
+                  // Tooltipのpropsにも型を付けられるとなお良い (Payload<ValueType, NameType>など)
+                  // ここではprops.payloadがFormattedSubscriberDataPointであることを期待
+                  const data = props.payload as FormattedSubscriberDataPoint | undefined;
                   const ratio = data?.diffRatio;
                   const diff = data?.diffValue;
                   const formattedRatio = ratio !== null && ratio !== undefined
@@ -117,10 +148,15 @@ export default function SubscriberGrowthPanel({ groupKey, monthlyStats, selected
                   const formattedDiff = diff !== null && diff !== undefined
                     ? `${diff > 0 ? '+' : ''}${diff.toLocaleString()}`
                     : '';
+
+                  // valueがnumberであることを確認
+                  const formattedValue = typeof value === 'number' ? value.toLocaleString() : value;
+
                   return [
                     <div key="tooltip-content" style={{ fontFamily: 'monospace', lineHeight: 1.6 }}>
                       <div style={{ fontSize: '15px', fontWeight: 600 }}>
-                        増加数合計：+{value.toLocaleString()}
+                        {/* Tooltipでは 'totalSubscribers' が value として渡される */}
+                        登録者数：{formattedValue}
                       </div>
                       {formattedRatio && formattedDiff && (
                         <div style={{ fontSize: '14px', color: '#7dd3fc' }}>
@@ -128,7 +164,7 @@ export default function SubscriberGrowthPanel({ groupKey, monthlyStats, selected
                         </div>
                       )}
                     </div>,
-                    null
+                    null // nameは表示しないのでnull
                   ];
                 }}
                 contentStyle={{
@@ -141,15 +177,17 @@ export default function SubscriberGrowthPanel({ groupKey, monthlyStats, selected
                   boxShadow: '0 0 8px rgba(56, 253, 253, 0.3)',
                   backdropFilter: 'blur(4px)',
                 }}
-                // itemStyle={{ color: '#38fdfd' }}
+                // itemStyle={{ color: '#38fdfd' }} // formatterでカスタマイズしたので不要かも
                 labelStyle={{ color: '#7dd3fc' }}
               />
               <Line
                 type="monotone"
-                dataKey="totalSubscribers"
+                dataKey="totalSubscribers" // ここを totalSubscribers に変更
                 stroke="url(#neonGradient)"
                 strokeWidth={4}
-                dot={<CustomizedDot data={formattedData} />}
+                // dotに関数を渡す場合、rechartsがpropsを注入する
+                // コンポーネントを渡す場合、明示的にpropsを渡す必要がある
+                dot={<CustomizedDot data={formattedData} />} // dataを明示的に渡す
                 activeDot={{ r: 8 }}
                 isAnimationActive={true}
                 animationBegin={300}

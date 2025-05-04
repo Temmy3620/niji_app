@@ -1,9 +1,26 @@
 import { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from 'framer-motion';
-import { GroupStats } from '@/types/MonthlyTrend';
+import { GroupStats } from '@/types/MonthlyTrend'; // GroupStats の型定義をインポート
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { GROUPS_CONFIG } from '@/constants/groupsConfig';
+
+// formattedDataの各要素の型を定義 (GroupStatsを拡張)
+interface FormattedDataPoint extends GroupStats {
+  prevValue: number | null;
+  diffValue: number | null;
+  diffRatio: number | null;
+}
+
+// CustomizedDotコンポーネントのPropsの型を定義
+interface CustomizedDotProps {
+  cx?: number; // rechartsから渡されるx座標 (通常は存在するが念のためoptional)
+  cy?: number; // rechartsから渡されるy座標 (通常は存在するが念のためoptional)
+  index?: number; // rechartsから渡されるデータ配列のインデックス
+  payload?: FormattedDataPoint; // rechartsから渡される、この点に対応するデータオブジェクト
+  // あなたが明示的に渡しているプロパティ
+  data: FormattedDataPoint[];
+}
 
 interface Props {
   groupKey: string;
@@ -26,7 +43,8 @@ export default function ViewGrowthPanel({ groupKey, monthlyStats, selectedDate }
 
   const groupName = GROUPS_CONFIG.find(group => group.key === groupKey)?.name ?? groupKey;
 
-  const formattedData = monthlyStats.map((item, index, array) => {
+  // formattedDataの型を明示的に指定
+  const formattedData: FormattedDataPoint[] = monthlyStats.map((item, index, array) => {
     const prev = array[index - 1]?.totalViews ?? null;
     const diff = prev !== null ? item.totalViews - prev : null;
     const ratio = prev && prev !== 0 && diff !== null ? ((diff / prev) * 100) : null;
@@ -38,9 +56,16 @@ export default function ViewGrowthPanel({ groupKey, monthlyStats, selectedDate }
     };
   });
 
-  // CustomizedDot for final marker
-  const CustomizedDot = (props: any) => {
+  // CustomizedDot コンポーネントで定義したPropsの型を使用
+  const CustomizedDot = (props: CustomizedDotProps) => {
+    // propsから必要な値を取り出す (存在しない可能性も考慮)
     const { cx, cy, index, data } = props;
+
+    // cx, cy, index が undefined の場合のデフォルト値やエラーハンドリングが必要な場合がある
+    if (cx === undefined || cy === undefined || index === undefined) {
+      return null; // または適切なフォールバック表示
+    }
+
     const isLast = index === data.length - 1;
     return (
       <circle
@@ -72,10 +97,12 @@ export default function ViewGrowthPanel({ groupKey, monthlyStats, selectedDate }
         </CardHeader>
         <CardContent className="h-[220px] sm:h-[180px] w-full text-white">
           <ResponsiveContainer width="100%" height="100%">
+            {/* LineChartのdataプロパティには型付けされたformattedDataを渡す */}
             <LineChart
               data={formattedData}
               margin={{ top: 10, right: 20, bottom: 10, left: 20 }}
             >
+              {/* ... (defs, CartesianGrid, XAxis, YAxis) */}
               <defs>
                 <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
                   <feGaussianBlur stdDeviation="3" result="coloredBlur" />
@@ -108,7 +135,9 @@ export default function ViewGrowthPanel({ groupKey, monthlyStats, selectedDate }
               />
               <Tooltip
                 formatter={(value, name, props) => {
-                  const data = props.payload;
+                  // Tooltipのpropsにも型を付けられるとなお良い (Payload<ValueType, NameType>など)
+                  // ここではprops.payloadがFormattedDataPointであることを期待
+                  const data = props.payload as FormattedDataPoint | undefined;
                   const ratio = data?.diffRatio;
                   const diff = data?.diffValue;
                   const formattedRatio = ratio !== null && ratio !== undefined
@@ -117,10 +146,15 @@ export default function ViewGrowthPanel({ groupKey, monthlyStats, selectedDate }
                   const formattedDiff = diff !== null && diff !== undefined
                     ? `${diff > 0 ? '+' : ''}${diff.toLocaleString()}`
                     : '';
+
+                  // valueがnumberであることを確認
+                  const formattedValue = typeof value === 'number' ? value.toLocaleString() : value;
+
                   return [
                     <div key="tooltip-content" style={{ fontFamily: 'monospace', lineHeight: 1.6 }}>
                       <div style={{ fontSize: '15px', fontWeight: 600 }}>
-                        増加数合計：+{value.toLocaleString()}
+                        {/* Tooltipでは 'totalViews' が value として渡される想定 */}
+                        再生数：{formattedValue}
                       </div>
                       {formattedRatio && formattedDiff && (
                         <div style={{ fontSize: '14px', color: '#7dd3fc' }}>
@@ -128,7 +162,7 @@ export default function ViewGrowthPanel({ groupKey, monthlyStats, selectedDate }
                         </div>
                       )}
                     </div>,
-                    null
+                    null // nameは表示しないのでnull
                   ];
                 }}
                 contentStyle={{
@@ -141,7 +175,7 @@ export default function ViewGrowthPanel({ groupKey, monthlyStats, selectedDate }
                   boxShadow: '0 0 8px rgba(56, 253, 253, 0.3)',
                   backdropFilter: 'blur(4px)',
                 }}
-                // itemStyle={{ color: '#38fdfd' }}
+                // itemStyle={{ color: '#38fdfd' }} // formatterでカスタマイズしたので不要かも
                 labelStyle={{ color: '#7dd3fc' }}
               />
               <Line
@@ -149,7 +183,10 @@ export default function ViewGrowthPanel({ groupKey, monthlyStats, selectedDate }
                 dataKey="totalViews"
                 stroke="url(#neonGradient)"
                 strokeWidth={4}
-                dot={<CustomizedDot data={formattedData} />}
+                // dotに関数を渡す場合、rechartsがpropsを注入する
+                // コンポーネントを渡す場合、明示的にpropsを渡す必要がある
+                // ここでは関数コンポーネントを直接渡しているので、rechartsからの注入と明示的なdata={formattedData}が合わさる
+                dot={<CustomizedDot data={formattedData} />} // dataを明示的に渡す
                 activeDot={{ r: 8 }}
                 isAnimationActive={true}
                 animationBegin={300}
