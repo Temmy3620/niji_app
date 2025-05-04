@@ -58,8 +58,15 @@ export default function ChannelListWithTabs({
           return (
             <TabsContent key={group.key} value={group.key} className="mt-4 focus-visible:ring-0 focus-visible:ring-offset-0">
               <div className="flex items-center justify-between gap-4 mt-10 mb-6 flex-wrap">
-                <h2 id="rankings" className="text-xl font-bold flex items-center gap-2 m-0">
-                  <a href="#rankings" className="text-blue-300 hover:text-blue-400 opacity-50 hover:opacity-100 transition" title="このセクションへのリンク">
+                <h2
+                  id="rankings"
+                  className="text-2xl sm:text-3xl font-extrabold flex items-center gap-2 m-0 text-cyan-100 tracking-wide font-mono"
+                >
+                  <a
+                    href="#rankings"
+                    className="text-cyan-600 opacity-20 hover:opacity-40 transition"
+                    title="このセクションへのリンク"
+                  >
                     🔗
                   </a>
                   ランキング（チャンネルごと）

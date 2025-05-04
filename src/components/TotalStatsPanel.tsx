@@ -28,21 +28,21 @@ export default function TotalStatsPanel({ groupKey, allGroupData }: Props) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      <Card className="relative p-2 border border-gray-700 bg-gray-900 rounded shadow-2xl transition-transform hover:scale-[1.001] overflow-hidden">
+      <Card className="relative p-4 border border-slate-600 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded transition-transform hover:scale-[1.01] overflow-hidden">
         <CardHeader>
-          <CardTitle className="text-base sm:text-xl font-bold tracking-wide text-white">
+          <CardTitle className="text-white text-lg sm:text-xl font-bold tracking-wider font-mono">
             {allGroupData[groupKey]?.groupName} の合計データ（チャンネル数・登録者数・総再生数）
           </CardTitle>
         </CardHeader>
-        <CardContent className="flex flex-row flex-wrap justify-around items-center text-white pb-2 gap-2 text-sm sm:text-base">
+        <CardContent className="flex flex-row flex-wrap justify-around items-center text-white py-4 gap-4 text-sm sm:text-base">
           <motion.div
             className="flex flex-col items-center gap-1"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.1 }}
           >
-            <div className="text-yellow-200 text-3xl font-extrabold leading-tight">{totalTalents.toLocaleString()}</div>
-            <div className="text-sm text-gray-400">チャンネル数</div>
+            <div className="text-cyan-200 text-4xl sm:text-5xl font-extrabold tracking-tight drop-shadow-[0_0_2px_#22d3ee]">{totalTalents.toLocaleString()}</div>
+            <div className="text-xs sm:text-sm text-slate-300 uppercase tracking-wide">チャンネル数</div>
           </motion.div>
           <motion.div
             className="flex flex-col items-center gap-1"
@@ -50,8 +50,8 @@ export default function TotalStatsPanel({ groupKey, allGroupData }: Props) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.2 }}
           >
-            <div className="text-yellow-200 text-3xl font-extrabold leading-tight">{totalSubscribers.toLocaleString()}</div>
-            <div className="text-sm text-gray-400">登録者数合計</div>
+            <div className="text-cyan-200 text-4xl sm:text-5xl font-extrabold tracking-tight drop-shadow-[0_0_2px_#22d3ee]">{totalSubscribers.toLocaleString()}</div>
+            <div className="text-xs sm:text-sm text-slate-300 uppercase tracking-wide">登録者数合計</div>
           </motion.div>
           <motion.div
             className="flex flex-col items-center gap-1"
@@ -59,8 +59,8 @@ export default function TotalStatsPanel({ groupKey, allGroupData }: Props) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.3 }}
           >
-            <div className="text-yellow-200 text-3xl font-extrabold leading-tight">{totalViews.toLocaleString()}</div>
-            <div className="text-sm text-gray-400">総再生数合計</div>
+            <div className="text-cyan-200 text-4xl sm:text-5xl font-extrabold tracking-tight drop-shadow-[0_0_2px_#22d3ee]">{totalViews.toLocaleString()}</div>
+            <div className="text-xs sm:text-sm text-slate-300 uppercase tracking-wide">総再生数合計</div>
           </motion.div>
         </CardContent>
       </Card>

@@ -32,13 +32,13 @@ export default function ViewGrowthPanel({ groupKey, monthlyStats, selectedDate }
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      <Card className="relative p-2 border border-gray-700 bg-gray-900 rounded shadow-2xl transition-transform hover:scale-[1.001] overflow-hidden">
+      <Card className="relative p-4 border border-slate-600 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded transition-transform hover:scale-[1.01] overflow-hidden">
         <CardHeader>
-          <CardTitle className="text-base sm:text-xl font-bold tracking-wide text-white">
+          <CardTitle className="text-white text-lg sm:text-xl font-bold tracking-wider font-mono">
             {groupName}（全チャンネル合計）：月別再生数の推移
           </CardTitle>
         </CardHeader>
-        <CardContent className="h-[220px] sm:h-[180px] w-full">
+        <CardContent className="h-[220px] sm:h-[180px] w-full text-white">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart
               data={monthlyStats}
