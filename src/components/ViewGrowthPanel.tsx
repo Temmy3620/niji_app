@@ -25,6 +25,37 @@ export default function ViewGrowthPanel({ groupKey, monthlyStats, selectedDate }
 
   const groupName = GROUPS_CONFIG.find(group => group.key === groupKey)?.name ?? groupKey;
 
+  const formattedData = monthlyStats.map((item, index, array) => {
+    const prev = array[index - 1]?.totalViews ?? null;
+    const diff = prev !== null ? item.totalViews - prev : null;
+    const ratio = prev && prev !== 0 && diff !== null ? ((diff / prev) * 100) : null;
+    return {
+      ...item,
+      prevValue: prev,
+      diffValue: diff,
+      diffRatio: ratio,
+    };
+  });
+
+  // CustomizedDot for final marker
+  const CustomizedDot = (props: any) => {
+    const { cx, cy, index, data } = props;
+    const isLast = index === data.length - 1;
+    return (
+      <circle
+        cx={cx}
+        cy={cy}
+        r={6}
+        stroke="#38fdfd"
+        strokeWidth={2}
+        fill={isLast ? 'none' : '#0f172a'}
+        strokeDasharray={isLast ? '4 2' : '0'}
+        filter="url(#glow)"
+        style={{ opacity: 0.8 }}
+      />
+    );
+  };
+
   return (
     <motion.div
       key={groupKey}
@@ -41,38 +72,89 @@ export default function ViewGrowthPanel({ groupKey, monthlyStats, selectedDate }
         <CardContent className="h-[220px] sm:h-[180px] w-full text-white">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart
-              data={monthlyStats}
-              margin={{ top: 10, right: 20, bottom: 10, left: 50 }}
+              data={formattedData}
+              margin={{ top: 10, right: 20, bottom: 10, left: 20 }}
             >
+              <defs>
+                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+                  <feMerge>
+                    <feMergeNode in="coloredBlur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+                <linearGradient id="neonGradient" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stopColor="#38fdfd" />
+                  <stop offset="100%" stopColor="#00f0ff" />
+                </linearGradient>
+              </defs>
               <CartesianGrid stroke="#334155" strokeDasharray="3 3" />
               <XAxis
                 dataKey="month"
-                stroke="#cbd5e1"
+                stroke="#5eead4"
+                tick={{ fill: '#5eead4', fontSize: 12, fontFamily: 'monospace' }}
+                tickLine={{ stroke: '#5eead4', strokeWidth: 0.3 }}
+                axisLine={{ stroke: '#5eead4', strokeWidth: 0.3 }}
                 tickFormatter={(month) => month.slice(5)}
                 interval={0}
               />
-              <YAxis stroke="#cbd5e1" width={yAxisWidth} />
+              <YAxis
+                stroke="#5eead4"
+                tick={{ fill: '#5eead4', fontSize: 12, fontFamily: 'monospace' }}
+                tickLine={{ stroke: '#5eead4', strokeWidth: 0.3 }}
+                axisLine={{ stroke: '#5eead4', strokeWidth: 0.3 }}
+                width={yAxisWidth}
+              />
               <Tooltip
-                formatter={(value: number) => [`+${value.toLocaleString()}`, '増加数合計']}
-                contentStyle={{
-                  backgroundColor: '#0f172a',
-                  color: '#e2e8f0',
-                  border: '1px solid #64748b',
-                  borderRadius: '6px',
-                  padding: '4px 6px',
-                  fontSize: '12px',
-                  boxShadow: '0 4px 10px rgba(0,0,0,0.4)',
+                formatter={(value, name, props) => {
+                  const data = props.payload;
+                  const ratio = data?.diffRatio;
+                  const diff = data?.diffValue;
+                  const formattedRatio = ratio !== null && ratio !== undefined
+                    ? `${ratio > 0 ? '+' : ''}${ratio.toFixed(1)}%`
+                    : '';
+                  const formattedDiff = diff !== null && diff !== undefined
+                    ? `${diff > 0 ? '+' : ''}${diff.toLocaleString()}`
+                    : '';
+                  return [
+                    <div style={{ fontFamily: 'monospace', lineHeight: 1.6 }}>
+                      <div style={{ fontSize: '15px', fontWeight: 600 }}>
+                        増加数合計：+{value.toLocaleString()}
+                      </div>
+                      {formattedRatio && formattedDiff && (
+                        <div style={{ fontSize: '14px', color: '#7dd3fc' }}>
+                          前月比：{formattedRatio}（{formattedDiff}）
+                        </div>
+                      )}
+                    </div>,
+                    null
+                  ];
                 }}
-                itemStyle={{ color: '#a5b4fc' }}
-                labelStyle={{ color: '#f1f5f9' }}
+                contentStyle={{
+                  backgroundColor: '#0a0f1c',
+                  color: '#38fdfd',
+                  border: '1px solid #38fdfd',
+                  borderRadius: '10px',
+                  padding: '10px 12px',
+                  fontSize: '14px',
+                  boxShadow: '0 0 8px rgba(56, 253, 253, 0.3)',
+                  backdropFilter: 'blur(4px)',
+                }}
+                // itemStyle={{ color: '#38fdfd' }}
+                labelStyle={{ color: '#7dd3fc' }}
               />
               <Line
                 type="monotone"
                 dataKey="totalViews"
-                stroke="#60a5fa"
-                strokeWidth={3}
-                dot={{ r: 3, stroke: '#93c5fd', strokeWidth: 2, fill: '#1e40af' }}
-                activeDot={{ r: 5 }}
+                stroke="url(#neonGradient)"
+                strokeWidth={4}
+                dot={<CustomizedDot data={formattedData} />}
+                activeDot={{ r: 8 }}
+                isAnimationActive={true}
+                animationBegin={300}
+                animationDuration={1200}
+                animationEasing="ease"
+                animateNewValues={true}
               />
             </LineChart>
           </ResponsiveContainer>

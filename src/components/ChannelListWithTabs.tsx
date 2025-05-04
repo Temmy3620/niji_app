@@ -60,7 +60,7 @@ export default function ChannelListWithTabs({
               <div className="flex items-center justify-between gap-4 mt-10 mb-6 flex-wrap">
                 <h2
                   id="rankings"
-                  className="text-2xl sm:text-3xl font-extrabold flex items-center gap-2 m-0 text-cyan-100 tracking-wide font-mono"
+                  className="text-xl sm:text-3xl font-extrabold flex items-center gap-2 m-0 text-cyan-100 tracking-wide font-mono"
                 >
                   <a
                     href="#rankings"
