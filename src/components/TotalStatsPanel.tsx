@@ -42,7 +42,7 @@ export default function TotalStatsPanel({ groupKey, allGroupData }: Props) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.1 }}
           >
-            <div className="text-cyan-200 text-3xl xs:text-4xl sm:text-5xl font-extrabold tracking-tight drop-shadow-[0_0_2px_#22d3ee]">{totalTalents.toLocaleString()}</div>
+            <div className="text-[#38fdfd] text-3xl xs:text-4xl sm:text-5xl font-extrabold tracking-tight drop-shadow-[0_0_2px_#22d3ee]">{totalTalents.toLocaleString()}</div>
             <div className="text-xs sm:text-sm text-slate-300 uppercase tracking-wide">チャンネル数</div>
           </motion.div>
           <motion.div
@@ -51,7 +51,7 @@ export default function TotalStatsPanel({ groupKey, allGroupData }: Props) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.2 }}
           >
-            <div className="text-cyan-200 text-3xl xs:text-4xl sm:text-5xl font-extrabold tracking-tight drop-shadow-[0_0_2px_#22d3ee]">{totalSubscribers.toLocaleString()}</div>
+            <div className="text-[#38fdfd] text-3xl xs:text-4xl sm:text-5xl font-extrabold tracking-tight drop-shadow-[0_0_2px_#22d3ee]">{totalSubscribers.toLocaleString()}</div>
             <div className="text-xs sm:text-sm text-slate-300 uppercase tracking-wide">登録者数合計</div>
           </motion.div>
           <motion.div
@@ -60,7 +60,7 @@ export default function TotalStatsPanel({ groupKey, allGroupData }: Props) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.3 }}
           >
-            <div className="text-cyan-200 text-3xl xs:text-4xl sm:text-5xl font-extrabold tracking-tight drop-shadow-[0_0_2px_#22d3ee]">{totalViews.toLocaleString()}</div>
+            <div className="text-[#38fdfd] text-3xl xs:text-4xl sm:text-5xl font-extrabold tracking-tight drop-shadow-[0_0_2px_#22d3ee]">{totalViews.toLocaleString()}</div>
             <div className="text-xs sm:text-sm text-slate-300 uppercase tracking-wide">総再生数合計</div>
           </motion.div>
         </CardContent>

@@ -35,8 +35,8 @@ export default function MonthlyTrendBase({
   const groupChannels = allGroupData[selectedGroupKey]?.channels || [];
   let totalSubscribers = 0;
   let totalViews = 0;
-  let negativeSubscribers = 0;
-  let negativeViews = 0;
+  const negativeSubscribers = 0;
+  const negativeViews = 0;
 
   for (const channel of groupChannels) {
     const base = defaultStats[channel.id];

@@ -12,6 +12,7 @@ interface Props {
 }
 
 export default function ViewGrowthPanel({ groupKey, monthlyStats, selectedDate }: Props) {
+  console.log('selectedDate :', selectedDate);
   const [yAxisWidth, setYAxisWidth] = useState(60);
 
   useEffect(() => {
@@ -117,7 +118,7 @@ export default function ViewGrowthPanel({ groupKey, monthlyStats, selectedDate }
                     ? `${diff > 0 ? '+' : ''}${diff.toLocaleString()}`
                     : '';
                   return [
-                    <div style={{ fontFamily: 'monospace', lineHeight: 1.6 }}>
+                    <div key="tooltip-content" style={{ fontFamily: 'monospace', lineHeight: 1.6 }}>
                       <div style={{ fontSize: '15px', fontWeight: 600 }}>
                         増加数合計：+{value.toLocaleString()}
                       </div>

@@ -28,7 +28,7 @@ export default function ChannelListWithTabs({
   sortKey,
   headerRight,
   monthlyStatsMap,
-  selectedDate, // ← add this line
+  selectedDate,
 }: ChannelListWithTabsProps) {
   return (
     <main className="p-4 md:p-6">
