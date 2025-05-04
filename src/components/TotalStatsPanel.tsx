@@ -31,7 +31,7 @@ export default function TotalStatsPanel({ groupKey, allGroupData }: Props) {
       <Card className="relative p-2 border border-gray-700 bg-gray-900 rounded shadow-2xl transition-transform hover:scale-[1.001] overflow-hidden">
         <CardHeader>
           <CardTitle className="text-base sm:text-xl font-bold tracking-wide text-white">
-            {allGroupData[groupKey]?.groupName} 全体の合計データ
+            {allGroupData[groupKey]?.groupName} の合計データ（チャンネル数・登録者数・総再生数）
           </CardTitle>
         </CardHeader>
         <CardContent className="flex flex-row flex-wrap justify-around items-center text-white pb-2 gap-2 text-sm sm:text-base">

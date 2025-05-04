@@ -35,7 +35,7 @@ export default function SubscriberGrowthPanel({ groupKey, monthlyStats, selected
       <Card className="relative p-2 border border-gray-700 bg-gray-900 rounded shadow-2xl transition-transform hover:scale-[1.001] overflow-hidden">
         <CardHeader>
           <CardTitle className="text-base sm:text-xl font-bold tracking-wide text-white">
-            過去数ヶ月間の {groupName} 全体の登録者数増加推移
+            {groupName}（全チャンネル合計）：月別登録者数の推移
           </CardTitle>
         </CardHeader>
         <CardContent className="h-[220px] sm:h-[180px] w-full">
