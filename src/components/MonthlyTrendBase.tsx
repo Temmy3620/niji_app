@@ -74,7 +74,7 @@ export default function MonthlyTrendBase({
     setSelectedDate(newDate);
     const current = new URLSearchParams(Array.from(searchParams.entries()));
     current.set('date', newDate);
-    router.push(`?${current.toString()}`);
+    router.push(`?${current.toString()}`, { scroll: false });
   };
 
   useEffect(() => {
@@ -125,6 +125,7 @@ export default function MonthlyTrendBase({
   const headerRight = (
     <div className="flex items-center justify-center gap-2 text-white text-lg font-semibold">
       <button
+        type="button"
         onClick={() => {
           const idx = availableDates.indexOf(selectedDate);
           if (idx > 0) updateSelectedDate(availableDates[idx - 1]);
@@ -142,6 +143,7 @@ export default function MonthlyTrendBase({
       </span>
 
       <button
+        type="button"
         onClick={() => {
           const idx = availableDates.indexOf(selectedDate);
           if (idx < availableDates.length - 1) updateSelectedDate(availableDates[idx + 1]);

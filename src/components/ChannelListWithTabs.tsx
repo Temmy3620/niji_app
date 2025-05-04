@@ -33,9 +33,8 @@ export default function ChannelListWithTabs({
   return (
     <main className="p-4 md:p-6">
       <Tabs value={selectedGroupKey} onValueChange={setSelectedGroupKey} className="w-full">
-        <div className="flex justify-between items-center mb-4 gap-4 flex-wrap">
+        <div className="flex items-center mb-4 gap-4 flex-wrap">
           <GroupTabs groupsConfig={groupsConfig} selectedGroupKey={selectedGroupKey} />
-          {headerRight && <div className="ml-auto">{headerRight}</div>}
         </div>
         <div className='mt-4'>
           {sortKey === 'current' && (
@@ -58,12 +57,15 @@ export default function ChannelListWithTabs({
 
           return (
             <TabsContent key={group.key} value={group.key} className="mt-4 focus-visible:ring-0 focus-visible:ring-offset-0">
-              <h2 id="rankings" className="text-xl font-bold mb-4 flex items-center gap-2">
-                <a href="#rankings" className="text-blue-300 hover:text-blue-400 opacity-50 hover:opacity-100 transition" title="このセクションへのリンク">
-                  🔗
-                </a>
-                ランキング（チャンネルごと）
-              </h2>
+              <div className="flex items-center justify-between gap-4 mt-10 mb-6 flex-wrap">
+                <h2 id="rankings" className="text-xl font-bold flex items-center gap-2 m-0">
+                  <a href="#rankings" className="text-blue-300 hover:text-blue-400 opacity-50 hover:opacity-100 transition" title="このセクションへのリンク">
+                    🔗
+                  </a>
+                  ランキング（チャンネルごと）
+                </h2>
+                {headerRight}
+              </div>
               {sortedChannels.length > 0 ? (
                 <div className="grid gap-4 grid-cols-[repeat(auto-fit,_minmax(320px,_1fr))]">
                   {sortedChannels.map((channel, index) => (
