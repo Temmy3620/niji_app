@@ -30,11 +30,11 @@ export default function TotalStatsPanel({ groupKey, allGroupData }: Props) {
     >
       <Card className="relative p-2 border border-gray-700 bg-gray-900 rounded shadow-2xl transition-transform hover:scale-[1.001] overflow-hidden">
         <CardHeader>
-          <CardTitle className="text-xl font-bold tracking-wide text-white">
+          <CardTitle className="text-base sm:text-xl font-bold tracking-wide text-white">
             {allGroupData[groupKey]?.groupName} 全体の合計データ
           </CardTitle>
         </CardHeader>
-        <CardContent className="flex justify-around items-center text-white pb-2">
+        <CardContent className="flex flex-row flex-wrap justify-around items-center text-white pb-2 gap-2 text-sm sm:text-base">
           <motion.div
             className="flex flex-col items-center gap-1"
             initial={{ opacity: 0, y: 10 }}

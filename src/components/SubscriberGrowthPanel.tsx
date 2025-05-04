@@ -20,8 +20,8 @@ export default function SubscriberGrowthPanel({ groupKey, monthlyStats, selected
     >
       <Card className="relative p-2 border border-gray-700 bg-gray-900 rounded shadow-2xl transition-transform hover:scale-[1.001] overflow-hidden">
         <CardHeader>
-          <CardTitle className="text-xl font-bold tracking-wide text-white">
-            {groupKey} 全体の登録者数増加比率
+          <CardTitle className="text-base sm:text-xl font-bold tracking-wide text-white">
+            {groupKey} の登録者数増加比率（5ヶ月間）
           </CardTitle>
         </CardHeader>
         <CardContent className="h-[180px] w-full">
