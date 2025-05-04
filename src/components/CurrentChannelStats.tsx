@@ -73,6 +73,8 @@ export default function CurrentChannelStats({
         getSortedData={getSortedData}
         sortKey="current"
         headerRight={headerRight}
+        monthlyStatsMap={{}}
+        selectedDate=""
       />
     </>
   );
