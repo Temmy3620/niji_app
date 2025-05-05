@@ -18,7 +18,7 @@ export function getAvailableDates(): { all: string[]; new_month: string } {
 
   const sortedDates = files
     .map(file => file.replace('_diff.json', ''))
-    .sort((a, b) => (a < b ? 1 : -1)); // 新しい順に並べる
+    .sort(); // 新しい順に並べる
 
   return {
     all: sortedDates,

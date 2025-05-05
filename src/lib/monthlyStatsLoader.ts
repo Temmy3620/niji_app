@@ -32,3 +32,13 @@ export async function loadStatsJsonByPrefix(datePrefix: string): Promise<Record<
     return {};
   }
 }
+
+// 新規追加: 指定したdatePrefixとchannelIdでChannelStatsを取得
+export async function loadStatsByPrefixAndChannelId(
+  datePrefix: string,
+  channelId: string,
+): Promise<{ subscribers: number; views: number } | null> {
+  const statsMap = await loadStatsJsonByPrefix(datePrefix);
+  const stats = statsMap[channelId] || null;
+  return stats;
+}

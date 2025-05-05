@@ -5,8 +5,10 @@ import { notFound } from 'next/navigation';
 import { getGroupNameByKey } from '@/utils/groupsConfigUtil';
 import { fetchChannelStats } from '@/app/channelStats/actions';
 import type { ChannelData } from '@/types/ChannelData';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { ChannelGrowthCharts } from '@/components/ChannelGrowthCharts';
+import { getAvailableDates } from '@/lib/fileStatsUtils';
+import { loadStatsByPrefixAndChannelId } from '@/lib/monthlyStatsLoader';
+import { getCurrentMonth } from '@/lib/monthUtils';
 
 interface Props {
   params: {
@@ -34,7 +36,7 @@ export default async function ChannelDetailPage({ params, searchParams }: Props)
   );
 
   // --- 追加: 月ごとの差分取得 ---
-  const months = ['2024-11', '2024-12', '2025-01', '2025-02', '2025-03', '2025-04'];
+  const months = getAvailableDates().all;
   const monthlyDiffs = (
     await Promise.all(
       months.map(async (month) => {
@@ -44,13 +46,16 @@ export default async function ChannelDetailPage({ params, searchParams }: Props)
     )
   ).reverse();
 
+  const currentMonth = getCurrentMonth();
+  const currentStats = await loadStatsByPrefixAndChannelId(currentMonth, channelId);
+
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 text-white">
       <Link
         href={`/current/${groupKey}`}
         className="inline-block mb-4 text-cyan-400 hover:text-cyan-200 transition font-mono text-sm"
       >
-        ◀ 「ホーム」に戻る
+        ◀ 「現登録・総再生数」に戻る
       </Link>
       <div className="mb-6 flex flex-col items-center text-center gap-4">
         {channelInfo && (
@@ -71,24 +76,51 @@ export default async function ChannelDetailPage({ params, searchParams }: Props)
           <div>
             <p className="text-sm text-gray-400">現在の登録者数</p>
             <p className="text-2xl font-extrabold text-cyan-300">
-              {typeof channelInfo.subscribers === 'string'
-                ? channelInfo.subscribers
-                : (channelInfo.subscribers as number).toLocaleString()} 人
+              {Number(channelInfo.subscribers).toLocaleString()} 人
             </p>
           </div>
           <div>
             <p className="text-sm text-gray-400">総再生数</p>
             <p className="text-2xl font-extrabold text-cyan-300">
-              {typeof channelInfo.views === 'string'
-                ? channelInfo.views
-                : (channelInfo.views as number).toLocaleString()} 回
+              {Number(channelInfo.views).toLocaleString()} 回
             </p>
           </div>
           <div>
             <p className="text-sm text-gray-400">動画数</p>
             <p className="text-2xl font-extrabold text-cyan-300">
-              {channelInfo.videoCount} 本
+              {channelInfo.videoCount.toLocaleString()} 本
             </p>
+          </div>
+        </div>
+      )}
+
+      {/* 今月の増加数パネル */}
+      {channelInfo && currentStats && (
+        <div className="mb-4 rounded-lg bg-gray-900 p-4 shadow-md text-white">
+          <h2 className="text-lg font-bold mb-2">今月の増加数</h2>
+          <div className="flex gap-6 text-sm sm:text-base">
+            <div className="flex flex-col items-center">
+              {(() => {
+                const diff = Number(channelInfo.subscribers) - Number(currentStats.subscribers);
+                return (
+                  <div className={`text-xl font-semibold ${diff >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                    {diff >= 0 ? '+' : '-'}{Math.abs(diff).toLocaleString()}
+                  </div>
+                );
+              })()}
+              <div className="text-gray-400">登録者数</div>
+            </div>
+            <div className="flex flex-col items-center">
+              {(() => {
+                const diff = Number(channelInfo.views) - Number(currentStats.views);
+                return (
+                  <div className={`text-xl font-semibold ${diff >= 0 ? 'text-blue-400' : 'text-red-400'}`}>
+                    {diff >= 0 ? '+' : '-'}{Math.abs(diff).toLocaleString()}
+                  </div>
+                );
+              })()}
+              <div className="text-gray-400">再生数</div>
+            </div>
           </div>
         </div>
       )}
