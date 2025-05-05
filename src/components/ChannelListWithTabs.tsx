@@ -81,6 +81,7 @@ export default function ChannelListWithTabs({
                       channel={channel}
                       currentTab={sortKey}
                       rank={index}
+                      groupKey={group.key}
                     />
                   ))}
                 </div>
