@@ -1,10 +1,12 @@
 // niji_app/src/app/card/[channelName]/page.tsx
+import Link from 'next/link';
 import { getChannelDiffByMonth } from '@/lib/diffData';
 import { notFound } from 'next/navigation';
-import { Suspense } from 'react';
 import { getGroupNameByKey } from '@/utils/groupsConfigUtil';
 import { fetchChannelStats } from '@/app/channelStats/actions';
 import type { ChannelData } from '@/types/ChannelData';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { ChannelGrowthCharts } from '@/components/ChannelGrowthCharts';
 
 interface Props {
   params: {
@@ -44,6 +46,12 @@ export default async function ChannelDetailPage({ params, searchParams }: Props)
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 text-white">
+      <Link
+        href={`/current/${groupKey}`}
+        className="inline-block mb-4 text-cyan-400 hover:text-cyan-200 transition font-mono text-sm"
+      >
+        ◀ 「ホーム」に戻る
+      </Link>
       <div className="mb-6 flex flex-col items-center text-center gap-4">
         {channelInfo && (
           <>
@@ -139,6 +147,13 @@ export default async function ChannelDetailPage({ params, searchParams }: Props)
           </tbody>
         </table>
       </div>
+
+      <h2 className="text-xl font-bold mt-6 mb-2 text-cyan-300">登録者増加数推移（月別）</h2>
+      <ChannelGrowthCharts monthlyDiffs={monthlyDiffs} type="subscribers" />
+
+      <h2 className="text-xl font-bold mt-6 mb-2 text-yellow-300">再生数増加数推移（月別）</h2>
+      <ChannelGrowthCharts monthlyDiffs={monthlyDiffs} type="views" />
+
     </div>
   );
 }
