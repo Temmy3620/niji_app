@@ -42,7 +42,10 @@ export default function TotalStatsPanel({ groupKey, allGroupData }: Props) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.1 }}
           >
-            <div className="text-[#38fdfd] text-3xl xs:text-4xl sm:text-5xl font-extrabold tracking-tight drop-shadow-[0_0_2px_#22d3ee]">{totalTalents.toLocaleString()}</div>
+            <div className="flex justify-center items-end gap-1">
+              <span className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-widest text-[#38fdfd] font-mono whitespace-nowrap">{totalTalents.toLocaleString()}</span>
+
+            </div>
             <div className="text-xs sm:text-sm text-slate-300 uppercase tracking-wide">チャンネル数</div>
           </motion.div>
           <motion.div
@@ -51,7 +54,10 @@ export default function TotalStatsPanel({ groupKey, allGroupData }: Props) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.2 }}
           >
-            <div className="text-[#38fdfd] text-3xl xs:text-4xl sm:text-5xl font-extrabold tracking-tight drop-shadow-[0_0_2px_#22d3ee]">{totalSubscribers.toLocaleString()}</div>
+            <div className="flex justify-center items-end gap-1">
+              <span className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-widest text-[#38fdfd] font-mono whitespace-nowrap">{totalSubscribers.toLocaleString()}</span>
+
+            </div>
             <div className="text-xs sm:text-sm text-slate-300 uppercase tracking-wide">登録者数合計</div>
           </motion.div>
           <motion.div
@@ -60,7 +66,10 @@ export default function TotalStatsPanel({ groupKey, allGroupData }: Props) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.3 }}
           >
-            <div className="text-[#38fdfd] text-3xl xs:text-4xl sm:text-5xl font-extrabold tracking-tight drop-shadow-[0_0_2px_#22d3ee]">{totalViews.toLocaleString()}</div>
+            <div className="flex justify-center items-end gap-1">
+              <span className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-widest text-[#38fdfd] font-mono whitespace-nowrap">{totalViews.toLocaleString()}</span>
+
+            </div>
             <div className="text-xs sm:text-sm text-slate-300 uppercase tracking-wide">総再生数合計</div>
           </motion.div>
         </CardContent>

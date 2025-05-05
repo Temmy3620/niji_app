@@ -1,5 +1,6 @@
 // niji_app/src/app/card/[channelName]/page.tsx
 import Link from 'next/link';
+import { AnimatedCardWrapper } from '@/components/AnimatedCardWrapper';
 import { getChannelDiffByMonth } from '@/lib/diffData';
 import { notFound } from 'next/navigation';
 import { getGroupNameByKey } from '@/utils/groupsConfigUtil';
@@ -50,142 +51,153 @@ export default async function ChannelDetailPage({ params, searchParams }: Props)
   const currentStats = await loadStatsByPrefixAndChannelId(currentMonth, channelId);
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8 text-white">
-      <Link
-        href={`/current/${groupKey}`}
-        className="inline-block mb-4 text-cyan-400 hover:text-cyan-200 transition font-mono text-sm"
-      >
-        ◀ 「現登録・総再生数」に戻る
-      </Link>
-      <div className="mb-6 flex flex-col items-center text-center gap-4">
-        {channelInfo && (
-          <>
-            <img
-              src={channelInfo.thumbnail}
-              alt={`${channelInfo.title}のサムネイル`}
-              className="w-28 h-28 rounded-full border-4 border-cyan-500 shadow-md"
-            />
-            <h1 className="text-2xl font-bold tracking-wide text-cyan-300">{decodeURIComponent(channelName)}</h1>
-            <p className="text-sm text-gray-400">{getGroupNameByKey(groupKey)}</p>
-          </>
-        )}
+    <>
+      <div className="flex justify-start mx-4 sm:mx-8 lg:mx-10 my-4">
+        <Link
+          href={`/current/${groupKey}`}
+          className="text-[#38fdfd] hover:text-cyan-200 transition font-mono text-xs sm:text-sm border border-[#38fdfd33] px-3 py-1 rounded-full bg-[#0f172a]/50 shadow-sm"
+        >
+          ◁「現登録・総再生数」に戻る
+        </Link>
       </div>
-
-      {channelInfo && (
-        <div className="grid grid-cols-3 gap-4 text-center bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 shadow-lg mb-8">
-          <div>
-            <p className="text-sm text-gray-400">現在の登録者数</p>
-            <p className="text-2xl font-extrabold text-cyan-300">
-              {Number(channelInfo.subscribers).toLocaleString()} 人
-            </p>
-          </div>
-          <div>
-            <p className="text-sm text-gray-400">総再生数</p>
-            <p className="text-2xl font-extrabold text-cyan-300">
-              {Number(channelInfo.views).toLocaleString()} 回
-            </p>
-          </div>
-          <div>
-            <p className="text-sm text-gray-400">動画数</p>
-            <p className="text-2xl font-extrabold text-cyan-300">
-              {channelInfo.videoCount.toLocaleString()} 本
-            </p>
-          </div>
+      <AnimatedCardWrapper>
+        <div className="mb-6 flex flex-col items-center text-center gap-4">
+          {channelInfo && (
+            <>
+              <img
+                src={channelInfo.thumbnail}
+                alt={`${channelInfo.title}のサムネイル`}
+                className="w-28 h-28 rounded-full border-4 border-cyan-500 shadow-md"
+              />
+              <h1 className="text-2xl sm:text-3xl font-extrabold tracking-widest text-[#38fdfd]">{decodeURIComponent(channelName)}</h1>
+              <p className="text-xs sm:text-sm text-gray-400">{getGroupNameByKey(groupKey)}</p>
+            </>
+          )}
         </div>
-      )}
 
-      {/* 今月の増加数パネル */}
-      {channelInfo && currentStats && (
-        <div className="mb-4 rounded-lg bg-gray-900 p-4 shadow-md text-white">
-          <h2 className="text-lg font-bold mb-2">今月の増加数</h2>
-          <div className="flex gap-6 text-sm sm:text-base">
-            <div className="flex flex-col items-center">
+        <h2 className="text-lg sm:text-xl font-bold text-[#38fdfd] mb-2 mt-6">チャンネル概要</h2>
+        {channelInfo && (
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-6 sm:gap-4 text-center bg-[#0d1b2a] border border-cyan-800/50 rounded-xl p-6 shadow-inner shadow-cyan-800/10 mb-8">
+            <div>
+              <p className="text-xs sm:text-sm text-gray-400">現在の登録者数</p>
+              <p className="text-2xl sm:text-3xl font-extrabold tracking-widest text-[#38fdfd] font-mono flex justify-center items-baseline gap-1">
+                <span>{Number(channelInfo.subscribers).toLocaleString()}</span>
+                <span className="text-sm sm:text-base">人</span>
+              </p>
+            </div>
+            <div>
+              <p className="text-xs sm:text-sm text-gray-400">総再生数</p>
+              <p className="text-2xl sm:text-3xl font-extrabold tracking-widest text-[#38fdfd] font-mono flex justify-center items-baseline gap-1">
+                <span>{Number(channelInfo.views).toLocaleString()}</span>
+                <span className="text-sm sm:text-base">回</span>
+              </p>
+            </div>
+            <div>
+              <p className="text-xs sm:text-sm text-gray-400">動画数</p>
+              <p className="text-2xl sm:text-3xl font-extrabold tracking-widest text-[#38fdfd] font-mono flex justify-center items-baseline gap-1">
+                <span>{channelInfo.videoCount.toLocaleString()}</span>
+                <span className="text-sm sm:text-base">本</span>
+              </p>
+            </div>
+          </div>
+        )}
+
+        {/* 今月の増加数パネル */}
+        <h2 className="text-lg sm:text-xl font-bold text-[#38fdfd] mb-2 mt-6">今月の登録・再生増加数</h2>
+        {channelInfo && currentStats && (
+          <div className="mb-4 rounded-lg bg-[#0a1323] p-4 shadow-md text-white grid grid-cols-2 sm:grid-cols-2 gap-4 text-center border border-cyan-700/40">
+            <div>
+              <p className="text-xs sm:text-sm text-gray-400">登録者数</p>
               {(() => {
                 const diff = Number(channelInfo.subscribers) - Number(currentStats.subscribers);
                 return (
-                  <div className={`text-xl font-semibold ${diff >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                  <p className={`text-xl sm:text-2xl font-semibold ${diff >= 0 ? 'text-green-400' : 'text-red-400'}`}>
                     {diff >= 0 ? '+' : '-'}{Math.abs(diff).toLocaleString()}
-                  </div>
+                  </p>
                 );
               })()}
-              <div className="text-gray-400">登録者数</div>
             </div>
-            <div className="flex flex-col items-center">
+            <div>
+              <p className="text-xs sm:text-sm text-gray-400">再生数</p>
               {(() => {
                 const diff = Number(channelInfo.views) - Number(currentStats.views);
                 return (
-                  <div className={`text-xl font-semibold ${diff >= 0 ? 'text-blue-400' : 'text-red-400'}`}>
+                  <p className={`text-xl sm:text-2xl font-semibold ${diff >= 0 ? 'text-green-400' : 'text-red-400'}`}>
                     {diff >= 0 ? '+' : '-'}{Math.abs(diff).toLocaleString()}
-                  </div>
+                  </p>
                 );
               })()}
-              <div className="text-gray-400">再生数</div>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-      <div className="overflow-x-auto">
-        <table className="min-w-full text-left text-sm text-white border border-gray-700 rounded-lg overflow-hidden">
-          <thead className="bg-gray-800 text-cyan-300">
-            <tr>
-              <th className="px-4 py-2 border-b">月</th>
-              <th className="px-4 py-2 border-b">登録者増加数</th>
-              <th className="px-4 py-2 border-b">再生数増加数</th>
-            </tr>
-          </thead>
-          <tbody>
-            {monthlyDiffs.map((diff) => (
-              <tr key={diff.month} className="hover:bg-gray-700 transition">
-                <td className="px-4 py-2 border-b">{diff.month}</td>
-                <td className="px-4 py-2 border-b">
-                  {diff.subscriberDiff !== undefined ? (
-                    <span
-                      className={
-                        diff.subscriberDiff > 0
-                          ? 'text-green-400'
-                          : diff.subscriberDiff < 0
-                            ? 'text-red-400'
-                            : 'text-gray-400'
-                      }
-                    >
-                      {diff.subscriberDiff > 0 ? '+' : ''}
-                      {diff.subscriberDiff.toLocaleString()} 人
-                    </span>
-                  ) : (
-                    '-'
-                  )}
-                </td>
-                <td className="px-4 py-2 border-b">
-                  {diff.viewDiff !== undefined ? (
-                    <span
-                      className={
-                        diff.viewDiff > 0
-                          ? 'text-green-400'
-                          : diff.viewDiff < 0
-                            ? 'text-red-400'
-                            : 'text-gray-400'
-                      }
-                    >
-                      {diff.viewDiff > 0 ? '+' : ''}
-                      {diff.viewDiff.toLocaleString()} 回
-                    </span>
-                  ) : (
-                    '-'
-                  )}
-                </td>
+        <hr className="border-cyan-800 my-6" />
+
+        <h2 className="text-lg sm:text-xl font-bold text-[#38fdfd] mb-2 mt-6">月別の登録者・再生増加数</h2>
+        <div className="w-full overflow-x-auto text-[10px] sm:text-sm">
+          <table className="min-w-full text-left text-xs sm:text-sm text-white border border-gray-700 rounded-lg overflow-hidden">
+            <thead className="bg-gray-800 text-[#38fdfd] font-mono">
+              <tr>
+                <th className="px-4 py-2 border-b">月</th>
+                <th className="px-4 py-2 border-b">登録者増加数</th>
+                <th className="px-4 py-2 border-b">再生数増加数</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+            </thead>
+            <tbody>
+              {monthlyDiffs.map((diff) => (
+                <tr key={diff.month} className="hover:bg-gray-700 transition">
+                  <td className="px-4 py-2 border-b">{diff.month}</td>
+                  <td className="px-4 py-2 border-b">
+                    {diff.subscriberDiff !== undefined ? (
+                      <span
+                        className={
+                          diff.subscriberDiff > 0
+                            ? 'text-green-400'
+                            : diff.subscriberDiff < 0
+                              ? 'text-red-400'
+                              : 'text-gray-400'
+                        }
+                      >
+                        {diff.subscriberDiff > 0 ? '+' : ''}
+                        {diff.subscriberDiff.toLocaleString()} 人
+                      </span>
+                    ) : (
+                      '-'
+                    )}
+                  </td>
+                  <td className="px-4 py-2 border-b">
+                    {diff.viewDiff !== undefined ? (
+                      <span
+                        className={
+                          diff.viewDiff > 0
+                            ? 'text-green-400'
+                            : diff.viewDiff < 0
+                              ? 'text-red-400'
+                              : 'text-gray-400'
+                        }
+                      >
+                        {diff.viewDiff > 0 ? '+' : ''}
+                        {diff.viewDiff.toLocaleString()} 回
+                      </span>
+                    ) : (
+                      '-'
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
-      <h2 className="text-xl font-bold mt-6 mb-2 text-cyan-300">登録者増加数推移（月別）</h2>
-      <ChannelGrowthCharts monthlyDiffs={monthlyDiffs} type="subscribers" />
+        <hr className="border-cyan-800 my-6" />
 
-      <h2 className="text-xl font-bold mt-6 mb-2 text-yellow-300">再生数増加数推移（月別）</h2>
-      <ChannelGrowthCharts monthlyDiffs={monthlyDiffs} type="views" />
+        <h2 className="text-xl sm:text-2xl font-bold mt-6 mb-2 text-[#38fdfd]">登録者増加数推移（月別）</h2>
+        <ChannelGrowthCharts monthlyDiffs={monthlyDiffs} type="subscribers" />
 
-    </div>
+        <h2 className="text-xl sm:text-2xl font-bold mt-6 mb-2 text-[#4ade80]">再生数増加数推移（月別）</h2>
+        <ChannelGrowthCharts monthlyDiffs={monthlyDiffs} type="views" />
+
+      </AnimatedCardWrapper>
+    </>
   );
 }

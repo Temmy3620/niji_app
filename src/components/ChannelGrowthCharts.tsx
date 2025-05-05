@@ -31,10 +31,10 @@ export function ChannelGrowthCharts({
   }));
 
   const gradientId = isSubscribers ? 'neonGradientSubscribers' : 'neonGradientViews';
-  const strokeColor = isSubscribers ? '#5eead4' : '#fde68a';
-  const tickColor = isSubscribers ? '#5eead4' : '#fde68a';
-  const tooltipColor = isSubscribers ? '#38fdfd' : '#fde68a';
-  const tooltipBorder = isSubscribers ? '#38fdfd' : '#fde68a';
+  const strokeColor = isSubscribers ? '#5eead4' : '#4ade80';
+  const tickColor = isSubscribers ? '#5eead4' : '#4ade80';
+  const tooltipColor = isSubscribers ? '#38fdfd' : '#4ade80';
+  const tooltipBorder = isSubscribers ? '#38fdfd' : '#4ade80';
   const tooltipLabel = isSubscribers ? '登録者増加数' : '再生数増加数';
   const unit = isSubscribers ? '人' : '回';
 
@@ -76,7 +76,8 @@ export function ChannelGrowthCharts({
             type="monotone"
             dataKey="value"
             stroke={`url(#${gradientId})`}
-            strokeWidth={4}
+            strokeWidth={3}
+            dot={{ r: 4, stroke: '#38fdfd', strokeWidth: 2, fill: '#0f172a' }}
             activeDot={{ r: 6 }}
           />
         </LineChart>
