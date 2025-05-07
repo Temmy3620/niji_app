@@ -74,7 +74,7 @@ export default async function ChannelDetailPage({
 
         <h2 className="text-lg sm:text-xl font-bold text-[#38fdfd] mb-2 mt-6">チャンネル概要</h2>
         {channelInfo && (
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-6 sm:gap-4 text-center bg-[#0d1b2a] border border-cyan-800/50 rounded-xl p-6 shadow-inner shadow-cyan-800/10 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-[1fr_1fr_0.7fr] gap-y-6 sm:gap-4 text-center bg-[#0d1b2a] border border-cyan-800/50 rounded-xl p-6 shadow-inner shadow-cyan-800/10 mb-8">
             <div>
               <p className="text-xs sm:text-sm text-gray-400">現在の登録者数</p>
               <p className="text-2xl lg:text-3xl font-extrabold tracking-widest text-[#38fdfd] font-mono flex justify-center items-baseline gap-1">
