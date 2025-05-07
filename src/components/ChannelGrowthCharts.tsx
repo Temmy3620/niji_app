@@ -31,7 +31,6 @@ export function ChannelGrowthCharts({
   }));
 
   const gradientId = isSubscribers ? 'neonGradientSubscribers' : 'neonGradientViews';
-  const strokeColor = isSubscribers ? '#5eead4' : '#4ade80';
   const tickColor = isSubscribers ? '#5eead4' : '#4ade80';
   const tooltipColor = isSubscribers ? '#38fdfd' : '#4ade80';
   const tooltipBorder = isSubscribers ? '#38fdfd' : '#4ade80';

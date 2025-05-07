@@ -55,7 +55,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body
-        className='bg-gray-900 lg:mx-50'
+        className='bg-gray-900 lg:mx-30 xl:mx-50'
       >
         <div className="bg-black text-white">
           <Header />

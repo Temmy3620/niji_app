@@ -11,20 +11,17 @@ import { getAvailableDates } from '@/lib/fileStatsUtils';
 import { loadStatsByPrefixAndChannelId } from '@/lib/monthlyStatsLoader';
 import { getCurrentMonth } from '@/lib/monthUtils';
 
-interface Props {
-  params: {
-    channelName: string;
-  };
-  searchParams: {
-    id?: string;
-    group?: string;
-  };
-}
 
-export default async function ChannelDetailPage({ params, searchParams }: Props) {
-  const { channelName } = params;
-  const channelId = searchParams.id;
-  const groupKey = searchParams.group;
+export default async function ChannelDetailPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ channelName: string }>;
+  searchParams?: Promise<{ id?: string; group?: string }>;
+}) {
+  // const { params, searchParams } = props;
+  const { channelName } = await params;
+  const { id: channelId, group: groupKey } = (await searchParams) ?? {};
 
   if (!channelId || !groupKey) {
     notFound();
@@ -80,21 +77,21 @@ export default async function ChannelDetailPage({ params, searchParams }: Props)
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-6 sm:gap-4 text-center bg-[#0d1b2a] border border-cyan-800/50 rounded-xl p-6 shadow-inner shadow-cyan-800/10 mb-8">
             <div>
               <p className="text-xs sm:text-sm text-gray-400">現在の登録者数</p>
-              <p className="text-2xl sm:text-3xl font-extrabold tracking-widest text-[#38fdfd] font-mono flex justify-center items-baseline gap-1">
+              <p className="text-2xl lg:text-3xl font-extrabold tracking-widest text-[#38fdfd] font-mono flex justify-center items-baseline gap-1">
                 <span>{Number(channelInfo.subscribers).toLocaleString()}</span>
                 <span className="text-sm sm:text-base">人</span>
               </p>
             </div>
             <div>
               <p className="text-xs sm:text-sm text-gray-400">総再生数</p>
-              <p className="text-2xl sm:text-3xl font-extrabold tracking-widest text-[#38fdfd] font-mono flex justify-center items-baseline gap-1">
+              <p className="text-2xl lg:text-3xl font-extrabold tracking-widest text-[#38fdfd] font-mono flex justify-center items-baseline gap-1">
                 <span>{Number(channelInfo.views).toLocaleString()}</span>
                 <span className="text-sm sm:text-base">回</span>
               </p>
             </div>
             <div>
               <p className="text-xs sm:text-sm text-gray-400">動画数</p>
-              <p className="text-2xl sm:text-3xl font-extrabold tracking-widest text-[#38fdfd] font-mono flex justify-center items-baseline gap-1">
+              <p className="text-2xl lg:text-3xl font-extrabold tracking-widest text-[#38fdfd] font-mono flex justify-center items-baseline gap-1">
                 <span>{channelInfo.videoCount.toLocaleString()}</span>
                 <span className="text-sm sm:text-base">本</span>
               </p>

@@ -1,3 +1,8 @@
+interface ChannelDiffRaw {
+  id: string;
+  subscriberDiff?: number;
+  viewDiff?: number;
+}
 import path from 'path';
 import fs from 'fs/promises';
 
@@ -14,7 +19,7 @@ export async function getChannelDiffByMonth(channelId: string, month: string, gr
     console.log(`Reading file: ${fileContent}`);
     const jsonData = JSON.parse(fileContent);
     const nijisanjiData = jsonData[groupKey];
-    const found = nijisanjiData.find((item: any) => item.id === channelId);
+    const found = (nijisanjiData as ChannelDiffRaw[]).find((item) => item.id === channelId);
     if (!found) return null;
     return {
       channelId,
