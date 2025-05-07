@@ -69,7 +69,7 @@ export default function ChannelListWithTabs({
                   >
                     🔗
                   </a>
-                  ランキング（チャンネルごと）
+                  Ranking....
                 </h2>
                 {headerRight}
               </div>
