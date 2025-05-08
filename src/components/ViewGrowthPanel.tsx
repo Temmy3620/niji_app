@@ -92,7 +92,7 @@ export default function ViewGrowthPanel({ groupKey, monthlyStats, selectedDate }
       <Card className="relative p-4 border border-slate-600 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded transition-transform hover:scale-[1.01] overflow-hidden">
         <CardHeader>
           <CardTitle className="text-white text-lg sm:text-xl font-bold tracking-wider font-mono">
-            {groupName}（全チャンネル合計）：月別再生数の推移
+            {groupName}（全チャンネル合計）：月別再生増加数の推移
           </CardTitle>
         </CardHeader>
         <CardContent className="h-[220px] sm:h-[180px] w-full text-white">
@@ -148,13 +148,15 @@ export default function ViewGrowthPanel({ groupKey, monthlyStats, selectedDate }
                     : '';
 
                   // valueがnumberであることを確認
-                  const formattedValue = typeof value === 'number' ? value.toLocaleString() : value;
+                  const formattedValue = typeof value === 'number'
+                    ? `${value >= 0 ? '+' : ''}${value.toLocaleString()}`
+                    : value;
 
                   return [
                     <div key="tooltip-content" style={{ fontFamily: 'monospace', lineHeight: 1.6 }}>
                       <div style={{ fontSize: '15px', fontWeight: 600 }}>
                         {/* Tooltipでは 'totalViews' が value として渡される想定 */}
-                        再生数：{formattedValue}
+                        再生増加数：{formattedValue}
                       </div>
                       {formattedRatio && formattedDiff && (
                         <div style={{ fontSize: '14px', color: '#7dd3fc' }}>
