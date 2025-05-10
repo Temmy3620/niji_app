@@ -1,7 +1,6 @@
 export async function GET() {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://vtubertracker.info/</loc></url>
   <url><loc>https://vtubertracker.info/current/nijisanji</loc></url>
   <url><loc>https://vtubertracker.info/current/hololive</loc></url>
   <url><loc>https://vtubertracker.info/current/vspo</loc></url>
