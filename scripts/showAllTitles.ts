@@ -21,8 +21,9 @@ async function showAllChannelTitles() {
         const outputPath = path.join(outputDir, 'titles.txt');
 
         await fs.mkdir(outputDir, { recursive: true });
-        const url = `https://vtubertracker.info/card/${urlPath}?id=${channel.id}&group=${groupKey}`;
-        await fs.appendFile(outputPath, `<url><loc>${url}</loc></url>\n`, 'utf8');
+        const rawUrl = `https://vtubertracker.info/card/${urlPath}?id=${channel.id}&group=${groupKey}`;
+        const escapedUrl = rawUrl.replace(/&/g, '&amp;');
+        await fs.appendFile(outputPath, `<url><loc>${escapedUrl}</loc></url>\n`, 'utf8');
       }
     } catch (err) {
       console.error(`エラー: ${groupKey}`, err);
