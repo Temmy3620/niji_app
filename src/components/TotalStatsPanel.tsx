@@ -1,4 +1,5 @@
 import { ChannelData } from '@/types/ChannelData';
+import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from 'framer-motion';
 import {
@@ -29,6 +30,21 @@ export default function TotalStatsPanel({ groupKey, allGroupData }: Props) {
   }, 0);
 
   const averageViewsPerChannel = totalChannels > 0 ? Math.floor(totalViews / totalChannels) : 0;
+
+  const sortedChannels = channels
+    .map((channel) => ({
+      name: channel.title,
+      value: typeof channel.views === 'number' ? channel.views : Number(channel.views),
+    }))
+    .sort((a, b) => b.value - a.value);
+
+  const top10 = sortedChannels.slice(0, 10);
+  const othersTotal = sortedChannels.slice(10).reduce((sum, c) => sum + c.value, 0);
+
+  const pieData = othersTotal > 0
+    ? [...top10, { name: 'その他', value: othersTotal }]
+    : top10;
+  const COLORS = ['#38fdfd', '#00bcd4', '#4dd0e1', '#80deea', '#b2ebf2', '#e0f7fa'];
 
   const [open, setOpen] = useState(false);
 
@@ -101,11 +117,32 @@ export default function TotalStatsPanel({ groupKey, allGroupData }: Props) {
           <DialogHeader>
             <DialogTitle className="text-lg sm:text-xl font-bold">モーダル表示</DialogTitle>
           </DialogHeader>
-          <div className="mb-4 px-4 py-3 rounded-md bg-slate-800 border border-slate-600">
-            <div className="text-sm text-slate-300 mb-1">1チャンネルあたりの平均再生数</div>
-            <div className="text-2xl text-cyan-400 font-extrabold font-mono tracking-wider">
-              {averageViewsPerChannel.toLocaleString()} 回
-            </div>
+          <div className="mb-4 text-base text-cyan-400 font-semibold font-mono">
+            平均再生数: {averageViewsPerChannel.toLocaleString()} 回 / 1チャンネル
+          </div>
+          <div className="h-64">
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie
+                  data={pieData}
+                  dataKey="value"
+                  nameKey="name"
+                  cx="50%"
+                  cy="50%"
+                  outerRadius={80}
+                >
+                  {pieData.map((_, index) => (
+                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                  ))}
+                </Pie>
+                <Tooltip
+                  formatter={(value: number, name: string, props) => {
+                    const percent = totalViews > 0 ? ((value / totalViews) * 100).toFixed(2) : "0.00";
+                    return [`${value.toLocaleString()} 回 (${percent}%)`, name];
+                  }}
+                />
+              </PieChart>
+            </ResponsiveContainer>
           </div>
         </motion.div>
       </DialogContent>
