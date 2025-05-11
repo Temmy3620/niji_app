@@ -401,16 +401,6 @@
       "viewDiff": 2271132
     },
     {
-      "id": "UC_T8F2CvqZOwa2kme0WwRhg",
-      "subscriberDiff": 0,
-      "viewDiff": 0
-    },
-    {
-      "id": "UCtHFXfrn52juTqGBN4WbMVw",
-      "subscriberDiff": 0,
-      "viewDiff": 0
-    },
-    {
       "id": "UC-o-E6I3IC2q8sAoAuM6Umg",
       "subscriberDiff": 0,
       "viewDiff": 728678
@@ -801,19 +791,9 @@
       "viewDiff": 2817876
     },
     {
-      "id": "UCCugV2RWXqJMjVVQl_Yh4TQ",
-      "subscriberDiff": 0,
-      "viewDiff": 0
-    },
-    {
       "id": "UCFtyinR2ZdvKK_Xgy07qXUg",
       "subscriberDiff": 4000,
       "viewDiff": 1227562
-    },
-    {
-      "id": "UClMYGvekJOb51eBOCK-d4Dw",
-      "subscriberDiff": 0,
-      "viewDiff": 0
     },
     {
       "id": "UCiSRx1a2k-0tOg-fs6gAolQ",
@@ -886,11 +866,6 @@
       "viewDiff": 60245
     },
     {
-      "id": "UCr40BzcLiGruKe7M5gXR9zQ",
-      "subscriberDiff": 0,
-      "viewDiff": 0
-    },
-    {
       "id": "UCkQ8i_cz0prqdo9jj__L93Q",
       "subscriberDiff": 8000,
       "viewDiff": 853838
@@ -899,11 +874,6 @@
       "id": "UC5ek2GWKvUKFgnKSHuuCFrw",
       "subscriberDiff": -100,
       "viewDiff": 19405
-    },
-    {
-      "id": "UChqQiUSyI-Q1j3k57_mAJHA",
-      "subscriberDiff": 0,
-      "viewDiff": 0
     },
     {
       "id": "UCpRXCTyNNa-MnjhK6gisnRw",
@@ -959,16 +929,6 @@
       "id": "UCufQu4q65z63IgE4cfKs1BQ",
       "subscriberDiff": 200,
       "viewDiff": 6432
-    },
-    {
-      "id": "UCEFOogmvTTcCaO8Qe0I8-tg",
-      "subscriberDiff": 0,
-      "viewDiff": 0
-    },
-    {
-      "id": "UCh98mDig5OrbsF-JUXbD5LA",
-      "subscriberDiff": 0,
-      "viewDiff": 0
     },
     {
       "id": "UCMzVa7B8UEdrvUGsPmSgyjA",
@@ -1871,11 +1831,6 @@
       "id": "UCJtDr_tuvwv-lfN4Gejd5hQ",
       "subscriberDiff": 2900,
       "viewDiff": 287787
-    },
-    {
-      "id": "UCLyTXfCZtl7dyhta9Jg3pZg",
-      "subscriberDiff": 0,
-      "viewDiff": 0
     }
   ],
   "dotlive": [
@@ -1906,7 +1861,7 @@
     },
     {
       "id": "UCXUtikLthPFa5DDmgT3naGA",
-      "subscriberDiff": 0,
+      "subscriberDiff": null,
       "viewDiff": 0
     },
     {

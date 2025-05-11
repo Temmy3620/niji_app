@@ -13,6 +13,13 @@ export default function ChannelCard({ channel, currentTab, rank, groupKey }: { c
   const isMonthlySubscribers = currentTab === 'subscribers';
   const isMonthlyViews = currentTab === 'views';
 
+  if (
+    (currentTab === 'subscribers' && typeof channel.subscriberDiff !== 'number') ||
+    (currentTab === 'views' && typeof channel.viewDiff !== 'number')
+  ) {
+    return null;
+  }
+
   return (
     <motion.div
       layout

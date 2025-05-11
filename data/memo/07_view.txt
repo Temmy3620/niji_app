@@ -1,0 +1,1487 @@
+[0 … 99]
+0
+:
+{channelId: 'UCCzUftO8KOVkV4wQG1vkUvg', 月初比: '+64,568,678'}
+1
+:
+{channelId: 'UCJFZiqLMntJufDCHc6bQixg', 月初比: '+43,205,306'}
+2
+:
+{channelId: 'UC5CwaMl1eIgY8h02uZw7u8A', 月初比: '+41,730,470'}
+3
+:
+{channelId: 'UCPLeqi7rIqS9uY4_TrSUOMg', 月初比: '+27,548,637'}
+4
+:
+{channelId: 'UCSFCh5NL4qXrAy9u-u2lX3g', 月初比: '+20,978,160'}
+5
+:
+{channelId: 'UCSCmu_VjL4RR7rBjrvSAwSg', 月初比: '+18,523,974'}
+6
+:
+{channelId: 'UC-hM6YJuNYVAmUWxeIr9FeA', 月初比: '+18,511,355'}
+7
+:
+{channelId: 'UCL_qhgtOy0dy1Agp8vkySQg', 月初比: '+18,392,336'}
+8
+:
+{channelId: 'UCspv01oxUFf_MTSipURRhkA', 月初比: '+18,353,737'}
+9
+:
+{channelId: 'UC1DCedRgGHBdm81E1llLhOQ', 月初比: '+16,857,727'}
+10
+:
+{channelId: 'UCwi4P78SVunSYAGrvC9aKcw', 月初比: '+15,143,664'}
+11
+:
+{channelId: 'UCz6vnIbgiqFT9xUcD6Bp65Q', 月初比: '+14,466,864'}
+12
+:
+{channelId: 'UCvaTdHTWBGv3MKj3KVqJVCw', 月初比: '+13,467,076'}
+13
+:
+{channelId: 'UC6eWCld0KwmyHFbAqK3V-Rw', 月初比: '+12,527,544'}
+14
+:
+{channelId: 'UCvzGlP9oQwU--Y0r9id_jnA', 月初比: '+12,388,863'}
+15
+:
+{channelId: 'UCD-miitqNY3nyukJ4Fnf4_A', 月初比: '+12,379,704'}
+16
+:
+{channelId: 'UCX7YkU9nEeaoZbkVLVajcMg', 月初比: '+10,660,278'}
+17
+:
+{channelId: 'UCs9_O1tRPMQTHQ-N_L6FU2g', 月初比: '+9,754,440'}
+18
+:
+{channelId: 'UC1opHUrw8rvnsadT-iGp7Cg', 月初比: '+9,574,604'}
+19
+:
+{channelId: 'UCdyqAaZDKHXg4Ahi7VENThQ', 月初比: '+9,538,985'}
+20
+:
+{channelId: 'UC6wvdADTJ88OfIbJYIpAaDA', 月初比: '+9,379,307'}
+21
+:
+{channelId: 'UCWnQDjlXTLDyYowc3LaHyJQ', 月初比: '+9,300,794'}
+22
+:
+{channelId: 'UCqm3BQLlJfvkTsX_hvm0UmA', 月初比: '+8,759,375'}
+23
+:
+{channelId: 'UCgmFrRcyH7d1zR9sIVQhFow', 月初比: '+8,567,567'}
+24
+:
+{channelId: 'UCZlDXzGoo7d44bwdNObFacg', 月初比: '+8,215,918'}
+25
+:
+{channelId: 'UCzNXpqpdvlibmNc1JpM1o4g', 月初比: '+8,095,171'}
+26
+:
+{channelId: 'UCYKP16oMX9KKPbrNgo_Kgag', 月初比: '+7,359,528'}
+27
+:
+{channelId: 'UCmovZ2th3Sqpd00F5RdeigQ', 月初比: '+7,324,410'}
+28
+:
+{channelId: 'UCjLEmnpCNeisMxy134KPwWw', 月初比: '+7,203,989'}
+29
+:
+{channelId: 'UCdn5BQ06XqgXoAxIhbqw5Rg', 月初比: '+7,188,151'}
+30
+:
+{channelId: 'UCuep1JCrMvSxOGgGhBfJuYw', 月初比: '+7,081,192'}
+31
+:
+{channelId: 'UCIcAj6WkJ8vZ7DeJVgmeqKw', 月初比: '+7,050,707'}
+32
+:
+{channelId: 'UCgIfLpQvelloDi8I0Ycbwpg', 月初比: '+6,773,422'}
+33
+:
+{channelId: 'UCFTLzh12_nrtzqBPsTCqenA', 月初比: '+6,727,342'}
+34
+:
+{channelId: 'UCNRh9kkByBTYLo0IJupnAug', 月初比: '+6,674,440'}
+35
+:
+{channelId: 'UC1uv2Oq6kNxgATlCiez59hw', 月初比: '+6,558,072'}
+36
+:
+{channelId: 'UC0TXe_LYZ4scaW2XMyi5_kw', 月初比: '+6,484,913'}
+37
+:
+{channelId: 'UCgZ0pH7j6c9z-pkOG3PYw1Q', 月初比: '+6,413,110'}
+38
+:
+{channelId: 'UC_4tXjqecqox5Uc05ncxpxg', 月初比: '+6,344,804'}
+39
+:
+{channelId: 'UC6WFKwYptsxVue56Lx218vg', 月初比: '+6,185,833'}
+40
+:
+{channelId: 'UC10wVt6hoQiwySRhz7RdOUA', 月初比: '+6,169,646'}
+41
+:
+{channelId: 'UC4l9gz3q65lTBFfFtW5LLeA', 月初比: '+6,151,013'}
+42
+:
+{channelId: 'UCo7TRj3cS-f_1D9ZDmuTsjw', 月初比: '+5,905,957'}
+43
+:
+{channelId: 'UCMGfV7TVTmHhEErVJg1oHBQ', 月初比: '+5,884,083'}
+44
+:
+{channelId: 'UCS-XXTgVkotkbkDnGEprXpg', 月初比: '+5,633,391'}
+45
+:
+{channelId: 'UCgmPnx-EEeOrZSg5Tiw7ZRQ', 月初比: '+5,604,909'}
+46
+:
+{channelId: 'UCHRCp0CSacVnTVS2Z4x9xYg', 月初比: '+5,590,295'}
+47
+:
+{channelId: 'UCENwRMx5Yh42zWpzURebzTw', 月初比: '+5,504,323'}
+48
+:
+{channelId: 'UCFKOVgVbGmX65RxO3EtH3iw', 月初比: '+4,986,913'}
+49
+:
+{channelId: 'UCyLGcqYs7RsBb3L0SJfzGYA', 月初比: '+4,954,912'}
+50
+:
+{channelId: 'UCeLzT-7b2PBcunJplmWtoDg', 月初比: '+4,884,899'}
+51
+:
+{channelId: 'UCHsx4Hqa-1ORjQTh9TYDhww', 月初比: '+4,865,869'}
+52
+:
+{channelId: 'UCkngxfPbmGyGl_RIq4FA3MQ', 月初比: '+4,822,989'}
+53
+:
+{channelId: 'UCp-5t9SrOQwXMU7iIjQfARg', 月初比: '+4,703,953'}
+54
+:
+{channelId: 'UC-6rZgmxZSIbq786j3RD5ow', 月初比: '+4,700,895'}
+55
+:
+{channelId: 'UC-JSeFfovhNsEhftt1WHMvg', 月初比: '+4,636,470'}
+56
+:
+{channelId: 'UCsg-YqdqQ-KFF0LNk23BY4A', 月初比: '+4,572,507'}
+57
+:
+{channelId: 'UChAnqc_AY5_I3Px5dig3X1Q', 月初比: '+4,464,661'}
+58
+:
+{channelId: 'UCKMYISTJAQ8xTplUPHiABlA', 月初比: '+4,428,471'}
+59
+:
+{channelId: 'UCl69AEx4MdqMZH7Jtsm7Tig', 月初比: '+4,366,271'}
+60
+:
+{channelId: 'UC9EjSJ8pvxtvPdxLOElv73w', 月初比: '+4,313,307'}
+61
+:
+{channelId: 'UCL34fAoFim9oHLbVzMKFavQ', 月初比: '+4,298,659'}
+62
+:
+{channelId: 'UCXRlIK3Cw_TJIQC5kSJJQMg', 月初比: '+4,200,547'}
+63
+:
+{channelId: 'UCK9V2B22uJYu3N7eR_BT9QA', 月初比: '+4,164,407'}
+64
+:
+{channelId: 'UCUc8GZfFxtmk7ZwSO7ccQ0g', 月初比: '+4,160,399'}
+65
+:
+{channelId: 'UCyXBNgCulibV9pRm3ZKpmoQ', 月初比: '+4,160,390'}
+66
+:
+{channelId: 'UCC7rRD6P7RQcx0hKv9RQP4w', 月初比: '+4,073,032'}
+67
+:
+{channelId: 'UChLfthKoUV502J7gU9STArg', 月初比: '+4,028,563'}
+68
+:
+{channelId: 'UC1iA6_NT4mtAcIII6ygrvCw', 月初比: '+3,894,066'}
+69
+:
+{channelId: 'UCp6993wxpyDPHUpavwDFqgg', 月初比: '+3,879,041'}
+70
+:
+{channelId: 'UC5dJFf4m-mEcoyJRfhBljoA', 月初比: '+3,810,438'}
+71
+:
+{channelId: 'UCv1fFr156jc65EMiLbaLImw', 月初比: '+3,774,663'}
+72
+:
+{channelId: 'UCIytNcoz4pWzXfLda0DoULQ', 月初比: '+3,762,976'}
+73
+:
+{channelId: 'UCjXBuHmWkieBApgBhDuJMMQ', 月初比: '+3,684,461'}
+74
+:
+{channelId: 'UCvUc0m317LWTTPZoBQV479A', 月初比: '+3,670,440'}
+75
+:
+{channelId: 'UCmZ1Rbthn-6Jm_qOGjYsh5A', 月初比: '+3,617,506'}
+76
+:
+{channelId: 'UCgnfPPb9JI3e9A4cXHnWbyg', 月初比: '+3,598,219'}
+77
+:
+{channelId: 'UC_vMYWcDjmfdpH6r4TTn1MQ', 月初比: '+3,566,179'}
+78
+:
+{channelId: 'UCotXwY6s8pWmuWd_snKYjhg', 月初比: '+3,492,883'}
+79
+:
+{channelId: 'UCt9H_RpQzhxzlyBxFqrdHqA', 月初比: '+3,479,624'}
+80
+:
+{channelId: 'UCt7_srJeiw55kTcK7M9ID6g', 月初比: '+3,468,195'}
+81
+:
+{channelId: 'UCAWSyEs_Io8MtpY3m-zqILA', 月初比: '+3,447,878'}
+82
+:
+{channelId: 'UCRm6lqtdxs_Qo6HeL-SRQ-w', 月初比: '+3,340,309'}
+83
+:
+{channelId: 'UCoztvTULBYd3WmStqYeoHcA', 月初比: '+3,331,364'}
+84
+:
+{channelId: 'UCo2N7C-Z91waaR6lF3LL_jw', 月初比: '+3,312,742'}
+85
+:
+{channelId: 'UCIBY1ollUsauvVi4hW4cumw', 月初比: '+3,276,685'}
+86
+:
+{channelId: 'UC8rcEBzJSleTkf_-agPM20g', 月初比: '+3,260,766'}
+87
+:
+{channelId: 'UCWQtYtq9EOB4-I5P-3fh8lA', 月初比: '+3,222,084'}
+88
+:
+{channelId: 'UCoSrY_IQQVpmIRZ9Xf-y93g', 月初比: '+3,180,036'}
+89
+:
+{channelId: 'UCNW1Ex0r6HsWRD4LCtPwvoQ', 月初比: '+3,147,723'}
+90
+:
+{channelId: 'UCt5-0i4AVHXaWJrL8Wql3mw', 月初比: '+3,143,858'}
+91
+:
+{channelId: 'UChKXd7oqD18qiIYBoRIHTlw', 月初比: '+3,143,731'}
+92
+:
+{channelId: 'UC5LyYg6cCA4yHEYvtUsir3g', 月初比: '+3,114,938'}
+93
+:
+{channelId: 'UCz89MGFBrAqwJ5xMr5weSuA', 月初比: '+3,106,721'}
+94
+:
+{channelId: 'UCIjdfjcSaEgdjwbgjxC3ZWg', 月初比: '+3,101,405'}
+95
+:
+{channelId: 'UCZ1xuCK1kNmn5RzPYIZop3w', 月初比: '+3,050,274'}
+96
+:
+{channelId: 'UCvN5h1ShZtc7nly3pezRayg', 月初比: '+3,033,919'}
+97
+:
+{channelId: 'UCdXAk5MpyLD8594lm_OvtGQ', 月初比: '+3,020,288'}
+98
+:
+{channelId: 'UCnvVG9RbOW3J6Ifqo-zKLiw', 月初比: '+3,008,067'}
+99
+:
+{channelId: 'UCTIE7LM5X15NVugV7Krp9Hw', 月初比: '+3,001,373'}
+[100 … 199]
+100
+:
+{channelId: 'UC0g1AE0DOjBYnLhkgoRWN1w', 月初比: '+2,989,718'}
+101
+:
+{channelId: 'UCtyWhCj3AqKh2dXctLkDtng', 月初比: '+2,954,965'}
+102
+:
+{channelId: 'UC3lNFeJiTq6L3UWoz4g1e-A', 月初比: '+2,930,408'}
+103
+:
+{channelId: 'UCdpUojq0KWZCN9bxXnZwz5w', 月初比: '+2,862,406'}
+104
+:
+{channelId: 'UC9V3Y3_uzU5e-usObb6IE1w', 月初比: '+2,817,731'}
+105
+:
+{channelId: 'UChUJbHiTVeGrSkTdBzVfNCQ', 月初比: '+2,759,704'}
+106
+:
+{channelId: 'UCO_aKKYxn4tvrqPjcTzZ6EQ', 月初比: '+2,729,828'}
+107
+:
+{channelId: 'UCcDDxnoQcezyTUzHg5uHaKg', 月初比: '+2,635,501'}
+108
+:
+{channelId: 'UCUKD-uaobj9jiqB-VXt71mA', 月初比: '+2,610,881'}
+109
+:
+{channelId: 'UC7fk0CB07ly8oSl0aqKkqFg', 月初比: '+2,484,526'}
+110
+:
+{channelId: 'UC8NZiqKx6fsDT3AVcMiVFyA', 月初比: '+2,437,326'}
+111
+:
+{channelId: 'UCtLfA_qUqCJtjXJM2ZR_keg', 月初比: '+2,418,382'}
+112
+:
+{channelId: 'UCzUNASdzI4PV5SlqtYwAkKQ', 月初比: '+2,401,041'}
+113
+:
+{channelId: 'UChdY64fJb14Nfnbs8EGdQig', 月初比: '+2,365,947'}
+114
+:
+{channelId: 'UCckdfYDGrjojJM28n5SHYrA', 月初比: '+2,357,566'}
+115
+:
+{channelId: 'UCivwPlOp0ojnMPZj5pNOPPA', 月初比: '+2,351,644'}
+116
+:
+{channelId: 'UCiA-trSZfB0i92V_-dyDqBw', 月初比: '+2,333,099'}
+117
+:
+{channelId: 'UCvInZx9h3jC2JzsIzoOebWg', 月初比: '+2,310,153'}
+118
+:
+{channelId: 'UCqXxS-9x9Ha_UiH6hG4kh5Q', 月初比: '+2,303,139'}
+119
+:
+{channelId: 'UC-WX1CXssCtCtc2TNIRnJzg', 月初比: '+2,246,027'}
+120
+:
+{channelId: 'UCPvGypSgfDkVe7JG2KygK7A', 月初比: '+2,236,699'}
+121
+:
+{channelId: 'UCg63a3lk6PNeWhVvMRM_mrQ', 月初比: '+2,207,976'}
+122
+:
+{channelId: 'UC1QgXt46-GEvtNjEC1paHnw', 月初比: '+2,161,823'}
+123
+:
+{channelId: 'UCsFn_ueskBkMCEyzCEqAOvg', 月初比: '+2,134,113'}
+124
+:
+{channelId: 'UCkIimWZ9gBJRamKF0rmPU8w', 月初比: '+2,118,618'}
+125
+:
+{channelId: 'UCmiYJycZXBGc4s_zjIRUHhQ', 月初比: '+2,113,576'}
+126
+:
+{channelId: 'UCW5uhrG1eCBYditmhL0Ykjw', 月初比: '+2,106,365'}
+127
+:
+{channelId: 'UCHVXbQzkl3rDfsXWo8xi2qw', 月初比: '+2,102,915'}
+128
+:
+{channelId: 'UCUP8TmlO7NNra88AMqGU_vQ', 月初比: '+2,096,806'}
+129
+:
+{channelId: 'UC1CfXB_kRs3C-zaeTG3oGyg', 月初比: '+2,092,913'}
+130
+:
+{channelId: 'UC_sFNM0z0MWm9A6WlKPuMMg', 月初比: '+2,016,489'}
+131
+:
+{channelId: 'UCL_O_HXgLJx3Auteer0n0pA', 月初比: '+2,002,493'}
+132
+:
+{channelId: 'UC1sBUU-y9FlHNukwsrR4bmA', 月初比: '+1,984,336'}
+133
+:
+{channelId: 'UC9p_lqQ0FEDz327Vgf5JwqA', 月初比: '+1,983,937'}
+134
+:
+{channelId: 'UC8SJPcLpIM3x8RdBJFfiluw', 月初比: '+1,879,600'}
+135
+:
+{channelId: 'UC1zFJrfEKvCixhsjNSb1toQ', 月初比: '+1,872,739'}
+136
+:
+{channelId: 'UCD5W21JqNMv_tV9nfjvF9sw', 月初比: '+1,843,074'}
+137
+:
+{channelId: 'UCDHABijvPBnJm7F-KlNME3w', 月初比: '+1,822,676'}
+138
+:
+{channelId: 'UCF_U2GCKHvDz52jWdizppIA', 月初比: '+1,793,468'}
+139
+:
+{channelId: 'UCa9Y57gfeY0Zro_noHRVrnw', 月初比: '+1,791,720'}
+140
+:
+{channelId: 'UCuDY3ibSP2MFRgf7eo3cojg', 月初比: '+1,771,610'}
+141
+:
+{channelId: 'UCXW4MqCQn-jCaxlX-nn-BYg', 月初比: '+1,761,056'}
+142
+:
+{channelId: 'UCkT1u65YS49ca_LsFwcTakw', 月初比: '+1,760,662'}
+143
+:
+{channelId: 'UC1vawzfbCnRpHT9SJ5pHlHw', 月初比: '+1,759,298'}
+144
+:
+{channelId: 'UCe22Bcwd_GCpTjLxn83zl7A', 月初比: '+1,746,331'}
+145
+:
+{channelId: 'UCWRPqA0ehhWV4Hnp27PJCkQ', 月初比: '+1,731,273'}
+146
+:
+{channelId: 'UCGYAYLDE7TZiiC8U6teciDQ', 月初比: '+1,719,477'}
+147
+:
+{channelId: 'UCy8P3o5XlMpJGQY4WugzdNA', 月初比: '+1,717,130'}
+148
+:
+{channelId: 'UCfipDDn7wY-C-SoUChgxCQQ', 月初比: '+1,713,807'}
+149
+:
+{channelId: 'UCJubINhCcFXlsBwnHp0wl_g', 月初比: '+1,713,652'}
+150
+:
+{channelId: 'UCmbs8T6MWqUHP1tIQvSgKrg', 月初比: '+1,706,142'}
+151
+:
+{channelId: 'UCambvP8yxNDot4FzQc9cgiw', 月初比: '+1,705,210'}
+152
+:
+{channelId: 'UC8C1LLhBhf_E2IBPLSDJXlQ', 月初比: '+1,696,036'}
+153
+:
+{channelId: 'UCDqI2jOz0weumE8s7paEk6g', 月初比: '+1,688,365'}
+154
+:
+{channelId: 'UCIG9rDtgR45VCZmYnd-4DUw', 月初比: '+1,662,843'}
+155
+:
+{channelId: 'UCcx3crxPFi006DUhb_YU-tw', 月初比: '+1,650,678'}
+156
+:
+{channelId: 'UCtnO2N4kPTXmyvedjGWdx3Q', 月初比: '+1,593,659'}
+157
+:
+{channelId: 'UCZLZ8Jjx_RN2CXloOmgTHVg', 月初比: '+1,589,313'}
+158
+:
+{channelId: 'UC1suqwovbL1kzsoaZgFZLKg', 月初比: '+1,540,284'}
+159
+:
+{channelId: 'UC7_MFM9b8hp5kuTSpa8WyOQ', 月初比: '+1,508,870'}
+160
+:
+{channelId: 'UCMwGHR0BTZuLsmjY_NT5Pwg', 月初比: '+1,504,952'}
+161
+:
+{channelId: 'UCG0rzBZV_QMP4MtWg6IjhEA', 月初比: '+1,489,896'}
+162
+:
+{channelId: 'UCurEA8YoqFwimJcAuSHU0MQ', 月初比: '+1,474,268'}
+163
+:
+{channelId: 'UCu-rV2gPtJ-CsGxe71z_BrQ', 月初比: '+1,469,418'}
+164
+:
+{channelId: 'UCiMG6VdScBabPhJ1ZtaVmbw', 月初比: '+1,445,124'}
+165
+:
+{channelId: 'UCXTpFs_3PqI41qX2d9tL2Rw', 月初比: '+1,443,566'}
+166
+:
+{channelId: 'UC0Owc36U9lOyi9Gx9Ic-4qg', 月初比: '+1,414,246'}
+167
+:
+{channelId: 'UCpNH2Zk2gw3JBjWAKSyZcQQ', 月初比: '+1,409,277'}
+168
+:
+{channelId: 'UCZmUoMwjyuQ59sk5_7Tx07A', 月初比: '+1,400,678'}
+169
+:
+{channelId: 'UC48jH1ul-6HOrcSSfoR02fQ', 月初比: '+1,373,213'}
+170
+:
+{channelId: 'UC7Gb7Uawe20QyFibhLl1lzA', 月初比: '+1,364,315'}
+171
+:
+{channelId: 'UCV5ZZlLjk5MKGg3L0n0vbzw', 月初比: '+1,340,534'}
+172
+:
+{channelId: 'UCQ0UDLQCjY0rmuxCDE38FGg', 月初比: '+1,334,731'}
+173
+:
+{channelId: 'UCfrWoRGlawPQDQxxeIDRP0Q', 月初比: '+1,333,350'}
+174
+:
+{channelId: 'UCPkKpOHxEDcwmUAnRpIu-Ng', 月初比: '+1,281,186'}
+175
+:
+{channelId: 'UCAoy6rzhSf4ydcYjJw3WoVg', 月初比: '+1,258,009'}
+176
+:
+{channelId: 'UCyY6YeINiwQoA-FnmdQCkug', 月初比: '+1,234,553'}
+177
+:
+{channelId: 'UCP0BspO_AMEe3aQqqpo89Dg', 月初比: '+1,216,925'}
+178
+:
+{channelId: 'UCuk7vapXKckSw6yCGGDspDg', 月初比: '+1,213,756'}
+179
+:
+{channelId: 'UCJ46YTYBQVXsfsp8-HryoUA', 月初比: '+1,212,274'}
+180
+:
+{channelId: 'UCIu-aUArYq_H84dBpCAokMA', 月初比: '+1,197,814'}
+181
+:
+{channelId: 'UCOyYb1c43VlX9rc_lT6NKQw', 月初比: '+1,192,676'}
+182
+:
+{channelId: 'UCu-J8uIXuLZh16gG-cT1naw', 月初比: '+1,182,278'}
+183
+:
+{channelId: 'UCbc8fwhdUNlqi-J99ISYu4A', 月初比: '+1,135,495'}
+184
+:
+{channelId: 'UCkhViRjLUKgIcVpar9JiNrw', 月初比: '+1,132,338'}
+185
+:
+{channelId: 'UCyl1z3jo3XHR1riLFKG5UAg', 月初比: '+1,126,888'}
+186
+:
+{channelId: 'UCMp55EbT_ZlqiMS3lCj01BQ', 月初比: '+1,114,188'}
+187
+:
+{channelId: 'UC3n5uGu18FoCy23ggWWp8tA', 月初比: '+1,096,328'}
+188
+:
+{channelId: 'UCzsCWYuvPUky3-DKzphYbEw', 月初比: '+1,096,152'}
+189
+:
+{channelId: 'UCFtyinR2ZdvKK_Xgy07qXUg', 月初比: '+1,017,299'}
+190
+:
+{channelId: 'UC4yNIKGvy-YUrwYupVdLDXA', 月初比: '+1,017,010'}
+191
+:
+{channelId: 'UCXXnWssOLdB2jg-4CznteAA', 月初比: '+1,013,827'}
+192
+:
+{channelId: 'UC2hc-00y-MSR6eYA4eQ4tjQ', 月初比: '+1,004,553'}
+193
+:
+{channelId: 'UCR6qhsLpn62WVxCBK1dkLow', 月初比: '+1,000,165'}
+194
+:
+{channelId: 'UCiJ_Um3KbfF19NzkDYLzZVQ', 月初比: '+981,498'}
+195
+:
+{channelId: 'UC-o-E6I3IC2q8sAoAuM6Umg', 月初比: '+979,350'}
+196
+:
+{channelId: 'UCX4WL24YEOUYd7qDsFSLDOw', 月初比: '+955,137'}
+197
+:
+{channelId: 'UCb6ObE-XGCctO3WrjRZC-cw', 月初比: '+944,252'}
+198
+:
+{channelId: 'UCtpB6Bvhs1Um93ziEDACQ8g', 月初比: '+868,173'}
+199
+:
+{channelId: 'UCjlmCrq4TP1I4xguOtJ-31w', 月初比: '+867,520'}
+[200 … 299]
+200
+:
+{channelId: 'UCRqBKoKuX30ruKAq05pCeRQ', 月初比: '+865,800'}
+201
+:
+{channelId: 'UCqjTqdVlvIipZXIKeCkHKUA', 月初比: '+850,530'}
+202
+:
+{channelId: 'UCGw7lrT-rVZCWHfdG9Frcgg', 月初比: '+847,973'}
+203
+:
+{channelId: 'UCuvk5PilcvDECU7dDZhQiEw', 月初比: '+836,277'}
+204
+:
+{channelId: 'UCuI5XaO-6VkOEhHao6ij7JA', 月初比: '+831,035'}
+205
+:
+{channelId: 'UCryOPk2GZ1meIDt53tL30Tw', 月初比: '+816,437'}
+206
+:
+{channelId: 'UCRcLAVTbmx2-iNcXSsupdNA', 月初比: '+789,195'}
+207
+:
+{channelId: 'UCHBhnG2G-qN0JrrWmMO2FTA', 月初比: '+787,733'}
+208
+:
+{channelId: 'UCTvHWSfBZgtxE4sILOaurIQ', 月初比: '+787,456'}
+209
+:
+{channelId: 'UChJ5FTsHOu72_5OVx0rvsvQ', 月初比: '+784,184'}
+210
+:
+{channelId: 'UCwaS8_S7kMiKA3izlTWHbQg', 月初比: '+782,753'}
+211
+:
+{channelId: 'UCANDOlYTJT7N5jlRC3zfzVA', 月初比: '+777,249'}
+212
+:
+{channelId: 'UCeGendL8CO5RkffB6IFwHow', 月初比: '+774,097'}
+213
+:
+{channelId: 'UClrQ7xhRBxS_v_-WuudGKmA', 月初比: '+772,632'}
+214
+:
+{channelId: 'UCW8WKciBixmaqaGqrlTITRQ', 月初比: '+762,569'}
+215
+:
+{channelId: 'UCKu59gTZ_rdEmerdx5rV4Yg', 月初比: '+719,453'}
+216
+:
+{channelId: 'UCwePpiw1ocZRSNSkpKvVISw', 月初比: '+713,175'}
+217
+:
+{channelId: 'UCwrjITPwG4q71HzihV2C7Nw', 月初比: '+677,527'}
+218
+:
+{channelId: 'UC16P6nSFhimmcjQKrdOx2IQ', 月初比: '+653,150'}
+219
+:
+{channelId: 'UCnbJ8LTbHrsRgqkxwJXCU8w', 月初比: '+649,595'}
+220
+:
+{channelId: 'UCjXJYPsKxoJyc-1RPB6dSyw', 月初比: '+631,106'}
+221
+:
+{channelId: 'UC_82HBGtvwN1hcGeOGHzUBQ', 月初比: '+590,347'}
+222
+:
+{channelId: 'UCXU7YYxy_iQd3ulXyO-zC2w', 月初比: '+578,551'}
+223
+:
+{channelId: 'UCWIPfdcux1WxuX5yZLPJDww', 月初比: '+569,821'}
+224
+:
+{channelId: 'UCs-lYkwb-NYKE9_ssTRDK3Q', 月初比: '+567,583'}
+225
+:
+{channelId: 'UC2OacIzd2UxGHRGhdHl1Rhw', 月初比: '+561,744'}
+226
+:
+{channelId: 'UC8hwewh9svh92E1gXvgVazg', 月初比: '+558,502'}
+227
+:
+{channelId: 'UCnRQYHTnRLSF0cLJwMnedCg', 月初比: '+555,333'}
+228
+:
+{channelId: 'UCWz0CSYCxf4MhRKPDm220AQ', 月初比: '+536,871'}
+229
+:
+{channelId: 'UChgTyjG-pdNvxxhdsXfHQ5Q', 月初比: '+530,373'}
+230
+:
+{channelId: 'UCFvEuP2EDkvrgJpHI6-pyNw', 月初比: '+519,292'}
+231
+:
+{channelId: 'UCYz_5n-uDuChHtLo7My1HnQ', 月初比: '+512,866'}
+232
+:
+{channelId: 'UCvzVB-EYuHFXHZrObB8a_Og', 月初比: '+509,919'}
+233
+:
+{channelId: 'UCz_ZRw6ak4Foy8zZy0kEprQ', 月初比: '+509,658'}
+234
+:
+{channelId: 'UCerkculBD7YLc_vOGrF7tKg', 月初比: '+504,281'}
+235
+:
+{channelId: 'UC47rNmkDcNgbOcM-2BwzJTQ', 月初比: '+501,461'}
+236
+:
+{channelId: 'UC61OwuYOVuKkpKnid-43Twg', 月初比: '+499,626'}
+237
+:
+{channelId: 'UCWsfcksUUpoEvhia0_ut0bA', 月初比: '+494,540'}
+238
+:
+{channelId: 'UCQYy35PowPpc6ImRH1TQgcw', 月初比: '+483,143'}
+239
+:
+{channelId: 'UCLlJpxXt6L5d-XQ0cDdIyDQ', 月初比: '+482,981'}
+240
+:
+{channelId: 'UCGhqxhovNfaPBpxfCruy9EA', 月初比: '+480,989'}
+241
+:
+{channelId: 'UCBJ6nejlzes6mm9UruaxQsA', 月初比: '+480,601'}
+242
+:
+{channelId: 'UCo6mwsozDGMW0UNGowBJGhg', 月初比: '+480,009'}
+243
+:
+{channelId: 'UC53UDnhAAYwvNO7j_2Ju1cQ', 月初比: '+470,200'}
+244
+:
+{channelId: 'UC3K7pmiHsNSx1y0tdx2bbCw', 月初比: '+456,775'}
+245
+:
+{channelId: 'UCK9l6rTwU3hiSZijIMq51Gw', 月初比: '+451,190'}
+246
+:
+{channelId: 'UCKeAhJvy8zgXWbh9duVjIaQ', 月初比: '+447,026'}
+247
+:
+{channelId: 'UC7wZb5INldbGweowOhBIs8Q', 月初比: '+446,643'}
+248
+:
+{channelId: 'UCFgXWZOUZA2oYHNr6qDmsTQ', 月初比: '+440,292'}
+249
+:
+{channelId: 'UCCHH0nWYXFZmtDS_4tvMxHQ', 月初比: '+435,564'}
+250
+:
+{channelId: 'UCllKI7VjyANuS1RXatizfLQ', 月初比: '+434,384'}
+251
+:
+{channelId: 'UCmUjjW5zF1MMOhYUwwwQv9Q', 月初比: '+430,572'}
+252
+:
+{channelId: 'UCgTzsBI0DIRopMylJEDqnog', 月初比: '+429,075'}
+253
+:
+{channelId: 'UCHP4f7G2dWD4qib7BMatGAw', 月初比: '+428,838'}
+254
+:
+{channelId: 'UCCra1t-eIlO3ULyXQQMD9Xw', 月初比: '+428,489'}
+255
+:
+{channelId: 'UCx_zwZuGIS4jxO07kFk8G6Q', 月初比: '+428,439'}
+256
+:
+{channelId: 'UCpYf6C9QsP_BRf97vLuXlIA', 月初比: '+427,045'}
+257
+:
+{channelId: 'UCAHXqn4nAd2j3LRu1Qyi_JA', 月初比: '+420,086'}
+258
+:
+{channelId: 'UCyJOgJhgfoVRpFjsBCUmuvg', 月初比: '+416,875'}
+259
+:
+{channelId: 'UCZrYHIPsKhYAXqOls2kQQNQ', 月初比: '+411,513'}
+260
+:
+{channelId: 'UCNVEsYbiZjH5QLmGeSgTSzg', 月初比: '+407,821'}
+261
+:
+{channelId: 'UC727SQYUvx5pDDGQpTICNWg', 月初比: '+405,373'}
+262
+:
+{channelId: 'UCv3EicDtxObcZZmnFcHvNnw', 月初比: '+403,798'}
+263
+:
+{channelId: 'UCfQVs_KuXeNAlGa3fb8rlnQ', 月初比: '+396,529'}
+264
+:
+{channelId: 'UCtHY-tP0dyykhTRMmnfPs_g', 月初比: '+389,401'}
+265
+:
+{channelId: 'UCggO2c1unS-oLwTLT0ICywg', 月初比: '+386,235'}
+266
+:
+{channelId: 'UCBiqkFJljoxAj10SoP2w2Cg', 月初比: '+384,695'}
+267
+:
+{channelId: 'UCTVSOgYuSWmNAt-lnJPkEEw', 月初比: '+379,345'}
+268
+:
+{channelId: 'UCP4nMSTdwU1KqYWu3UH5DHQ', 月初比: '+376,143'}
+269
+:
+{channelId: 'UCKpKC3M5fkcEvtOr06dmYlA', 月初比: '+365,962'}
+270
+:
+{channelId: 'UCnJNNk45O1QYS2oMRYFKSyw', 月初比: '+357,593'}
+271
+:
+{channelId: 'UC7gxU6NXjKF1LrgOddPzgTw', 月初比: '+356,657'}
+272
+:
+{channelId: 'UCJ4O6PWA47f6XbCgrLQNqEQ', 月初比: '+354,438'}
+273
+:
+{channelId: 'UCFG6teapZaN6J1oVXl7MYPA', 月初比: '+347,233'}
+274
+:
+{channelId: 'UC2hx0xVkMoHGWijwr_lA01w', 月初比: '+342,326'}
+275
+:
+{channelId: 'UCQ1zGxHrfEmmW4CPpBx9-qw', 月初比: '+336,840'}
+276
+:
+{channelId: 'UC_GCs6GARLxEHxy1w40d6VQ', 月初比: '+334,223'}
+277
+:
+{channelId: 'UC3EhsuKdEkI99TWZwZgWutg', 月初比: '+333,164'}
+278
+:
+{channelId: 'UCZgOv3YDEs-ZnZWDYVwJdmA', 月初比: '+331,474'}
+279
+:
+{channelId: 'UC6oDys1BGgBsIC3WhG1BovQ', 月初比: '+328,274'}
+280
+:
+{channelId: 'UCuuAb_72QzK0M1USPMEl1yw', 月初比: '+322,402'}
+281
+:
+{channelId: 'UCajbFh6e_R8QZdHAMbbi4rQ', 月初比: '+319,356'}
+282
+:
+{channelId: 'UCupmjRr7kPgzXKh-cPxxGbg', 月初比: '+318,322'}
+283
+:
+{channelId: 'UCebT4Aq-3XWb5je1S1FvR_A', 月初比: '+318,145'}
+284
+:
+{channelId: 'UCdfMHxjcCc2HSd9qFvfJgjg', 月初比: '+316,438'}
+285
+:
+{channelId: 'UCRvpMpzAXBRKJQuk-8-Sdvg', 月初比: '+311,329'}
+286
+:
+{channelId: 'UCc88OV45ICgHbn3ZqLLb52w', 月初比: '+310,984'}
+287
+:
+{channelId: 'UCLk1hcmxg8rJ3Nm1_GvxTRA', 月初比: '+288,286'}
+288
+:
+{channelId: 'UCP9ZgeIJ3Ri9En69R0kJc9Q', 月初比: '+287,538'}
+289
+:
+{channelId: 'UCpnvhOIJ6BN-vPkYU9ls-Eg', 月初比: '+279,194'}
+290
+:
+{channelId: 'UC9mf_ZVpouoILRY9NUIaK-w', 月初比: '+278,661'}
+291
+:
+{channelId: 'UCeCWj-SiJG9SWN6wGORiLmw', 月初比: '+265,810'}
+292
+:
+{channelId: 'UCW98GVLrx8lG_ddOts3cl4g', 月初比: '+256,361'}
+293
+:
+{channelId: 'UCUtKkGKef8BYMs3h-3zQm9A', 月初比: '+249,689'}
+294
+:
+{channelId: 'UCw91yT7J79VACK4tdNQBskQ', 月初比: '+249,530'}
+295
+:
+{channelId: 'UCmeyo5pRj_6PXG-CsGUuWWg', 月初比: '+247,854'}
+296
+:
+{channelId: 'UCkb-r702uhx4-6Lrmetp-Ow', 月初比: '+247,498'}
+297
+:
+{channelId: 'UCHX7YpFG8rVwhsHCx34xt7w', 月初比: '+244,905'}
+298
+:
+{channelId: 'UCBURM8S4LH7cRZ0Clea9RDA', 月初比: '+243,204'}
+299
+:
+{channelId: 'UCT7oOT1SNIIix-N22sJqfLw', 月初比: '+242,409'}
+[300 … 399]
+300
+:
+{channelId: 'UCIeSUTOTkF9Hs7q3SGcO-Ow', 月初比: '+242,226'}
+301
+:
+{channelId: 'UCRlZaszk84YXjRtdPCxqjvw', 月初比: '+239,722'}
+302
+:
+{channelId: 'UCRWOdwLRsenx2jLaiCAIU4A', 月初比: '+228,969'}
+303
+:
+{channelId: 'UCrhhJPNsOqzNIkUfTABoSpg', 月初比: '+225,304'}
+304
+:
+{channelId: 'UCgA2jKRkqpY_8eysPUs8sjw', 月初比: '+224,859'}
+305
+:
+{channelId: 'UC6FprWVXuULaY9mZOcqTe4A', 月初比: '+223,338'}
+306
+:
+{channelId: 'UCdh-YF2gTzqDNu0VU9lwPPw', 月初比: '+219,984'}
+307
+:
+{channelId: 'UCyb-cllCkMREr9de-hoiDrg', 月初比: '+215,271'}
+308
+:
+{channelId: 'UCyxtGMdWlURZ30WSnEjDOQw', 月初比: '+214,830'}
+309
+:
+{channelId: 'UCAHQGIKolfBfoeXXMY79SBA', 月初比: '+214,424'}
+310
+:
+{channelId: 'UCb5JxV6vKlYVknoJB8TnyYg', 月初比: '+211,552'}
+311
+:
+{channelId: 'UCMqGG8BRAiI1lJfKOpETM_w', 月初比: '+207,523'}
+312
+:
+{channelId: 'UClhLb5qSZy0Gvn3c-HuaInQ', 月初比: '+207,504'}
+313
+:
+{channelId: 'UCGEMpMpll4otCdnnxQ9paFg', 月初比: '+205,641'}
+314
+:
+{channelId: 'UCUZ5AlC3rTlM-rA2cj5RP6w', 月初比: '+203,451'}
+315
+:
+{channelId: 'UCN68LoM3khS4gdBMiWJO8WA', 月初比: '+202,831'}
+316
+:
+{channelId: 'UCvXsXmpMKthJuX8XHbsnOjQ', 月初比: '+202,675'}
+317
+:
+{channelId: 'UCEtUOMEAuAMz8dor89rt2RA', 月初比: '+202,014'}
+318
+:
+{channelId: 'UCO8WcDsF5znr-qsXlzZNpqg', 月初比: '+199,183'}
+319
+:
+{channelId: 'UCy91xBlY_Brh3bnHxKtjrrg', 月初比: '+194,455'}
+320
+:
+{channelId: 'UC-hMwvRuMsQrfgu0DPKLV2A', 月初比: '+188,237'}
+321
+:
+{channelId: 'UCIwHOJn_3QjBTwQ_gNj7WRA', 月初比: '+186,484'}
+322
+:
+{channelId: 'UCIzZDiilcPv0wim_MbuizFA', 月初比: '+183,615'}
+323
+:
+{channelId: 'UC4WvIIAo89_AzGUh1AZ6Dkg', 月初比: '+182,846'}
+324
+:
+{channelId: 'UCC0i9nECi4Gz7TU63xZwodg', 月初比: '+182,261'}
+325
+:
+{channelId: 'UC060r4zABV18vcahAWR1n7w', 月初比: '+181,769'}
+326
+:
+{channelId: 'UCElYE3bfzjjmJ9xwjvro9Yw', 月初比: '+180,293'}
+327
+:
+{channelId: 'UCiSRx1a2k-0tOg-fs6gAolQ', 月初比: '+169,917'}
+328
+:
+{channelId: 'UC98iRMvRqUxRD6GP4NtRskw', 月初比: '+168,542'}
+329
+:
+{channelId: 'UCpzxZW5kghGnO5TmAFJQAVw', 月初比: '+168,511'}
+330
+:
+{channelId: 'UCl1oLKcAq93p-pwKfDGhiYQ', 月初比: '+167,153'}
+331
+:
+{channelId: 'UCGWa1dMU_sDCaRQjdabsVgg', 月初比: '+166,721'}
+332
+:
+{channelId: 'UCg7sW-h1PUowdiR5K4HlBew', 月初比: '+164,730'}
+333
+:
+{channelId: 'UC-tBLCGTheczDn5mYNoNWTQ', 月初比: '+164,420'}
+334
+:
+{channelId: 'UCQYwIUCLqFoin7lHKmePjJw', 月初比: '+162,542'}
+335
+:
+{channelId: 'UCoAQsc-DQ0MjfTp059otQAw', 月初比: '+159,547'}
+336
+:
+{channelId: 'UCGNI4MENvnsymYjKiZwv9eg', 月初比: '+156,288'}
+337
+:
+{channelId: 'UCX88Pe54pxbJDSGIyGrzNdg', 月初比: '+155,966'}
+338
+:
+{channelId: 'UCahgMxSIQ2zIRrPKhM6Mjvg', 月初比: '+155,190'}
+339
+:
+{channelId: 'UCMzxQ58QL4NNbWghGymtHvw', 月初比: '+153,003'}
+340
+:
+{channelId: 'UC_hjHmi-ODGhHlSzD16p5Pw', 月初比: '+149,706'}
+341
+:
+{channelId: 'UCVo_KgPNsDKxHwzib7uarCw', 月初比: '+147,923'}
+342
+:
+{channelId: 'UClpOEZoIYhxIY6n5NNGaPbA', 月初比: '+147,701'}
+343
+:
+{channelId: 'UCBi8YaVyZpiKWN3_Z0dCTfQ', 月初比: '+147,314'}
+344
+:
+{channelId: 'UC2kyQhzGOB-JPgcQX9OMgEw', 月初比: '+142,780'}
+345
+:
+{channelId: 'UCm5rjZAFQuRrnDCkxnwvWkg', 月初比: '+140,571'}
+346
+:
+{channelId: 'UCXp7sNC0F_qkjickvlYkg-Q', 月初比: '+138,677'}
+347
+:
+{channelId: 'UCKuwxopq9c3cldzSOo4ceSA', 月初比: '+137,803'}
+348
+:
+{channelId: 'UC3MBUvkVTI9p-p0be7y7TQA', 月初比: '+134,684'}
+349
+:
+{channelId: 'UCbBLqA4HRowpj2JuLrkig5w', 月初比: '+134,584'}
+350
+:
+{channelId: 'UCJxZpzx4wHzEYD-eCiZPikg', 月初比: '+132,411'}
+351
+:
+{channelId: 'UC0w_dvkIwnXzMak6gfeioRQ', 月初比: '+125,036'}
+352
+:
+{channelId: 'UCK6vZrTlPNCrWzXHIgwDy4Q', 月初比: '+124,878'}
+353
+:
+{channelId: 'UCUI1qpjJSEbgzdlwmpdVmMw', 月初比: '+120,604'}
+354
+:
+{channelId: 'UCpJtk0myFr5WnyfsmnInP-w', 月初比: '+119,953'}
+355
+:
+{channelId: 'UCrt4cTM_sWH0iySLMkwwYLQ', 月初比: '+117,796'}
+356
+:
+{channelId: 'UCmpEFsiD67ZOjn2CCJoo1mw', 月初比: '+115,094'}
+357
+:
+{channelId: 'UCz6Gi81kE6p5cdW1rT0ixqw', 月初比: '+114,986'}
+358
+:
+{channelId: 'UCsb-1aJgiJXJH2feV-zlZRw', 月初比: '+114,422'}
+359
+:
+{channelId: 'UCDh2bWI5EDu7PavqwICkVpA', 月初比: '+112,501'}
+360
+:
+{channelId: 'UCeK9HFcRZoTrvqcUCtccMoQ', 月初比: '+111,063'}
+361
+:
+{channelId: 'UCEy9cYULQrC2cRlVqJPCcSw', 月初比: '+105,432'}
+362
+:
+{channelId: 'UCle1cz6rcyH0a-xoMYwLlAg', 月初比: '+105,259'}
+363
+:
+{channelId: 'UC4Xuz67FNRr69ILv2b7ZRBA', 月初比: '+102,728'}
+364
+:
+{channelId: 'UCtAvQ5U0aXyKwm2i4GqFgJg', 月初比: '+102,624'}
+365
+:
+{channelId: 'UChSvpZYRPh0FvG4SJGSga3g', 月初比: '+102,179'}
+366
+:
+{channelId: 'UC_WOBIopwUih0rytRnr_1Ag', 月初比: '+101,905'}
+367
+:
+{channelId: 'UC6t3-_N8A6ME1JShZHHqOMw', 月初比: '+99,291'}
+368
+:
+{channelId: 'UC3vzVK_N_SUVKqbX69L_X4g', 月初比: '+96,878'}
+369
+:
+{channelId: 'UCHK5wkevfaGrPr7j3g56Jmw', 月初比: '+96,214'}
+370
+:
+{channelId: 'UCRY0-zJ1pV4EiKUSLXCXTAg', 月初比: '+95,299'}
+371
+:
+{channelId: 'UCB7sSUNwh_dXE7ZL3DsGDpw', 月初比: '+92,793'}
+372
+:
+{channelId: 'UCBxw5bdrbKO7E60E4s3KgQg', 月初比: '+92,154'}
+373
+:
+{channelId: 'UCoM_XmK45j504hfUWvN06Qg', 月初比: '+88,149'}
+374
+:
+{channelId: 'UCClwIqTUn5LDpFucHyaAhHg', 月初比: '+86,329'}
+375
+:
+{channelId: 'UCwL7dgTxKo8Y4RFIKWaf8gA', 月初比: '+83,925'}
+376
+:
+{channelId: 'UCMxIxoMdtcLkZ1wTq7qjztg', 月初比: '+82,042'}
+377
+:
+{channelId: 'UCEiB6vkUtWsBwYsAF7ukKXw', 月初比: '+81,998'}
+378
+:
+{channelId: 'UCt0clH12Xk1-Ej5PXKGfdPA', 月初比: '+81,662'}
+379
+:
+{channelId: 'UCuycJ_IsA5ESbTYhe05ozqQ', 月初比: '+79,266'}
+380
+:
+{channelId: 'UCpRXCTyNNa-MnjhK6gisnRw', 月初比: '+77,722'}
+381
+:
+{channelId: 'UCLhUvJ_wO9hOvv_yYENu4fQ', 月初比: '+77,125'}
+382
+:
+{channelId: 'UCejbicoRnQjCOdAPAv5JPwg', 月初比: '+76,803'}
+383
+:
+{channelId: 'UCEk1_ZVGRiVV-gxHT9wdNMg', 月初比: '+76,186'}
+384
+:
+{channelId: 'UChTA8kHyInr2rKZ2aBv5ULw', 月初比: '+75,207'}
+385
+:
+{channelId: 'UCnNLZWjl4GvVF4s8zBT9_kA', 月初比: '+74,410'}
+386
+:
+{channelId: 'UCRV9d6YCYIMUszK-83TwxVA', 月初比: '+73,602'}
+387
+:
+{channelId: 'UCqskJ0nmw-_eweWfsKvbrzQ', 月初比: '+70,940'}
+388
+:
+{channelId: 'UCYTz3uIgwVY3ZU-IQJS8r3A', 月初比: '+69,925'}
+389
+:
+{channelId: 'UCfMNN0I96oGbmJzCRCWgoog', 月初比: '+68,665'}
+390
+:
+{channelId: 'UCXDytlJU6RL8D68VrPZGyIA', 月初比: '+68,130'}
+391
+:
+{channelId: 'UCFsWaTQ7kT76jNNGeGIKNSA', 月初比: '+67,220'}
+392
+:
+{channelId: 'UCE5VgVGRPfNCjXPeTe1QJHA', 月初比: '+67,060'}
+393
+:
+{channelId: 'UCJv02SHZgav7Mv3V0kBOR8Q', 月初比: '+66,875'}
+394
+:
+{channelId: 'UCPxSh63XjfSYJbkBLxM3fSw', 月初比: '+66,823'}
+395
+:
+{channelId: 'UCwokZsOK_uEre70XayaFnzA', 月初比: '+65,638'}
+396
+:
+{channelId: 'UCkpqb53xiOvOgNYEbNpFSyw', 月初比: '+65,394'}
+397
+:
+{channelId: 'UCBhfuPYgo5ALbn6WmTXwHwg', 月初比: '+64,022'}
+398
+:
+{channelId: 'UC5qlAhrec6-0J-K3zmhNPPQ', 月初比: '+63,376'}
+399
+:
+{channelId: 'UCeflPOZtwUfdZjTo2AiVDsQ', 月初比: '+56,976'}
+[400 … 493]
+400
+:
+{channelId: 'UC6TfqY40Xt1Y0J-N18c85qQ', 月初比: '+55,074'}
+401
+:
+{channelId: 'UCd3QtnFVO1ZMay1LoWq1C8A', 月初比: '+48,894'}
+402
+:
+{channelId: 'UCgRqGV1gBf2Esxh0Tz1vxzw', 月初比: '+48,762'}
+403
+:
+{channelId: 'UChXm-xAYPfygrbyLo2yCASQ', 月初比: '+48,609'}
+404
+:
+{channelId: 'UC4PrHgUcAtOoj_LKmUL-uLQ', 月初比: '+46,981'}
+405
+:
+{channelId: 'UCQoK32rBoWhHTBIWOYsYC4Q', 月初比: '+45,694'}
+406
+:
+{channelId: 'UCDd-NcDZGw5gwxPsTXj9IFQ', 月初比: '+44,808'}
+407
+:
+{channelId: 'UCivDgaCAh7WPBoKA24WNwJQ', 月初比: '+43,423'}
+408
+:
+{channelId: 'UCnzZmBOSrQf2wDBbnsDajVw', 月初比: '+42,551'}
+409
+:
+{channelId: 'UCAQDFeCTVdx90GtwohwjHzQ', 月初比: '+42,246'}
+410
+:
+{channelId: 'UCtWH0tVAcUcSm4v96H5cAqQ', 月初比: '+40,629'}
+411
+:
+{channelId: 'UCN5bD1YYapThOeadG7YkBOA', 月初比: '+39,365'}
+412
+:
+{channelId: 'UCucJYLJSEFRRfV2CA_JGHIQ', 月初比: '+37,825'}
+413
+:
+{channelId: 'UCSlcMof1GIPvH6H_VcknCbQ', 月初比: '+37,733'}
+414
+:
+{channelId: 'UCtM5G3bS7zM8bv6p-OwoNTw', 月初比: '+34,696'}
+415
+:
+{channelId: 'UCBAeKqEIugv69Q2GIgcH7oA', 月初比: '+34,317'}
+416
+:
+{channelId: 'UC1cExET9xoWSO9iSnRsW_1Q', 月初比: '+33,942'}
+417
+:
+{channelId: 'UCJtDr_tuvwv-lfN4Gejd5hQ', 月初比: '+32,958'}
+418
+:
+{channelId: 'UCxrmkJf_X1Yhte_a4devFzA', 月初比: '+32,510'}
+419
+:
+{channelId: 'UC5ek2GWKvUKFgnKSHuuCFrw', 月初比: '+32,431'}
+420
+:
+{channelId: 'UCDlS1C0KkKGxsHVUqRqkdZw', 月初比: '+31,987'}
+421
+:
+{channelId: 'UCbLgcjfsUaCUgJh9SVit8kw', 月初比: '+31,045'}
+422
+:
+{channelId: 'UCPYOimOwBfRzqZDXSZgbZ2g', 月初比: '+30,210'}
+423
+:
+{channelId: 'UCCVwhI5trmaSxfcze_Ovzfw', 月初比: '+29,050'}
+424
+:
+{channelId: 'UCIEBSYfCdoSwkeWu9Odhkgg', 月初比: '+28,691'}
+425
+:
+{channelId: 'UCTxoJgb4DzMd7tiM8cvf4PA', 月初比: '+27,543'}
+426
+:
+{channelId: 'UC0WwEfE-jOM2rzjpdfhTzZA', 月初比: '+27,226'}
+427
+:
+{channelId: 'UCCB4kCxfVMdudYmF6nTnMUQ', 月初比: '+26,694'}
+428
+:
+{channelId: 'UCJEpkwwDiTKS5lxwFttEbIQ', 月初比: '+26,314'}
+429
+:
+{channelId: 'UCtMNvdl247Eyl-2Jf4z_UBA', 月初比: '+26,234'}
+430
+:
+{channelId: 'UCLjx3lqIkYkPCBJop8czJ2A', 月初比: '+26,057'}
+431
+:
+{channelId: 'UCGXwv2zYOxeWiNNyPiLCBCQ', 月初比: '+25,745'}
+432
+:
+{channelId: 'UCWtr2UnCkvyFZnzKBQqG3lg', 月初比: '+25,427'}
+433
+:
+{channelId: 'UCSgheR9xOIcQjlkeXqIofLQ', 月初比: '+22,953'}
+434
+:
+{channelId: 'UCUzJ90o1EjqUbk2pBAy0_aw', 月初比: '+21,688'}
+435
+:
+{channelId: 'UClS6k3w1sPwlVFqK3-yID5A', 月初比: '+21,502'}
+436
+:
+{channelId: 'UCv5ndlKn_HNPySHP7mL1TTA', 月初比: '+20,366'}
+437
+:
+{channelId: 'UCs7OqbuJAwrXvofbxp9g-ZQ', 月初比: '+20,026'}
+438
+:
+{channelId: 'UCS5l_Y0oMVTjEos2LuyeSZQ', 月初比: '+19,228'}
+439
+:
+{channelId: 'UCMzVa7B8UEdrvUGsPmSgyjA', 月初比: '+18,958'}
+440
+:
+{channelId: 'UCCXME7oZmXB2VFHJbz5496A', 月初比: '+18,442'}
+441
+:
+{channelId: 'UCF0k0ma4nRRWXRUE5FtabLA', 月初比: '+17,837'}
+442
+:
+{channelId: 'UCSiTkTBwIMwsAetwwzgFyBg', 月初比: '+16,523'}
+443
+:
+{channelId: 'UCFzQd4pZ43ZNEdWBFe7QOKA', 月初比: '+16,233'}
+444
+:
+{channelId: 'UCyRkQSuhJILuGOuXk10voPg', 月初比: '+15,095'}
+445
+:
+{channelId: 'UCvmppcdYf4HOv-tFQhHHJMA', 月初比: '+15,062'}
+446
+:
+{channelId: 'UCYcnLc0n1ryBDZeGWQTVJ_g', 月初比: '+14,253'}
+447
+:
+{channelId: 'UC7hffDQLKIEG-_zoAQkMIvg', 月初比: '+13,997'}
+448
+:
+{channelId: 'UCNGMMdEgYIUR6rC44v9aZ8w', 月初比: '+12,486'}
+449
+:
+{channelId: 'UCjFu-9GHnabzSFRAYm1B9Dw', 月初比: '+11,211'}
+450
+:
+{channelId: 'UCufQu4q65z63IgE4cfKs1BQ', 月初比: '+10,837'}
+451
+:
+{channelId: 'UC7nyueGsb-5VDNPRh6pHtCA', 月初比: '+10,777'}
+452
+:
+{channelId: 'UC5yckZliCkuaEFbqzLBD7hQ', 月初比: '+10,374'}
+453
+:
+{channelId: 'UCGyywYAJd2O5Y7yUyr7qBRQ', 月初比: '+10,077'}
+454
+:
+{channelId: 'UCwqtK-m6954_aHEvOYtZpyQ', 月初比: '+9,687'}
+455
+:
+{channelId: 'UCUfkaeS_RMaZfIapykxldVg', 月初比: '+9,618'}
+456
+:
+{channelId: 'UCdMpGhtL9oK8EYolTt8v4uQ', 月初比: '+9,159'}
+457
+:
+{channelId: 'UCy951eHJiaOED-G2hsR4CjA', 月初比: '+9,091'}
+458
+:
+{channelId: 'UCAZ_LA7f0sjuZ1Ni8L2uITw', 月初比: '+9,067'}
+459
+:
+{channelId: 'UCOg01LJmZF9UnwFbly73CVw', 月初比: '+9,037'}
+460
+:
+{channelId: 'UCiLFvfLfq5MpS-x2vCy2Amg', 月初比: '+8,241'}
+461
+:
+{channelId: 'UC8Snw5i4eOJXEQqURAK17hQ', 月初比: '+8,093'}
+462
+:
+{channelId: 'UCDwPMymmju4GZV7kZcL2vIQ', 月初比: '+6,704'}
+463
+:
+{channelId: 'UC6TyfKcsrPwBsBnx2QobVLQ', 月初比: '+6,266'}
+464
+:
+{channelId: 'UCStzBFfjwFYb0qSYHnzFZvw', 月初比: '+6,181'}
+465
+:
+{channelId: 'UCijNnZ-6m8g85UGaRAWuw7g', 月初比: '+5,466'}
+466
+:
+{channelId: 'UCTi_rzf5QIkXjhJjkbcAdTg', 月初比: '+5,442'}
+467
+:
+{channelId: 'UCcd4MSYH7bPIBEUqmBgSZQw', 月初比: '+5,058'}
+468
+:
+{channelId: 'UCkL9OLKjIQbKk2CztbpOCFg', 月初比: '+4,758'}
+469
+:
+{channelId: 'UCi3aT9cC6YyC0BnOpm2XBEw', 月初比: '+4,648'}
+470
+:
+{channelId: 'UCLfAsY3iMUAF2vvDxvIjymQ', 月初比: '+4,135'}
+471
+:
+{channelId: 'UCoJ0Ct-jdas4cLPpSp06gZg', 月初比: '+2,823'}
+472
+:
+{channelId: 'UCq4ky2drohLT7W0DmDEw1dQ', 月初比: '+2,296'}
+473
+:
+{channelId: 'UCJCzy0Fyrm0UhIrGQ7tHpjg', 月初比: '+1,978'}
+474
+:
+{channelId: 'UC7-YM5BhR-FCZloquRE7XGw', 月初比: '+1,927'}
+475
+:
+{channelId: 'UCju7v8SkoWUQ5ITCQwmYpYg', 月初比: '+1,842'}
+476
+:
+{channelId: 'UCIBj1-d71vKjRftiauF50pg', 月初比: '+1,716'}
+477
+:
+{channelId: 'UCXPSFGZZrJ0tQEeP7R2jRqQ', 月初比: '+1,188'}
+478
+:
+{channelId: 'UC6W1rDne4LOYK4XLpvhW6ow', 月初比: '+1,143'}
+479
+:
+{channelId: 'UC_D2DNy-KUNQJ_NGMppgmyg', 月初比: '+502'}
+480
+:
+{channelId: 'UCmWqYB6y8gSfPONWGspuOWQ', 月初比: '+420'}
+481
+:
+{channelId: 'UC4Jyg9gFStHO8r5n4ya7XCQ', 月初比: '0'}
+482
+:
+{channelId: 'UCmqrvfLMws-GLGHQcB5dasg', 月初比: '0'}
+483
+:
+{channelId: 'UCFOhd3zJLXms6_ekbCPmyMQ', 月初比: '0'}
+484
+:
+{channelId: 'UCHjeZylSgXDSnor8wUnwU_g', 月初比: '0'}
+485
+:
+{channelId: 'UC3xG1XWzAKt5dxSxktJvtxg', 月初比: '0'}
+486
+:
+{channelId: 'UCvPPBoTOor5gm8zSlE2tg4w', 月初比: '0'}
+487
+:
+{channelId: 'UCxCdPRbi-s5J74A6KgkxnQg', 月初比: '0'}
+488
+:
+{channelId: 'UCLO9QDxVL4bnvRRsz6K4bsQ', 月初比: '0'}
+489
+:
+{channelId: 'UCD8HOxPs4Xvsm8H0ZxXGiBw', 月初比: '0'}
+490
+:
+{channelId: 'UCV1xUwfM2v2oBtT3JNvic3w', 月初比: '0'}
+491
+:
+{channelId: 'UCx9yRTjbPuS1ZA1Hxdsxj4A', 月初比: '-119,782'}
+492
+:
+{channelId: 'UCyk04zbgBkxlFccIU7Uf67Q', 月初比: '-535,300'}
+493
+:
+{channelId: 'UC--A2dwZW7-M2kID0N6_lfA', 月初比: '-6,758,818'}

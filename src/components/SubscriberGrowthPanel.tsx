@@ -32,11 +32,13 @@ interface Props {
 export default function SubscriberGrowthPanel({ groupKey, monthlyStats, selectedDate }: Props) {
   console.log('selectedDate :', selectedDate);
   const [yAxisWidth, setYAxisWidth] = useState(60); // 初期値は適切に設定してください
+  const [tickFontSize, setTickFontSize] = useState(12);
 
   useEffect(() => {
     const handleResize = () => {
       // Y軸の幅を調整 (値は元のコードから)
       setYAxisWidth(window.innerWidth < 640 ? 30 : 40);
+      setTickFontSize(window.innerWidth < 640 ? 8 : 12);
     };
     handleResize();
     window.addEventListener('resize', handleResize);
@@ -122,7 +124,7 @@ export default function SubscriberGrowthPanel({ groupKey, monthlyStats, selected
               <XAxis
                 dataKey="month"
                 stroke="#5eead4"
-                tick={{ fill: '#5eead4', fontSize: 12, fontFamily: 'monospace' }}
+                tick={{ fill: '#5eead4', fontSize: tickFontSize, fontFamily: 'monospace' }}
                 tickLine={{ stroke: '#5eead4', strokeWidth: 0.3 }}
                 axisLine={{ stroke: '#5eead4', strokeWidth: 0.3 }}
                 tickFormatter={(month) => month.slice(5)}
@@ -130,7 +132,7 @@ export default function SubscriberGrowthPanel({ groupKey, monthlyStats, selected
               />
               <YAxis
                 stroke="#5eead4"
-                tick={{ fill: '#5eead4', fontSize: 12, fontFamily: 'monospace' }}
+                tick={{ fill: '#5eead4', fontSize: tickFontSize, fontFamily: 'monospace' }}
                 tickLine={{ stroke: '#5eead4', strokeWidth: 0.3 }}
                 axisLine={{ stroke: '#5eead4', strokeWidth: 0.3 }}
                 width={yAxisWidth} // stateからY軸幅を設定

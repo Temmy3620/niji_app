@@ -31,10 +31,12 @@ interface Props {
 export default function ViewGrowthPanel({ groupKey, monthlyStats, selectedDate }: Props) {
   console.log('selectedDate :', selectedDate);
   const [yAxisWidth, setYAxisWidth] = useState(60);
+  const [tickFontSize, setTickFontSize] = useState(12);
 
   useEffect(() => {
     const handleResize = () => {
       setYAxisWidth(window.innerWidth < 640 ? 45 : 60);
+      setTickFontSize(window.innerWidth < 640 ? 8 : 12);
     };
     handleResize();
     window.addEventListener('resize', handleResize);
@@ -120,7 +122,7 @@ export default function ViewGrowthPanel({ groupKey, monthlyStats, selectedDate }
               <XAxis
                 dataKey="month"
                 stroke="#5eead4"
-                tick={{ fill: '#5eead4', fontSize: 12, fontFamily: 'monospace' }}
+                tick={{ fill: '#5eead4', fontSize: tickFontSize, fontFamily: 'monospace' }}
                 tickLine={{ stroke: '#5eead4', strokeWidth: 0.3 }}
                 axisLine={{ stroke: '#5eead4', strokeWidth: 0.3 }}
                 tickFormatter={(month) => month.slice(5)}
@@ -128,7 +130,7 @@ export default function ViewGrowthPanel({ groupKey, monthlyStats, selectedDate }
               />
               <YAxis
                 stroke="#5eead4"
-                tick={{ fill: '#5eead4', fontSize: 12, fontFamily: 'monospace' }}
+                tick={{ fill: '#5eead4', fontSize: tickFontSize, fontFamily: 'monospace' }}
                 tickLine={{ stroke: '#5eead4', strokeWidth: 0.3 }}
                 axisLine={{ stroke: '#5eead4', strokeWidth: 0.3 }}
                 width={yAxisWidth}
