@@ -94,14 +94,14 @@ export default function ChannelListWithTabs({
                 )}
                 {sortKey === 'subscribers' && (
                   <>
-                    {getGroupNameByKey(group.key)}所属Vtuber（バーチャルYouTuber）の登録者数の月間増加ランキング（{selectedDateJa}）です。<br />
+                    {getGroupNameByKey(group.key)}に所属するVtuber（バーチャルYouTuber）の登録者数の月間増加ランキング（{selectedDateJa}）です。<br />
                     月ごとの登録者数の推移を集計し、急成長している人気Vtuberをランキング形式で紹介しています。<br />
                     Vtuber業界の各グループごとのトレンドや注目株を知りたい方に最適なデータです。
                   </>
                 )}
                 {sortKey === 'views' && (
                   <>
-                    {getGroupNameByKey(group.key)}所属Vtuber（バーチャルYouTuber）の再生数の月間増加ランキング（{selectedDateJa}）です。<br />
+                    {getGroupNameByKey(group.key)}に所属するVtuber（バーチャルYouTuber）の再生数の月間増加ランキング（{selectedDateJa}）です。<br />
                     動画コンテンツの再生回数に注目し、どのVtuberが視聴者から多くの支持を集めているかをランキング形式で紹介。<br />
                     YouTube動画の人気動向を知りたい方や注目のVtuberを探している方におすすめの内容です。
                   </>
