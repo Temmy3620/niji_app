@@ -1,4 +1,5 @@
 // niji_app/src/app/card/[channelName]/page.tsx
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { AnimatedCardWrapper } from '@/components/AnimatedCardWrapper';
 import { getChannelDiffByMonth } from '@/lib/diffData';
@@ -197,4 +198,52 @@ export default async function ChannelDetailPage({
       </AnimatedCardWrapper>
     </>
   );
+}
+
+export async function generateMetadata({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ channelName: string }>;
+  searchParams?: Promise<{ id?: string; group?: string }>;
+}): Promise<Metadata> {
+  const { channelName } = await params;
+  const { id: channelId, group: groupKey } = (await searchParams) ?? {};
+
+  const decodedName = decodeURIComponent(channelName);
+  const groupName = getGroupNameByKey(groupKey ?? '');
+  const vtuberNameJa = decodedName;
+  const vtuberNameEn = ''; // 必要なら取得処理を追加
+  const startMonth = '2024年5月'; // 動的に取得してもOK
+  const endMonth = '2025年4月';
+  const ogImageUrl = `https://vtubertracker.info/ogp.png`;
+  const pageUrl = `https://vtubertracker.info/card/${encodeURIComponent(channelName)}?id=${channelId}&group=${groupKey}`;
+
+  const title = `${vtuberNameJa}（${groupName}）登録者数・再生数グラフ | VtubeTracker`;
+  const description = `${vtuberNameJa} / ${vtuberNameEn} のYouTube登録者数・再生数の月別推移（${startMonth}〜${endMonth}）を掲載。${groupName}内での比較やグループ全体統計も確認できます。`;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      url: pageUrl,
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: `${vtuberNameJa}の登録者・再生数グラフ`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [ogImageUrl],
+    },
+  };
 }

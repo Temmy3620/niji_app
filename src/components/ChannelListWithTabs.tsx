@@ -8,6 +8,7 @@ import SubscriberGrowthPanel from '@/components/SubscriberGrowthPanel';
 import ViewGrowthPanel from '@/components/ViewGrowthPanel';
 import { ChannelData } from '@/types/ChannelData';
 import { GroupConfig, GroupStats } from '@/types/MonthlyTrend';
+import { getGroupNameByKey } from '@/utils/groupsConfigUtil';
 
 interface ChannelListWithTabsProps {
   groupsConfig: GroupConfig[];
@@ -30,6 +31,10 @@ export default function ChannelListWithTabs({
   monthlyStatsMap,
   selectedDate,
 }: ChannelListWithTabsProps) {
+  const selectedDateJa = selectedDate.replace(/(\d{4})-(\d{2})/, (_, year, month) => {
+    return `${year}年${parseInt(month, 10)}月`;
+  });
+
   return (
     <main className="p-4 md:p-6">
       <Tabs value={selectedGroupKey} onValueChange={setSelectedGroupKey} className="w-full">
@@ -58,10 +63,7 @@ export default function ChannelListWithTabs({
           return (
             <TabsContent key={group.key} value={group.key} className="mt-4 focus-visible:ring-0 focus-visible:ring-offset-0">
               <div className="flex items-center justify-between gap-4 mt-10 mb-6 flex-wrap">
-                <h2
-                  id="rankings"
-                  className="text-xl sm:text-3xl font-extrabold flex items-center gap-2 m-0 text-cyan-100 tracking-wide font-mono"
-                >
+                <h1 className="text-xl sm:text-2xl font-extrabold flex items-center gap-2 m-0 text-cyan-100 tracking-wide font-mono" id="rankings">
                   <a
                     href="#rankings"
                     className="text-cyan-600 opacity-20 hover:opacity-40 transition"
@@ -69,10 +71,42 @@ export default function ChannelListWithTabs({
                   >
                     🔗
                   </a>
-                  Ranking....
-                </h2>
+                  {sortKey === 'current' && (
+                    `【${getGroupNameByKey(group.key)}】登録者数・再生数ランキング`
+                  )}
+                  {sortKey === 'subscribers' && (
+                    `【${getGroupNameByKey(group.key)}】 登録者増加数ランキング（${selectedDateJa}）`
+                  )}
+                  {sortKey === 'views' && (
+                    `【${getGroupNameByKey(group.key)}】 再生増加数ランキング（${selectedDateJa}）`
+                  )}
+                </h1>
                 {headerRight}
               </div>
+
+              <p className="text-gray-700 mb-6">
+                {sortKey === 'current' && (
+                  <>
+                    {getGroupNameByKey(group.key)}に所属するVtuber（バーチャルYouTuber）の最新YouTubeチャンネル情報を掲載しています。<br />
+                    現時点での登録者数や総再生回数のデータをランキング形式で掲載しています。<br />
+                    Vtuberの成長状況や人気の傾向を確認したい方におすすめのランキングページです。
+                  </>
+                )}
+                {sortKey === 'subscribers' && (
+                  <>
+                    {getGroupNameByKey(group.key)}所属Vtuber（バーチャルYouTuber）の登録者数の月間増加ランキング（{selectedDateJa}）です。<br />
+                    月ごとの登録者数の推移を集計し、急成長している人気Vtuberをランキング形式で紹介しています。<br />
+                    Vtuber業界の各グループごとのトレンドや注目株を知りたい方に最適なデータです。
+                  </>
+                )}
+                {sortKey === 'views' && (
+                  <>
+                    {getGroupNameByKey(group.key)}所属Vtuber（バーチャルYouTuber）の再生数の月間増加ランキング（{selectedDateJa}）です。<br />
+                    動画コンテンツの再生回数に注目し、どのVtuberが視聴者から多くの支持を集めているかをランキング形式で紹介。<br />
+                    YouTube動画の人気動向を知りたい方や注目のVtuberを探している方におすすめの内容です。
+                  </>
+                )}
+              </p>
               {sortedChannels.length > 0 ? (
                 <div className="grid gap-4 grid-cols-[repeat(auto-fit,_minmax(320px,_1fr))]">
                   {sortedChannels.map((channel, index) => (
