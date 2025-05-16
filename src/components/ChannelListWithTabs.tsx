@@ -9,6 +9,7 @@ import ViewGrowthPanel from '@/components/ViewGrowthPanel';
 import { ChannelData } from '@/types/ChannelData';
 import { GroupConfig, GroupStats } from '@/types/MonthlyTrend';
 import { getGroupNameByKey } from '@/utils/groupsConfigUtil';
+import { ShareButtons } from "@/components/ShareButtons";
 
 interface ChannelListWithTabsProps {
   groupsConfig: GroupConfig[];
@@ -59,32 +60,27 @@ export default function ChannelListWithTabs({
 
         {groupsConfig.map((group) => {
           const sortedChannels = getSortedData(group.key);
+          const rankingTitle =
+            sortKey === 'current'
+              ? `【${getGroupNameByKey(group.key)}】登録者数・再生数ランキング`
+              : sortKey === 'subscribers'
+                ? `【${getGroupNameByKey(group.key)}】 登録者増加数ランキング（${selectedDateJa}）`
+                : sortKey === 'views'
+                  ? `【${getGroupNameByKey(group.key)}】 再生増加数ランキング（${selectedDateJa}）`
+                  : '';
 
           return (
             <TabsContent key={group.key} value={group.key} className="mt-4 focus-visible:ring-0 focus-visible:ring-offset-0">
               <div className="flex items-center justify-between gap-4 mt-10 mb-6 flex-wrap">
-                <h1 className="text-xl sm:text-2xl font-extrabold flex items-center gap-2 m-0 text-cyan-100 tracking-wide font-mono" id="rankings">
-                  <a
-                    href="#rankings"
-                    className="text-cyan-600 opacity-20 hover:opacity-40 transition"
-                    title="このセクションへのリンク"
-                  >
-                    🔗
-                  </a>
-                  {sortKey === 'current' && (
-                    `【${getGroupNameByKey(group.key)}】登録者数・再生数ランキング`
-                  )}
-                  {sortKey === 'subscribers' && (
-                    `【${getGroupNameByKey(group.key)}】 登録者増加数ランキング（${selectedDateJa}）`
-                  )}
-                  {sortKey === 'views' && (
-                    `【${getGroupNameByKey(group.key)}】 再生増加数ランキング（${selectedDateJa}）`
-                  )}
+                <h1 className="text-base sm:text-2xl font-extrabold flex items-center gap-2 m-0 text-cyan-100 tracking-wide font-mono" id="rankings">
+                  {rankingTitle}
                 </h1>
                 {headerRight}
               </div>
 
-              <p className="text-gray-700 mb-6">
+              <ShareButtons postTitle={rankingTitle} hash='#rankings' />
+
+              <p className="text-gray-700 mb-6 text-xs sm:text-base">
                 {sortKey === 'current' && (
                   <>
                     {getGroupNameByKey(group.key)}に所属するVtuber（バーチャルYouTuber）の最新YouTubeチャンネル情報を掲載しています。<br />

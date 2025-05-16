@@ -18,7 +18,7 @@ export const GROUPS_CONFIG: { key: GroupKey; name: string; iconUrl: string }[] =
   },
   {
     key: 'neoporte',
-    name: 'ネオポルテ',
+    name: 'Neo-Porte',
     iconUrl: 'https://yt3.ggpht.com/B8q4Y3dRcxGtVCjgiIZcrlwUE34caO8e8QVSm-yCmkTgLopCFfm6MiJmrhGzd3gjOZ0V0dXV5w=s88-c-k-c0x00ffffff-no-rj',
   },
   {

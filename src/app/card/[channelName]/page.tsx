@@ -11,6 +11,7 @@ import { ChannelGrowthCharts } from '@/components/ChannelGrowthCharts';
 import { getAvailableDates } from '@/lib/fileStatsUtils';
 import { loadStatsByPrefixAndChannelId } from '@/lib/monthlyStatsLoader';
 import { getCurrentMonth } from '@/lib/monthUtils';
+import { ShareButtons } from "@/components/ShareButtons";
 
 
 export default async function ChannelDetailPage({
@@ -48,6 +49,8 @@ export default async function ChannelDetailPage({
   const currentMonth = getCurrentMonth();
   const currentStats = await loadStatsByPrefixAndChannelId(currentMonth, channelId);
 
+  const groupName = getGroupNameByKey(groupKey);
+
   return (
     <>
       <div className="flex justify-start mx-4 sm:mx-8 lg:mx-10 my-4">
@@ -57,6 +60,10 @@ export default async function ChannelDetailPage({
         >
           ◁「現登録・総再生数」に戻る
         </Link>
+      </div>
+      {/* カード右上にシェアボタン */}
+      <div className="flex justify-end mx-4 sm:mx-8 lg:mx-10 mb-2">
+        <ShareButtons postTitle={`${decodeURIComponent(channelName)}（${groupName}）登録者数・再生数グラフ`} hash={`?id=${channelId}&group=${groupKey}`} />
       </div>
       <AnimatedCardWrapper>
         <div className="mb-6 flex flex-col items-center text-center gap-4">
@@ -68,7 +75,7 @@ export default async function ChannelDetailPage({
                 className="w-28 h-28 rounded-full border-4 border-cyan-500 shadow-md"
               />
               <h1 className="text-2xl sm:text-3xl font-extrabold tracking-widest text-[#38fdfd]">{decodeURIComponent(channelName)}</h1>
-              <p className="text-xs sm:text-sm text-gray-400">{getGroupNameByKey(groupKey)}</p>
+              <p className="text-xs sm:text-sm text-gray-400">{groupName}</p>
             </>
           )}
         </div>
@@ -101,15 +108,15 @@ export default async function ChannelDetailPage({
         )}
 
         {/* 今月の増加数パネル */}
-        <h2 className="text-lg sm:text-xl font-bold text-[#38fdfd] mb-2 mt-6">今月の登録・再生増加数</h2>
+        <h2 className="text-lg sm:text-xl font-bold text-[#38fdfd] mb-2 mt-6">今月の登録・再生・投稿</h2>
         {channelInfo && currentStats && (
-          <div className="mb-4 rounded-lg bg-[#0a1323] p-4 shadow-md text-white grid grid-cols-2 sm:grid-cols-2 gap-4 text-center border border-cyan-700/40">
+          <div className="mb-4 rounded-lg bg-[#0a1323] p-4 shadow-md text-white grid grid-cols-3 sm:grid-cols-3 gap-4 text-center border border-cyan-700/40">
             <div>
               <p className="text-xs sm:text-sm text-gray-400">登録者数</p>
               {(() => {
                 const diff = Number(channelInfo.subscribers) - Number(currentStats.subscribers);
                 return (
-                  <p className={`text-xl sm:text-2xl font-semibold ${diff >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                  <p className={`text-sm sm:text-2xl font-semibold ${diff >= 0 ? 'text-green-400' : 'text-red-400'}`}>
                     {diff >= 0 ? '+' : '-'}{Math.abs(diff).toLocaleString()}
                   </p>
                 );
@@ -120,7 +127,18 @@ export default async function ChannelDetailPage({
               {(() => {
                 const diff = Number(channelInfo.views) - Number(currentStats.views);
                 return (
-                  <p className={`text-xl sm:text-2xl font-semibold ${diff >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                  <p className={`text-sm sm:text-2xl font-semibold ${diff >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                    {diff >= 0 ? '+' : '-'}{Math.abs(diff).toLocaleString()}
+                  </p>
+                );
+              })()}
+            </div>
+            <div>
+              <p className="text-xs sm:text-sm text-gray-400">動画数</p>
+              {(() => {
+                const diff = Number(channelInfo.videoCount) - Number(currentStats.videoCount);
+                return (
+                  <p className={`text-sm sm:text-2xl font-semibold ${diff >= 0 ? 'text-green-400' : 'text-red-400'}`}>
                     {diff >= 0 ? '+' : '-'}{Math.abs(diff).toLocaleString()}
                   </p>
                 );
