@@ -72,10 +72,10 @@ export const ShareButtons = ({ postTitle, hash }: ShareButtonsProps) => {
           className="flex items-center gap-1 px-2 h-7 rounded-full bg-cyan-900/60 hover:bg-cyan-800 hover:opacity-90 text-cyan-100 font-normal transition text-[8px] sm:text-[12px]"
           style={{ minWidth: "unset" }}
         >
-          <svg width="14" height="14" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="15" height="18" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M853.818 320H1042L709.091 692.308L1099 1100H825.273L601.364 861.538L348.818 1100H160L513.455 693.077L134 320H417.818L620.545 541.538L853.818 320ZM805.364 1020H891.818L415.909 399.231H325.364L805.364 1020Z" fill="white" />
           </svg>
-          SNSでシェア
+          でシェア
         </a>
       )}
     </div>
