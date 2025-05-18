@@ -13,8 +13,8 @@ export default function Header() {
           rel="noopener noreferrer"
           className="flex items-center gap-2 text-white px-2 sm:px-3 py-1.5 rounded-full border border-white/30 bg-gradient-to-r from-white/10 via-white/5 to-transparent backdrop-blur-md shadow-sm hover:scale-105 transition-transform duration-200"
         >
-          <img src="/x_icon.png" alt="X" className="w-5 h-5" />
-          <span className="text-xs sm:text-sm">@VtubeTracker</span>
+          <img src="/x_icon.png" alt="X" className="w-3 h-3 sm:w-5 sm:h-5" />
+          <span className="text-[10px] sm:text-sm">@VtubeTracker</span>
         </a>
       </div>
     </header>
