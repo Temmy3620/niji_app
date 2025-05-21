@@ -2,6 +2,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { AnimatedCardWrapper } from '@/components/AnimatedCardWrapper';
+import { FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { getChannelDiffByMonth } from '@/lib/diffData';
 import { notFound } from 'next/navigation';
 import { getGroupNameByKey } from '@/utils/groupsConfigUtil';
@@ -12,7 +14,7 @@ import { getAvailableDates } from '@/lib/fileStatsUtils';
 import { loadStatsByPrefixAndChannelId } from '@/lib/monthlyStatsLoader';
 import { getCurrentMonth } from '@/lib/monthUtils';
 import { ShareButtons } from "@/components/ShareButtons";
-
+import { getTwitterHandle } from "@/lib/getTwitterHandle";
 
 export default async function ChannelDetailPage({
   params,
@@ -51,6 +53,8 @@ export default async function ChannelDetailPage({
 
   const groupName = getGroupNameByKey(groupKey);
 
+  const twitterId = getTwitterHandle(channelId);
+
   return (
     <>
       <div className="flex justify-start mx-4 sm:mx-8 lg:mx-10 my-4">
@@ -75,7 +79,29 @@ export default async function ChannelDetailPage({
                 className="w-28 h-28 rounded-full border-4 border-cyan-500 shadow-md"
               />
               <h1 className="text-2xl sm:text-3xl font-extrabold tracking-widest text-[#38fdfd]">{decodeURIComponent(channelName)}</h1>
-              <p className="text-xs sm:text-sm text-gray-400">{groupName}</p>
+              <div className="flex items-center gap-2">
+                <p className="text-xs sm:text-lg text-gray-400">{groupName}</p>
+                <a
+                  href={`https://www.youtube.com/channel/${channelId}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-red-500 hover:opacity-80"
+                  aria-label="YouTubeチャンネルへ"
+                >
+                  <FaYoutube className="w-5 h-5 sm:w-6 sm:h-6" />
+                </a>
+                {twitterId && twitterId !== "Not found" && (
+                  <a
+                    href={`https://x.com/${twitterId}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-300 hover:text-white"
+                    aria-label="Xアカウントへ"
+                  >
+                    <FaXTwitter className="w-5 h-5 sm:w-6 sm:h-6" />
+                  </a>
+                )}
+              </div>
             </>
           )}
         </div>
