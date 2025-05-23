@@ -7,4 +7,5 @@ export type ChannelData = {
   subscriberDiff?: number | null;
   viewDiff?: number | null;
   videoCount: string;
+  description?: string;
 };

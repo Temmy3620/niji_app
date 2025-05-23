@@ -2,6 +2,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { AnimatedCardWrapper } from '@/components/AnimatedCardWrapper';
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { getChannelDiffByMonth } from '@/lib/diffData';
@@ -103,7 +104,11 @@ export default async function ChannelDetailPage({
                   </a>
                 )}
               </div>
+              <ScrollArea className="h-20 w-full rounded-xl bg-[#111827]/60 px-6 py-4 text-left text-gray-500 text-[10px] sm:text-xs shadow-inner border border-cyan-800/50 mx-auto">
+                {channelInfo.description || 'チャンネル説明はありません'}
+              </ScrollArea>
             </>
+
           )}
         </div>
 
