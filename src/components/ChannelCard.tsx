@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { ChannelData } from "@/types/ChannelData";
 import { useRouter } from 'next/navigation';
+import { FaUserFriends, FaPlay, FaChartLine } from "react-icons/fa";
 
 export default function ChannelCard({ channel, currentTab, rank, groupKey }: { channel: ChannelData; currentTab: 'current' | 'subscribers' | 'views'; rank?: number; groupKey: string; }) {
   const router = useRouter();
@@ -51,7 +52,7 @@ export default function ChannelCard({ channel, currentTab, rank, groupKey }: { c
 
             {(isCurrent || isMonthlySubscribers) && (
               <p className="flex items-center gap-1 text-sm text-gray-300">
-                <span role="img" aria-label="Subscribers">👥</span>
+                <FaUserFriends className="text-gray-300 w-4 h-4" />
                 {(Number(channel.subscribers)
                   ? `${Number(channel.subscribers).toLocaleString()} 人`
                   : <span className="text-red-400">現在の数値をしゅとくできません</span>)}
@@ -63,7 +64,7 @@ export default function ChannelCard({ channel, currentTab, rank, groupKey }: { c
                 className={`flex items-center gap-1 text-sm ${channel.subscriberDiff >= 0 ? 'text-green-400' : 'text-red-400'
                   }`}
               >
-                <span role="img" aria-label="Diff">📈</span>
+                <FaChartLine className={`w-4 h-4 ${channel.subscriberDiff >= 0 ? 'text-green-400' : 'text-red-400'}`} />
                 {channel.subscriberDiff >= 0 ? '+' : ''}
                 {channel.subscriberDiff.toLocaleString()} 人
               </p>
@@ -71,7 +72,7 @@ export default function ChannelCard({ channel, currentTab, rank, groupKey }: { c
 
             {(isCurrent || isMonthlyViews) && (
               <p className="flex items-center gap-1 text-sm text-gray-300">
-                <span role="img" aria-label="Views">▶️</span>
+                <FaPlay className="text-gray-300 w-3 h-3" />
                 {Number(channel.views)
                   ? `${Number(channel.views).toLocaleString()} 回`
                   : <span className="text-red-400">現在の数値を取得できません</span>}
@@ -83,7 +84,7 @@ export default function ChannelCard({ channel, currentTab, rank, groupKey }: { c
                 className={`flex items-center gap-1 text-sm ${channel.viewDiff >= 0 ? 'text-green-400' : 'text-red-400'
                   }`}
               >
-                <span role="img" aria-label="Diff">📈</span>
+                <FaChartLine className={`w-4 h-4 ${channel.viewDiff >= 0 ? 'text-green-400' : 'text-red-400'}`} />
                 {channel.viewDiff >= 0 ? '+' : ''}
                 {channel.viewDiff.toLocaleString()} 回
               </p>

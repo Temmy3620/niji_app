@@ -144,7 +144,7 @@ export default async function ChannelDetailPage({
         {channelInfo && currentStats && (
           <div className="mb-4 rounded-lg bg-[#0a1323] p-4 shadow-md text-white grid grid-cols-3 sm:grid-cols-3 gap-4 text-center border border-cyan-700/40">
             <div>
-              <p className="text-xs sm:text-sm text-gray-400">登録者数</p>
+              <p className="text-xs sm:text-sm text-gray-400">登録増加数</p>
               {(() => {
                 const diff = Number(channelInfo.subscribers) - Number(currentStats.subscribers);
                 return (
@@ -155,7 +155,7 @@ export default async function ChannelDetailPage({
               })()}
             </div>
             <div>
-              <p className="text-xs sm:text-sm text-gray-400">再生数</p>
+              <p className="text-xs sm:text-sm text-gray-400">再生増加数</p>
               {(() => {
                 const diff = Number(channelInfo.views) - Number(currentStats.views);
                 return (
@@ -166,7 +166,7 @@ export default async function ChannelDetailPage({
               })()}
             </div>
             <div>
-              <p className="text-xs sm:text-sm text-gray-400">動画数</p>
+              <p className="text-xs sm:text-sm text-gray-400">動画増加数</p>
               {(() => {
                 const diff = Number(channelInfo.videoCount) - Number(currentStats.videoCount);
                 return (

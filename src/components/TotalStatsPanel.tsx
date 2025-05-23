@@ -105,6 +105,7 @@ export default function TotalStatsPanel({ groupKey, allGroupData }: Props) {
               <div className="text-xs sm:text-sm text-slate-300 uppercase tracking-wide">総再生数合計</div>
             </motion.div>
           </CardContent>
+          <p className="text-base text-slate-400">※タップして詳細表示</p>
         </Card>
       </motion.div>
       <DialogContent className="sm:max-w-xl max-h-[90vh] overflow-y-auto bg-gray-900 border border-slate-700 text-white shadow-xl rounded-lg p-6">

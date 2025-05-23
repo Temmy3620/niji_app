@@ -80,7 +80,7 @@ export default function ChannelListWithTabs({
 
               <ShareButtons postTitle={rankingTitle} hash='#rankings' />
 
-              <p className="text-gray-700 mb-6 text-xs sm:text-base">
+              <p className="text-gray-300 mb-6 text-xs sm:text-base">
                 {sortKey === 'current' && (
                   <>
                     {getGroupNameByKey(group.key)}に所属するVtuber（バーチャルYouTuber）の最新YouTubeチャンネル情報を掲載しています。<br />
