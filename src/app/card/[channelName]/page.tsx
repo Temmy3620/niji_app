@@ -82,7 +82,7 @@ export default async function ChannelDetailPage({
               />
               <h1 className="text-2xl sm:text-3xl font-extrabold tracking-widest text-[#38fdfd]">{decodeURIComponent(channelName)}</h1>
               <div className="flex items-center gap-2">
-                <p className="text-xs sm:text-lg text-gray-400">{groupName}</p>
+                <p className="text-xs sm:text-base text-gray-400">{groupName}</p>
                 <a
                   href={`https://www.youtube.com/channel/${channelId}`}
                   target="_blank"
@@ -90,7 +90,7 @@ export default async function ChannelDetailPage({
                   className="text-red-500 hover:opacity-80"
                   aria-label="YouTubeチャンネルへ"
                 >
-                  <FaYoutube className="w-5 h-5 sm:w-6 sm:h-6" />
+                  <FaYoutube className="w-2 h-2 sm:w-4 sm:h-4" />
                 </a>
                 {twitterId && twitterId !== "Not found" && (
                   <a
@@ -100,7 +100,7 @@ export default async function ChannelDetailPage({
                     className="text-gray-300 hover:text-white"
                     aria-label="Xアカウントへ"
                   >
-                    <FaXTwitter className="w-5 h-5 sm:w-6 sm:h-6" />
+                    <FaXTwitter className="w-2 h-2 sm:w-4 sm:h-4" />
                   </a>
                 )}
               </div>
