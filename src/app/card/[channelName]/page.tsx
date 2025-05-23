@@ -104,7 +104,7 @@ export default async function ChannelDetailPage({
                   </a>
                 )}
               </div>
-              <ScrollArea className="h-20 w-full rounded-xl bg-[#111827]/60 px-6 py-4 text-left text-gray-500 text-[10px] sm:text-xs shadow-inner border border-cyan-800/50 mx-auto">
+              <ScrollArea className="h-20 w-full rounded-xl bg-[#111827]/60 px-4 py-2 text-left text-gray-500 text-[10px] sm:text-xs shadow-inner mx-auto">
                 {channelInfo.description || 'チャンネル説明はありません'}
               </ScrollArea>
             </>
