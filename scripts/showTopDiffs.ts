@@ -64,10 +64,10 @@ async function main() {
     const groupData = data[group];
     if (!groupData || groupData.length === 0) continue;
 
-    console.log(`\n📊 ${groupNames[group] || group.toUpperCase()} - ${monthLabel} 登録者増加数 Top 4`);
+    console.log(`\n📊 ${groupNames[group] || group.toUpperCase()} - ${monthLabel} 登録者増加数 Top 10`);
     const topSubscribers = [...groupData]
       .sort((a, b) => b.subscriberDiff - a.subscriberDiff)
-      .slice(0, 4);
+      .slice(0, 15);
     for (let i = 0; i < topSubscribers.length; i++) {
       const entry = topSubscribers[i];
       const title = await fetchChannelTitle(entry.id);
@@ -75,10 +75,10 @@ async function main() {
     }
     console.log(`\nhttps://vtubertracker.info/subscribers/${group}`);
 
-    console.log(`\n📊 ${groupNames[group] || group.toUpperCase()} - ${monthLabel} 総再生数増加数 Top 4`);
+    console.log(`\n📊 ${groupNames[group] || group.toUpperCase()} - ${monthLabel} 総再生数増加数 Top 10`);
     const topViews = [...groupData]
       .sort((a, b) => b.viewDiff - a.viewDiff)
-      .slice(0, 4);
+      .slice(0, 15);
     for (let i = 0; i < topViews.length; i++) {
       const entry = topViews[i];
       const title = await fetchChannelTitle(entry.id);
