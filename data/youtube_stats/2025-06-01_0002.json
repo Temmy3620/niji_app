@@ -1,0 +1,2335 @@
+{
+  "__generatedAt": "2025-05-31T15:02:45.027Z",
+  "nijisanji": [
+    {
+      "id": "UC_4tXjqecqox5Uc05ncxpxg",
+      "subscribers": 825000,
+      "views": 314696101,
+      "videoCount": 2351
+    },
+    {
+      "id": "UCo2N7C-Z91waaR6lF3LL_jw",
+      "subscribers": 678000,
+      "views": 209209117,
+      "videoCount": 1827
+    },
+    {
+      "id": "UCckdfYDGrjojJM28n5SHYrA",
+      "subscribers": 1340000,
+      "views": 109350228,
+      "videoCount": 634
+    },
+    {
+      "id": "UCL34fAoFim9oHLbVzMKFavQ",
+      "subscribers": 564000,
+      "views": 154685044,
+      "videoCount": 1995
+    },
+    {
+      "id": "UC9V3Y3_uzU5e-usObb6IE1w",
+      "subscribers": 1130000,
+      "views": 308341733,
+      "videoCount": 1712
+    },
+    {
+      "id": "UCUc8GZfFxtmk7ZwSO7ccQ0g",
+      "subscribers": 654000,
+      "views": 219101559,
+      "videoCount": 1759
+    },
+    {
+      "id": "UCQ1zGxHrfEmmW4CPpBx9-qw",
+      "subscribers": 721000,
+      "views": 58712587,
+      "videoCount": 883
+    },
+    {
+      "id": "UCX7YkU9nEeaoZbkVLVajcMg",
+      "subscribers": 1750000,
+      "views": 918360152,
+      "videoCount": 2582
+    },
+    {
+      "id": "UCG0rzBZV_QMP4MtWg6IjhEA",
+      "subscribers": 963000,
+      "views": 66584334,
+      "videoCount": 586
+    },
+    {
+      "id": "UCIG9rDtgR45VCZmYnd-4DUw",
+      "subscribers": 622000,
+      "views": 109319489,
+      "videoCount": 1468
+    },
+    {
+      "id": "UCt5-0i4AVHXaWJrL8Wql3mw",
+      "subscribers": 749000,
+      "views": 358896581,
+      "videoCount": 1264
+    },
+    {
+      "id": "UC6wvdADTJ88OfIbJYIpAaDA",
+      "subscribers": 1100000,
+      "views": 496588475,
+      "videoCount": 1593
+    },
+    {
+      "id": "UCNW1Ex0r6HsWRD4LCtPwvoQ",
+      "subscribers": 705000,
+      "views": 223308332,
+      "videoCount": 1040
+    },
+    {
+      "id": "UCZ1xuCK1kNmn5RzPYIZop3w",
+      "subscribers": 924000,
+      "views": 262560131,
+      "videoCount": 1011
+    },
+    {
+      "id": "UCuep1JCrMvSxOGgGhBfJuYw",
+      "subscribers": 746000,
+      "views": 249359413,
+      "videoCount": 1422
+    },
+    {
+      "id": "UCoztvTULBYd3WmStqYeoHcA",
+      "subscribers": 895000,
+      "views": 246277372,
+      "videoCount": 1521
+    },
+    {
+      "id": "UC7Gb7Uawe20QyFibhLl1lzA",
+      "subscribers": 1040000,
+      "views": 117306015,
+      "videoCount": 708
+    },
+    {
+      "id": "UCHVXbQzkl3rDfsXWo8xi2qw",
+      "subscribers": 892000,
+      "views": 179093838,
+      "videoCount": 906
+    },
+    {
+      "id": "UCYKP16oMX9KKPbrNgo_Kgag",
+      "subscribers": 680000,
+      "views": 297733605,
+      "videoCount": 2700
+    },
+    {
+      "id": "UC-JSeFfovhNsEhftt1WHMvg",
+      "subscribers": 859000,
+      "views": 254429181,
+      "videoCount": 1112
+    },
+    {
+      "id": "UCR6qhsLpn62WVxCBK1dkLow",
+      "subscribers": 643000,
+      "views": 74168904,
+      "videoCount": 703
+    },
+    {
+      "id": "UCgIfLpQvelloDi8I0Ycbwpg",
+      "subscribers": 1810000,
+      "views": 304971959,
+      "videoCount": 903
+    },
+    {
+      "id": "UC8C1LLhBhf_E2IBPLSDJXlQ",
+      "subscribers": 602000,
+      "views": 104498583,
+      "videoCount": 1489
+    },
+    {
+      "id": "UCjlmCrq4TP1I4xguOtJ-31w",
+      "subscribers": 624000,
+      "views": 104868190,
+      "videoCount": 1763
+    },
+    {
+      "id": "UCsg-YqdqQ-KFF0LNk23BY4A",
+      "subscribers": 924000,
+      "views": 305356000,
+      "videoCount": 1714
+    },
+    {
+      "id": "UChKXd7oqD18qiIYBoRIHTlw",
+      "subscribers": 566000,
+      "views": 58684635,
+      "videoCount": 575
+    },
+    {
+      "id": "UCXRlIK3Cw_TJIQC5kSJJQMg",
+      "subscribers": 903000,
+      "views": 258671012,
+      "videoCount": 1047
+    },
+    {
+      "id": "UCgmFrRcyH7d1zR9sIVQhFow",
+      "subscribers": 853000,
+      "views": 321895985,
+      "videoCount": 924
+    },
+    {
+      "id": "UCkIimWZ9gBJRamKF0rmPU8w",
+      "subscribers": 732000,
+      "views": 169277188,
+      "videoCount": 1541
+    },
+    {
+      "id": "UCmovZ2th3Sqpd00F5RdeigQ",
+      "subscribers": 862000,
+      "views": 284984768,
+      "videoCount": 1393
+    },
+    {
+      "id": "UCwi4P78SVunSYAGrvC9aKcw",
+      "subscribers": 1180000,
+      "views": 462322214,
+      "videoCount": 393
+    },
+    {
+      "id": "UCv1fFr156jc65EMiLbaLImw",
+      "subscribers": 1140000,
+      "views": 268956574,
+      "videoCount": 582
+    },
+    {
+      "id": "UCo7TRj3cS-f_1D9ZDmuTsjw",
+      "subscribers": 772000,
+      "views": 234291093,
+      "videoCount": 952
+    },
+    {
+      "id": "UCkngxfPbmGyGl_RIq4FA3MQ",
+      "subscribers": 631000,
+      "views": 182425053,
+      "videoCount": 2215
+    },
+    {
+      "id": "UCuuAb_72QzK0M1USPMEl1yw",
+      "subscribers": 537000,
+      "views": 28492863,
+      "videoCount": 554
+    },
+    {
+      "id": "UCD-miitqNY3nyukJ4Fnf4_A",
+      "subscribers": 1400000,
+      "views": 566224425,
+      "videoCount": 1000
+    },
+    {
+      "id": "UCz6vnIbgiqFT9xUcD6Bp65Q",
+      "subscribers": 1150000,
+      "views": 370694856,
+      "videoCount": 531
+    },
+    {
+      "id": "UCL_O_HXgLJx3Auteer0n0pA",
+      "subscribers": 608000,
+      "views": 92426888,
+      "videoCount": 1174
+    },
+    {
+      "id": "UChJ5FTsHOu72_5OVx0rvsvQ",
+      "subscribers": 651000,
+      "views": 60368630,
+      "videoCount": 764
+    },
+    {
+      "id": "UCSFCh5NL4qXrAy9u-u2lX3g",
+      "subscribers": 1990000,
+      "views": 1126872250,
+      "videoCount": 2389
+    },
+    {
+      "id": "UChUJbHiTVeGrSkTdBzVfNCQ",
+      "subscribers": 554000,
+      "views": 164296275,
+      "videoCount": 982
+    },
+    {
+      "id": "UC1zFJrfEKvCixhsjNSb1toQ",
+      "subscribers": 594000,
+      "views": 122603199,
+      "videoCount": 2846
+    },
+    {
+      "id": "UCspv01oxUFf_MTSipURRhkA",
+      "subscribers": 1440000,
+      "views": 671183668,
+      "videoCount": 3978
+    },
+    {
+      "id": "UCPvGypSgfDkVe7JG2KygK7A",
+      "subscribers": 580000,
+      "views": 96700438,
+      "videoCount": 635
+    },
+    {
+      "id": "UCfipDDn7wY-C-SoUChgxCQQ",
+      "subscribers": 570000,
+      "views": 71590965,
+      "videoCount": 1157
+    },
+    {
+      "id": "UCKMYISTJAQ8xTplUPHiABlA",
+      "subscribers": 874000,
+      "views": 308565545,
+      "videoCount": 1575
+    },
+    {
+      "id": "UCmZ1Rbthn-6Jm_qOGjYsh5A",
+      "subscribers": 792000,
+      "views": 222232990,
+      "videoCount": 1483
+    },
+    {
+      "id": "UCdpUojq0KWZCN9bxXnZwz5w",
+      "subscribers": 858000,
+      "views": 240583203,
+      "videoCount": 1903
+    },
+    {
+      "id": "UC0g1AE0DOjBYnLhkgoRWN1w",
+      "subscribers": 756000,
+      "views": 277876422,
+      "videoCount": 2089
+    },
+    {
+      "id": "UCzNXpqpdvlibmNc1JpM1o4g",
+      "subscribers": 723000,
+      "views": 66133719,
+      "videoCount": 364
+    },
+    {
+      "id": "UCGw7lrT-rVZCWHfdG9Frcgg",
+      "subscribers": 362000,
+      "views": 78129930,
+      "videoCount": 987
+    },
+    {
+      "id": "UCXU7YYxy_iQd3ulXyO-zC2w",
+      "subscribers": 344000,
+      "views": 60134822,
+      "videoCount": 1082
+    },
+    {
+      "id": "UCGhqxhovNfaPBpxfCruy9EA",
+      "subscribers": 472000,
+      "views": 31364230,
+      "videoCount": 627
+    },
+    {
+      "id": "UCuvk5PilcvDECU7dDZhQiEw",
+      "subscribers": 448000,
+      "views": 65363097,
+      "videoCount": 1297
+    },
+    {
+      "id": "UC4l9gz3q65lTBFfFtW5LLeA",
+      "subscribers": 542000,
+      "views": 149875162,
+      "videoCount": 750
+    },
+    {
+      "id": "UCTIE7LM5X15NVugV7Krp9Hw",
+      "subscribers": 359000,
+      "views": 122390750,
+      "videoCount": 1224
+    },
+    {
+      "id": "UC48jH1ul-6HOrcSSfoR02fQ",
+      "subscribers": 344000,
+      "views": 73446065,
+      "videoCount": 1314
+    },
+    {
+      "id": "UC53UDnhAAYwvNO7j_2Ju1cQ",
+      "subscribers": 342000,
+      "views": 49028671,
+      "videoCount": 1179
+    },
+    {
+      "id": "UCqjTqdVlvIipZXIKeCkHKUA",
+      "subscribers": 333000,
+      "views": 39750508,
+      "videoCount": 757
+    },
+    {
+      "id": "UCwaS8_S7kMiKA3izlTWHbQg",
+      "subscribers": 436000,
+      "views": 35372480,
+      "videoCount": 1112
+    },
+    {
+      "id": "UCJubINhCcFXlsBwnHp0wl_g",
+      "subscribers": 448000,
+      "views": 120525963,
+      "videoCount": 836
+    },
+    {
+      "id": "UCUP8TmlO7NNra88AMqGU_vQ",
+      "subscribers": 329000,
+      "views": 65800758,
+      "videoCount": 740
+    },
+    {
+      "id": "UC1QgXt46-GEvtNjEC1paHnw",
+      "subscribers": 523000,
+      "views": 298515275,
+      "videoCount": 979
+    },
+    {
+      "id": "UC5dJFf4m-mEcoyJRfhBljoA",
+      "subscribers": 334000,
+      "views": 70709422,
+      "videoCount": 745
+    },
+    {
+      "id": "UCtpB6Bvhs1Um93ziEDACQ8g",
+      "subscribers": 326000,
+      "views": 102740483,
+      "videoCount": 739
+    },
+    {
+      "id": "UC3lNFeJiTq6L3UWoz4g1e-A",
+      "subscribers": 403000,
+      "views": 120440294,
+      "videoCount": 1157
+    },
+    {
+      "id": "UC6WFKwYptsxVue56Lx218vg",
+      "subscribers": 369000,
+      "views": 96763074,
+      "videoCount": 494
+    },
+    {
+      "id": "UC_T8F2CvqZOwa2kme0WwRhg",
+      "subscribers": 538000,
+      "views": 542213111,
+      "videoCount": 1855
+    },
+    {
+      "id": "UCsFn_ueskBkMCEyzCEqAOvg",
+      "subscribers": 527000,
+      "views": 115534746,
+      "videoCount": 1257
+    },
+    {
+      "id": "UCivwPlOp0ojnMPZj5pNOPPA",
+      "subscribers": 345000,
+      "views": 57073701,
+      "videoCount": 881
+    },
+    {
+      "id": "UCS-XXTgVkotkbkDnGEprXpg",
+      "subscribers": 530000,
+      "views": 174948602,
+      "videoCount": 705
+    },
+    {
+      "id": "UCXW4MqCQn-jCaxlX-nn-BYg",
+      "subscribers": 478000,
+      "views": 132726161,
+      "videoCount": 2082
+    },
+    {
+      "id": "UC-o-E6I3IC2q8sAoAuM6Umg",
+      "subscribers": 456000,
+      "views": 74394281,
+      "videoCount": 1209
+    },
+    {
+      "id": "UCtnO2N4kPTXmyvedjGWdx3Q",
+      "subscribers": 360000,
+      "views": 91438767,
+      "videoCount": 1556
+    },
+    {
+      "id": "UCCHH0nWYXFZmtDS_4tvMxHQ",
+      "subscribers": 316000,
+      "views": 33706908,
+      "videoCount": 1046
+    },
+    {
+      "id": "UC47rNmkDcNgbOcM-2BwzJTQ",
+      "subscribers": 497000,
+      "views": 57887864,
+      "videoCount": 836
+    },
+    {
+      "id": "UCIeSUTOTkF9Hs7q3SGcO-Ow",
+      "subscribers": 523000,
+      "views": 54485892,
+      "videoCount": 899
+    },
+    {
+      "id": "UCHBhnG2G-qN0JrrWmMO2FTA",
+      "subscribers": 403000,
+      "views": 56472002,
+      "videoCount": 885
+    },
+    {
+      "id": "UCKu59gTZ_rdEmerdx5rV4Yg",
+      "subscribers": 527000,
+      "views": 45979678,
+      "videoCount": 438
+    },
+    {
+      "id": "UCHRCp0CSacVnTVS2Z4x9xYg",
+      "subscribers": 452000,
+      "views": 89564107,
+      "videoCount": 194
+    },
+    {
+      "id": "UCgA2jKRkqpY_8eysPUs8sjw",
+      "subscribers": 489000,
+      "views": 26295575,
+      "videoCount": 567
+    },
+    {
+      "id": "UCRm6lqtdxs_Qo6HeL-SRQ-w",
+      "subscribers": 416000,
+      "views": 80193604,
+      "videoCount": 1412
+    },
+    {
+      "id": "UCgZ0pH7j6c9z-pkOG3PYw1Q",
+      "subscribers": 348000,
+      "views": 146119450,
+      "videoCount": 665
+    },
+    {
+      "id": "UCIytNcoz4pWzXfLda0DoULQ",
+      "subscribers": 469000,
+      "views": 139640103,
+      "videoCount": 1767
+    },
+    {
+      "id": "UCV5ZZlLjk5MKGg3L0n0vbzw",
+      "subscribers": 512000,
+      "views": 137829706,
+      "videoCount": 2608
+    },
+    {
+      "id": "UCCVwhI5trmaSxfcze_Ovzfw",
+      "subscribers": 337000,
+      "views": 36820170,
+      "videoCount": 356
+    },
+    {
+      "id": "UCtHFXfrn52juTqGBN4WbMVw",
+      "subscribers": 361000,
+      "views": 25774155,
+      "videoCount": 21
+    },
+    {
+      "id": "UC4WvIIAo89_AzGUh1AZ6Dkg",
+      "subscribers": 473000,
+      "views": 38107752,
+      "videoCount": 848
+    },
+    {
+      "id": "UC9EjSJ8pvxtvPdxLOElv73w",
+      "subscribers": 536000,
+      "views": 109972790,
+      "videoCount": 1528
+    },
+    {
+      "id": "UCggO2c1unS-oLwTLT0ICywg",
+      "subscribers": 357000,
+      "views": 8772454,
+      "videoCount": 11
+    },
+    {
+      "id": "UC-6rZgmxZSIbq786j3RD5ow",
+      "subscribers": 473000,
+      "views": 113992503,
+      "videoCount": 1003
+    },
+    {
+      "id": "UCu-J8uIXuLZh16gG-cT1naw",
+      "subscribers": 483000,
+      "views": 54983581,
+      "videoCount": 1032
+    },
+    {
+      "id": "UCGYAYLDE7TZiiC8U6teciDQ",
+      "subscribers": 459000,
+      "views": 129071899,
+      "videoCount": 1795
+    },
+    {
+      "id": "UC6oDys1BGgBsIC3WhG1BovQ",
+      "subscribers": 375000,
+      "views": 72655838,
+      "videoCount": 2149
+    },
+    {
+      "id": "UCBURM8S4LH7cRZ0Clea9RDA",
+      "subscribers": 409000,
+      "views": 21910167,
+      "videoCount": 1010
+    },
+    {
+      "id": "UCBiqkFJljoxAj10SoP2w2Cg",
+      "subscribers": 407000,
+      "views": 58924017,
+      "videoCount": 872
+    },
+    {
+      "id": "UCFgXWZOUZA2oYHNr6qDmsTQ",
+      "subscribers": 360000,
+      "views": 25420682,
+      "videoCount": 1274
+    },
+    {
+      "id": "UCcDDxnoQcezyTUzHg5uHaKg",
+      "subscribers": 425000,
+      "views": 103058385,
+      "videoCount": 647
+    },
+    {
+      "id": "UCNRh9kkByBTYLo0IJupnAug",
+      "subscribers": 411000,
+      "views": 175352898,
+      "videoCount": 698
+    },
+    {
+      "id": "UCbc8fwhdUNlqi-J99ISYu4A",
+      "subscribers": 477000,
+      "views": 102782934,
+      "videoCount": 1786
+    },
+    {
+      "id": "UC2OacIzd2UxGHRGhdHl1Rhw",
+      "subscribers": 265000,
+      "views": 40836993,
+      "videoCount": 1150
+    },
+    {
+      "id": "UCWz0CSYCxf4MhRKPDm220AQ",
+      "subscribers": 263000,
+      "views": 49767188,
+      "videoCount": 2344
+    },
+    {
+      "id": "UCy91xBlY_Brh3bnHxKtjrrg",
+      "subscribers": 235000,
+      "views": 12616065,
+      "videoCount": 551
+    },
+    {
+      "id": "UCRcLAVTbmx2-iNcXSsupdNA",
+      "subscribers": 245000,
+      "views": 41569130,
+      "videoCount": 1405
+    },
+    {
+      "id": "UCe22Bcwd_GCpTjLxn83zl7A",
+      "subscribers": 284000,
+      "views": 51444128,
+      "videoCount": 873
+    },
+    {
+      "id": "UCC7rRD6P7RQcx0hKv9RQP4w",
+      "subscribers": 308000,
+      "views": 81786034,
+      "videoCount": 824
+    },
+    {
+      "id": "UCWRPqA0ehhWV4Hnp27PJCkQ",
+      "subscribers": 264000,
+      "views": 47828261,
+      "videoCount": 939
+    },
+    {
+      "id": "UCxWcO9CLti4uouUIS5IIF-Q",
+      "subscribers": 208000,
+      "views": 49329567,
+      "videoCount": 77
+    },
+    {
+      "id": "UC7_MFM9b8hp5kuTSpa8WyOQ",
+      "subscribers": 328000,
+      "views": 49768818,
+      "videoCount": 489
+    },
+    {
+      "id": "UClrQ7xhRBxS_v_-WuudGKmA",
+      "subscribers": 209000,
+      "views": 38048705,
+      "videoCount": 919
+    },
+    {
+      "id": "UCl1oLKcAq93p-pwKfDGhiYQ",
+      "subscribers": 214000,
+      "views": 14876575,
+      "videoCount": 762
+    },
+    {
+      "id": "UCwrjITPwG4q71HzihV2C7Nw",
+      "subscribers": 257000,
+      "views": 50977182,
+      "videoCount": 1737
+    },
+    {
+      "id": "UCllKI7VjyANuS1RXatizfLQ",
+      "subscribers": 255000,
+      "views": 44355348,
+      "videoCount": 1386
+    },
+    {
+      "id": "UCeGendL8CO5RkffB6IFwHow",
+      "subscribers": 210000,
+      "views": 51293849,
+      "videoCount": 1531
+    },
+    {
+      "id": "UCu-rV2gPtJ-CsGxe71z_BrQ",
+      "subscribers": 260000,
+      "views": 41783413,
+      "videoCount": 816
+    },
+    {
+      "id": "UC_GCs6GARLxEHxy1w40d6VQ",
+      "subscribers": 252000,
+      "views": 19038753,
+      "videoCount": 908
+    },
+    {
+      "id": "UC8SJPcLpIM3x8RdBJFfiluw",
+      "subscribers": 285000,
+      "views": 30358085,
+      "videoCount": 450
+    },
+    {
+      "id": "UCfQVs_KuXeNAlGa3fb8rlnQ",
+      "subscribers": 273000,
+      "views": 50306208,
+      "videoCount": 2421
+    },
+    {
+      "id": "UCiphSlsDcJJQ7mDqR9Q3SdA",
+      "subscribers": 238000,
+      "views": 47369982,
+      "videoCount": 94
+    },
+    {
+      "id": "UCg63a3lk6PNeWhVvMRM_mrQ",
+      "subscribers": 227000,
+      "views": 33599631,
+      "videoCount": 1831
+    },
+    {
+      "id": "UCpNH2Zk2gw3JBjWAKSyZcQQ",
+      "subscribers": 232000,
+      "views": 25955905,
+      "videoCount": 760
+    },
+    {
+      "id": "UCN68LoM3khS4gdBMiWJO8WA",
+      "subscribers": 290000,
+      "views": 12508134,
+      "videoCount": 868
+    },
+    {
+      "id": "UCpJtk0myFr5WnyfsmnInP-w",
+      "subscribers": 281000,
+      "views": 17486504,
+      "videoCount": 883
+    },
+    {
+      "id": "UCiA-trSZfB0i92V_-dyDqBw",
+      "subscribers": 219000,
+      "views": 52464825,
+      "videoCount": 713
+    },
+    {
+      "id": "UC_82HBGtvwN1hcGeOGHzUBQ",
+      "subscribers": 192000,
+      "views": 16471291,
+      "videoCount": 912
+    },
+    {
+      "id": "UCz89MGFBrAqwJ5xMr5weSuA",
+      "subscribers": 271000,
+      "views": 73299690,
+      "videoCount": 692
+    },
+    {
+      "id": "UChdY64fJb14Nfnbs8EGdQig",
+      "subscribers": 272000,
+      "views": 65735980,
+      "videoCount": 805
+    },
+    {
+      "id": "UCmUjjW5zF1MMOhYUwwwQv9Q",
+      "subscribers": 183000,
+      "views": 14409404,
+      "videoCount": 792
+    },
+    {
+      "id": "UCBi8YaVyZpiKWN3_Z0dCTfQ",
+      "subscribers": 207000,
+      "views": 20316262,
+      "videoCount": 286
+    },
+    {
+      "id": "UCmeyo5pRj_6PXG-CsGUuWWg",
+      "subscribers": 281000,
+      "views": 31203497,
+      "videoCount": 594
+    },
+    {
+      "id": "UCy8P3o5XlMpJGQY4WugzdNA",
+      "subscribers": 319000,
+      "views": 45809068,
+      "videoCount": 628
+    },
+    {
+      "id": "UCyXBNgCulibV9pRm3ZKpmoQ",
+      "subscribers": 251000,
+      "views": 46483022,
+      "videoCount": 353
+    },
+    {
+      "id": "UCpYf6C9QsP_BRf97vLuXlIA",
+      "subscribers": 253000,
+      "views": 17001469,
+      "videoCount": 642
+    },
+    {
+      "id": "UC1vawzfbCnRpHT9SJ5pHlHw",
+      "subscribers": 241000,
+      "views": 46439282,
+      "videoCount": 731
+    },
+    {
+      "id": "UCb6ObE-XGCctO3WrjRZC-cw",
+      "subscribers": 245000,
+      "views": 41359071,
+      "videoCount": 1364
+    },
+    {
+      "id": "UCambvP8yxNDot4FzQc9cgiw",
+      "subscribers": 262000,
+      "views": 43141344,
+      "videoCount": 604
+    },
+    {
+      "id": "UCerkculBD7YLc_vOGrF7tKg",
+      "subscribers": 302000,
+      "views": 59135029,
+      "videoCount": 1128
+    },
+    {
+      "id": "UCtHY-tP0dyykhTRMmnfPs_g",
+      "subscribers": 248000,
+      "views": 37718678,
+      "videoCount": 606
+    },
+    {
+      "id": "UCO8WcDsF5znr-qsXlzZNpqg",
+      "subscribers": 228000,
+      "views": 12707324,
+      "videoCount": 425
+    },
+    {
+      "id": "UCRqBKoKuX30ruKAq05pCeRQ",
+      "subscribers": 304000,
+      "views": 33986993,
+      "videoCount": 1013
+    },
+    {
+      "id": "UCt0clH12Xk1-Ej5PXKGfdPA",
+      "subscribers": 266000,
+      "views": 35674669,
+      "videoCount": 973
+    },
+    {
+      "id": "UCpzxZW5kghGnO5TmAFJQAVw",
+      "subscribers": 312000,
+      "views": 14424089,
+      "videoCount": 673
+    },
+    {
+      "id": "UCcx3crxPFi006DUhb_YU-tw",
+      "subscribers": 194000,
+      "views": 29707330,
+      "videoCount": 336
+    },
+    {
+      "id": "UC0WwEfE-jOM2rzjpdfhTzZA",
+      "subscribers": 181000,
+      "views": 14730803,
+      "videoCount": 706
+    },
+    {
+      "id": "UCKpKC3M5fkcEvtOr06dmYlA",
+      "subscribers": 202000,
+      "views": 11802216,
+      "videoCount": 396
+    },
+    {
+      "id": "UCryOPk2GZ1meIDt53tL30Tw",
+      "subscribers": 315000,
+      "views": 65905103,
+      "videoCount": 1681
+    },
+    {
+      "id": "UCqXxS-9x9Ha_UiH6hG4kh5Q",
+      "subscribers": 329000,
+      "views": 69484275,
+      "videoCount": 649
+    },
+    {
+      "id": "UCHX7YpFG8rVwhsHCx34xt7w",
+      "subscribers": 206000,
+      "views": 26480476,
+      "videoCount": 1163
+    },
+    {
+      "id": "UCtLfA_qUqCJtjXJM2ZR_keg",
+      "subscribers": 315000,
+      "views": 69006336,
+      "videoCount": 680
+    },
+    {
+      "id": "UCK9l6rTwU3hiSZijIMq51Gw",
+      "subscribers": 197000,
+      "views": 11893437,
+      "videoCount": 531
+    },
+    {
+      "id": "UC0xry7czPasj1wPxR8L0MZg",
+      "subscribers": 144000,
+      "views": 17693121,
+      "videoCount": 339
+    },
+    {
+      "id": "UCUtKkGKef8BYMs3h-3zQm9A",
+      "subscribers": 172000,
+      "views": 11005265,
+      "videoCount": 983
+    },
+    {
+      "id": "UCiJ_Um3KbfF19NzkDYLzZVQ",
+      "subscribers": 128000,
+      "views": 12795207,
+      "videoCount": 428
+    },
+    {
+      "id": "UCyJOgJhgfoVRpFjsBCUmuvg",
+      "subscribers": 102000,
+      "views": 9573476,
+      "videoCount": 485
+    },
+    {
+      "id": "UCZzBZtqCowlyG4ZXr6R_pIw",
+      "subscribers": 89600,
+      "views": 5667007,
+      "videoCount": 16
+    },
+    {
+      "id": "UCvzVB-EYuHFXHZrObB8a_Og",
+      "subscribers": 127000,
+      "views": 8953487,
+      "videoCount": 464
+    },
+    {
+      "id": "UCeK9HFcRZoTrvqcUCtccMoQ",
+      "subscribers": 161000,
+      "views": 32611723,
+      "videoCount": 2542
+    },
+    {
+      "id": "UCwNNw9kUM-Bo0n2ktXOPB7Q",
+      "subscribers": 176000,
+      "views": 10321301,
+      "videoCount": 19
+    },
+    {
+      "id": "UClMYGvekJOb51eBOCK-d4Dw",
+      "subscribers": 134000,
+      "views": 5996259,
+      "videoCount": 107
+    },
+    {
+      "id": "UCdh-YF2gTzqDNu0VU9lwPPw",
+      "subscribers": 135000,
+      "views": 7856371,
+      "videoCount": 322
+    },
+    {
+      "id": "UCjFu-9GHnabzSFRAYm1B9Dw",
+      "subscribers": 57500,
+      "views": 1819614,
+      "videoCount": 469
+    },
+    {
+      "id": "UCUI1qpjJSEbgzdlwmpdVmMw",
+      "subscribers": 55200,
+      "views": 1244202,
+      "videoCount": 204
+    },
+    {
+      "id": "UCufQu4q65z63IgE4cfKs1BQ",
+      "subscribers": 111000,
+      "views": 1549561,
+      "videoCount": 3
+    },
+    {
+      "id": "UCiSRx1a2k-0tOg-fs6gAolQ",
+      "subscribers": 110000,
+      "views": 8295322,
+      "videoCount": 340
+    },
+    {
+      "id": "UCRV9d6YCYIMUszK-83TwxVA",
+      "subscribers": 146000,
+      "views": 13610839,
+      "videoCount": 919
+    },
+    {
+      "id": "UCGEMpMpll4otCdnnxQ9paFg",
+      "subscribers": 175000,
+      "views": 17050362,
+      "videoCount": 16
+    },
+    {
+      "id": "UCpjypWF_wNRs9_TrjjWngpQ",
+      "subscribers": 155000,
+      "views": 12878189,
+      "videoCount": 194
+    },
+    {
+      "id": "UCr40BzcLiGruKe7M5gXR9zQ",
+      "subscribers": 147000,
+      "views": 3894362,
+      "videoCount": 72
+    },
+    {
+      "id": "UCkQ8i_cz0prqdo9jj__L93Q",
+      "subscribers": 127000,
+      "views": 8309095,
+      "videoCount": 219
+    },
+    {
+      "id": "UC8Snw5i4eOJXEQqURAK17hQ",
+      "subscribers": 54200,
+      "views": 1543149,
+      "videoCount": 371
+    },
+    {
+      "id": "UCh98mDig5OrbsF-JUXbD5LA",
+      "subscribers": 56800,
+      "views": 683755,
+      "videoCount": 37
+    },
+    {
+      "id": "UCkhViRjLUKgIcVpar9JiNrw",
+      "subscribers": 204000,
+      "views": 35721263,
+      "videoCount": 419
+    },
+    {
+      "id": "UCyRkQSuhJILuGOuXk10voPg",
+      "subscribers": 80000,
+      "views": 2954806,
+      "videoCount": 698
+    },
+    {
+      "id": "UCw-kTlPnZYSHhlGMFJ17Znw",
+      "subscribers": 110000,
+      "views": 11177154,
+      "videoCount": 292
+    },
+    {
+      "id": "UChqQiUSyI-Q1j3k57_mAJHA",
+      "subscribers": 80500,
+      "views": 9938816,
+      "videoCount": 9
+    },
+    {
+      "id": "UCYjdP5F0ds2D6deMo5rpoyw",
+      "subscribers": 90300,
+      "views": 11451409,
+      "videoCount": 32
+    },
+    {
+      "id": "UCClwIqTUn5LDpFucHyaAhHg",
+      "subscribers": 106000,
+      "views": 4220118,
+      "videoCount": 488
+    },
+    {
+      "id": "UCtAvQ5U0aXyKwm2i4GqFgJg",
+      "subscribers": 182000,
+      "views": 13281424,
+      "videoCount": 550
+    },
+    {
+      "id": "UCh-GyPNxvjTsza0ptjnkh1w",
+      "subscribers": 192000,
+      "views": 40994323,
+      "videoCount": 147
+    },
+    {
+      "id": "UC5ek2GWKvUKFgnKSHuuCFrw",
+      "subscribers": 88400,
+      "views": 5324947,
+      "videoCount": 640
+    },
+    {
+      "id": "UCRWOdwLRsenx2jLaiCAIU4A",
+      "subscribers": 171000,
+      "views": 7953876,
+      "videoCount": 72
+    },
+    {
+      "id": "UClS6k3w1sPwlVFqK3-yID5A",
+      "subscribers": 37600,
+      "views": 1357437,
+      "videoCount": 538
+    },
+    {
+      "id": "UCCugV2RWXqJMjVVQl_Yh4TQ",
+      "subscribers": 135000,
+      "views": 3002712,
+      "videoCount": 90
+    },
+    {
+      "id": "UCpRXCTyNNa-MnjhK6gisnRw",
+      "subscribers": 53700,
+      "views": 2965483,
+      "videoCount": 728
+    },
+    {
+      "id": "UCnzZmBOSrQf2wDBbnsDajVw",
+      "subscribers": 56900,
+      "views": 2673665,
+      "videoCount": 980
+    },
+    {
+      "id": "UCEFOogmvTTcCaO8Qe0I8-tg",
+      "subscribers": 157000,
+      "views": 4577112,
+      "videoCount": 67
+    },
+    {
+      "id": "UCFtyinR2ZdvKK_Xgy07qXUg",
+      "subscribers": 172000,
+      "views": 18792957,
+      "videoCount": 430
+    },
+    {
+      "id": "UCebT4Aq-3XWb5je1S1FvR_A",
+      "subscribers": 164000,
+      "views": 30360225,
+      "videoCount": 503
+    },
+    {
+      "id": "UC7hffDQLKIEG-_zoAQkMIvg",
+      "subscribers": 56300,
+      "views": 2341003,
+      "videoCount": 478
+    },
+    {
+      "id": "UCrhhJPNsOqzNIkUfTABoSpg",
+      "subscribers": 113000,
+      "views": 8972416,
+      "videoCount": 836
+    },
+    {
+      "id": "UCAQDFeCTVdx90GtwohwjHzQ",
+      "subscribers": 139000,
+      "views": 10592103,
+      "videoCount": 304
+    },
+    {
+      "id": "UCnbJ8LTbHrsRgqkxwJXCU8w",
+      "subscribers": 124000,
+      "views": 13291963,
+      "videoCount": 489
+    },
+    {
+      "id": "UCUzJ90o1EjqUbk2pBAy0_aw",
+      "subscribers": 194000,
+      "views": 6907393,
+      "videoCount": 57
+    },
+    {
+      "id": "UCMzVa7B8UEdrvUGsPmSgyjA",
+      "subscribers": 44200,
+      "views": 834818,
+      "videoCount": 220
+    },
+    {
+      "id": "UCIzZDiilcPv0wim_MbuizFA",
+      "subscribers": 57500,
+      "views": 1901091,
+      "videoCount": 371
+    },
+    {
+      "id": "UCtC3B1n4XMiJmrDtu1Ni5qw",
+      "subscribers": 181000,
+      "views": 24027717,
+      "videoCount": 617
+    },
+    {
+      "id": "UCvmppcdYf4HOv-tFQhHHJMA",
+      "subscribers": 142000,
+      "views": 11686291,
+      "videoCount": 627
+    },
+    {
+      "id": "UCX88Pe54pxbJDSGIyGrzNdg",
+      "subscribers": 63200,
+      "views": 4038503,
+      "videoCount": 906
+    },
+    {
+      "id": "UCzsCWYuvPUky3-DKzphYbEw",
+      "subscribers": 138000,
+      "views": 18696431,
+      "videoCount": 451
+    },
+    {
+      "id": "UCQYwIUCLqFoin7lHKmePjJw",
+      "subscribers": 69900,
+      "views": 1765488,
+      "videoCount": 261
+    },
+    {
+      "id": "UCijNnZ-6m8g85UGaRAWuw7g",
+      "subscribers": 31200,
+      "views": 956207,
+      "videoCount": 411
+    },
+    {
+      "id": "UC_D2DNy-KUNQJ_NGMppgmyg",
+      "subscribers": 20000,
+      "views": 242036,
+      "videoCount": 2
+    },
+    {
+      "id": "UCcyiT8QT7fo7LrxXe1oxOoA",
+      "subscribers": 145000,
+      "views": 3394980,
+      "videoCount": 33
+    },
+    {
+      "id": "UCiBBDZ-ndtBgE4xKbswlgXQ",
+      "subscribers": 117000,
+      "views": 4355520,
+      "videoCount": 58
+    }
+  ],
+  "hololive": [
+    {
+      "id": "UCvaTdHTWBGv3MKj3KVqJVCw",
+      "subscribers": 2010000,
+      "views": 560273842,
+      "videoCount": 1485
+    },
+    {
+      "id": "UCMwGHR0BTZuLsmjY_NT5Pwg",
+      "subscribers": 1630000,
+      "views": 166867885,
+      "videoCount": 850
+    },
+    {
+      "id": "UCp-5t9SrOQwXMU7iIjQfARg",
+      "subscribers": 1300000,
+      "views": 255586491,
+      "videoCount": 1320
+    },
+    {
+      "id": "UCTvHWSfBZgtxE4sILOaurIQ",
+      "subscribers": 979000,
+      "views": 56595752,
+      "videoCount": 795
+    },
+    {
+      "id": "UCa9Y57gfeY0Zro_noHRVrnw",
+      "subscribers": 1100000,
+      "views": 148969322,
+      "videoCount": 1330
+    },
+    {
+      "id": "UChAnqc_AY5_I3Px5dig3X1Q",
+      "subscribers": 2210000,
+      "views": 423543293,
+      "videoCount": 1242
+    },
+    {
+      "id": "UCUKD-uaobj9jiqB-VXt71mA",
+      "subscribers": 1520000,
+      "views": 257716085,
+      "videoCount": 1281
+    },
+    {
+      "id": "UCdyqAaZDKHXg4Ahi7VENThQ",
+      "subscribers": 2010000,
+      "views": 372474218,
+      "videoCount": 1429
+    },
+    {
+      "id": "UCENwRMx5Yh42zWpzURebzTw",
+      "subscribers": 1370000,
+      "views": 318166726,
+      "videoCount": 800
+    },
+    {
+      "id": "UC1suqwovbL1kzsoaZgFZLKg",
+      "subscribers": 1100000,
+      "views": 92894172,
+      "videoCount": 1004
+    },
+    {
+      "id": "UCDqI2jOz0weumE8s7paEk6g",
+      "subscribers": 1090000,
+      "views": 130200378,
+      "videoCount": 1793
+    },
+    {
+      "id": "UCJFZiqLMntJufDCHc6bQixg",
+      "subscribers": 2820000,
+      "views": 1776235842,
+      "videoCount": 1653
+    },
+    {
+      "id": "UCjLEmnpCNeisMxy134KPwWw",
+      "subscribers": 2680000,
+      "views": 215754105,
+      "videoCount": 599
+    },
+    {
+      "id": "UC1uv2Oq6kNxgATlCiez59hw",
+      "subscribers": 1520000,
+      "views": 394740888,
+      "videoCount": 1557
+    },
+    {
+      "id": "UCIBY1ollUsauvVi4hW4cumw",
+      "subscribers": 1360000,
+      "views": 203040634,
+      "videoCount": 649
+    },
+    {
+      "id": "UCZlDXzGoo7d44bwdNObFacg",
+      "subscribers": 1620000,
+      "views": 498146205,
+      "videoCount": 1818
+    },
+    {
+      "id": "UCP0BspO_AMEe3aQqqpo89Dg",
+      "subscribers": 1390000,
+      "views": 136793012,
+      "videoCount": 1065
+    },
+    {
+      "id": "UCgmPnx-EEeOrZSg5Tiw7ZRQ",
+      "subscribers": 1060000,
+      "views": 183368046,
+      "videoCount": 1048
+    },
+    {
+      "id": "UC8rcEBzJSleTkf_-agPM20g",
+      "subscribers": 1090000,
+      "views": 131140672,
+      "videoCount": 628
+    },
+    {
+      "id": "UCoSrY_IQQVpmIRZ9Xf-y93g",
+      "subscribers": 4740000,
+      "views": 448227780,
+      "videoCount": 565
+    },
+    {
+      "id": "UCL_qhgtOy0dy1Agp8vkySQg",
+      "subscribers": 2540000,
+      "views": 736518625,
+      "videoCount": 1514
+    },
+    {
+      "id": "UCXTpFs_3PqI41qX2d9tL2Rw",
+      "subscribers": 1360000,
+      "views": 243073582,
+      "videoCount": 685
+    },
+    {
+      "id": "UC5CwaMl1eIgY8h02uZw7u8A",
+      "subscribers": 2750000,
+      "views": 1334123782,
+      "videoCount": 967
+    },
+    {
+      "id": "UCFKOVgVbGmX65RxO3EtH3iw",
+      "subscribers": 1330000,
+      "views": 306795991,
+      "videoCount": 1592
+    },
+    {
+      "id": "UC6eWCld0KwmyHFbAqK3V-Rw",
+      "subscribers": 1290000,
+      "views": 504147465,
+      "videoCount": 2431
+    },
+    {
+      "id": "UCs9_O1tRPMQTHQ-N_L6FU2g",
+      "subscribers": 1070000,
+      "views": 345320339,
+      "videoCount": 1770
+    },
+    {
+      "id": "UCdXAk5MpyLD8594lm_OvtGQ",
+      "subscribers": 1100000,
+      "views": 142990328,
+      "videoCount": 535
+    },
+    {
+      "id": "UC7fk0CB07ly8oSl0aqKkqFg",
+      "subscribers": 1630000,
+      "views": 164574918,
+      "videoCount": 405
+    },
+    {
+      "id": "UC1CfXB_kRs3C-zaeTG3oGyg",
+      "subscribers": 1560000,
+      "views": 258830850,
+      "videoCount": 1568
+    },
+    {
+      "id": "UCOyYb1c43VlX9rc_lT6NKQw",
+      "subscribers": 951000,
+      "views": 79724746,
+      "videoCount": 1287
+    },
+    {
+      "id": "UCdn5BQ06XqgXoAxIhbqw5Rg",
+      "subscribers": 2590000,
+      "views": 649663961,
+      "videoCount": 2777
+    },
+    {
+      "id": "UC-hM6YJuNYVAmUWxeIr9FeA",
+      "subscribers": 2390000,
+      "views": 785008793,
+      "videoCount": 1855
+    },
+    {
+      "id": "UCHsx4Hqa-1ORjQTh9TYDhww",
+      "subscribers": 1590000,
+      "views": 276855311,
+      "videoCount": 1393
+    },
+    {
+      "id": "UC1DCedRgGHBdm81E1llLhOQ",
+      "subscribers": 2700000,
+      "views": 930343250,
+      "videoCount": 2107
+    },
+    {
+      "id": "UCAWSyEs_Io8MtpY3m-zqILA",
+      "subscribers": 1280000,
+      "views": 199508624,
+      "videoCount": 1172
+    },
+    {
+      "id": "UC0TXe_LYZ4scaW2XMyi5_kw",
+      "subscribers": 1220000,
+      "views": 204643832,
+      "videoCount": 1003
+    },
+    {
+      "id": "UCt9H_RpQzhxzlyBxFqrdHqA",
+      "subscribers": 1170000,
+      "views": 97315681,
+      "videoCount": 695
+    },
+    {
+      "id": "UCQ0UDLQCjY0rmuxCDE38FGg",
+      "subscribers": 1530000,
+      "views": 213104882,
+      "videoCount": 1470
+    },
+    {
+      "id": "UCp6993wxpyDPHUpavwDFqgg",
+      "subscribers": 1290000,
+      "views": 224996266,
+      "videoCount": 1503
+    },
+    {
+      "id": "UC_vMYWcDjmfdpH6r4TTn1MQ",
+      "subscribers": 1080000,
+      "views": 190091771,
+      "videoCount": 846
+    },
+    {
+      "id": "UCqm3BQLlJfvkTsX_hvm0UmA",
+      "subscribers": 1660000,
+      "views": 538586073,
+      "videoCount": 2611
+    },
+    {
+      "id": "UCFTLzh12_nrtzqBPsTCqenA",
+      "subscribers": 1000000,
+      "views": 137905549,
+      "videoCount": 1501
+    },
+    {
+      "id": "UCYz_5n-uDuChHtLo7My1HnQ",
+      "subscribers": 1380000,
+      "views": 89583767,
+      "videoCount": 1469
+    },
+    {
+      "id": "UC3n5uGu18FoCy23ggWWp8tA",
+      "subscribers": 1180000,
+      "views": 113998674,
+      "videoCount": 530
+    },
+    {
+      "id": "UCvInZx9h3jC2JzsIzoOebWg",
+      "subscribers": 1120000,
+      "views": 199589994,
+      "videoCount": 1586
+    },
+    {
+      "id": "UCmbs8T6MWqUHP1tIQvSgKrg",
+      "subscribers": 1080000,
+      "views": 98792054,
+      "videoCount": 585
+    },
+    {
+      "id": "UCyl1z3jo3XHR1riLFKG5UAg",
+      "subscribers": 1790000,
+      "views": 178987835,
+      "videoCount": 920
+    },
+    {
+      "id": "UCCzUftO8KOVkV4wQG1vkUvg",
+      "subscribers": 4060000,
+      "views": 1780146490,
+      "videoCount": 1453
+    },
+    {
+      "id": "UCK9V2B22uJYu3N7eR_BT9QA",
+      "subscribers": 1310000,
+      "views": 294503264,
+      "videoCount": 1874
+    },
+    {
+      "id": "UCvzGlP9oQwU--Y0r9id_jnA",
+      "subscribers": 1890000,
+      "views": 510954166,
+      "videoCount": 1727
+    },
+    {
+      "id": "UCLk1hcmxg8rJ3Nm1_GvxTRA",
+      "subscribers": 102000,
+      "views": 6407050,
+      "videoCount": 518
+    },
+    {
+      "id": "UCTVSOgYuSWmNAt-lnJPkEEw",
+      "subscribers": 150000,
+      "views": 8046382,
+      "videoCount": 313
+    },
+    {
+      "id": "UC727SQYUvx5pDDGQpTICNWg",
+      "subscribers": 752000,
+      "views": 37441408,
+      "videoCount": 993
+    },
+    {
+      "id": "UChgTyjG-pdNvxxhdsXfHQ5Q",
+      "subscribers": 830000,
+      "views": 76948563,
+      "videoCount": 1577
+    },
+    {
+      "id": "UC9LSiN9hXI55svYEBrrK-tw",
+      "subscribers": 275000,
+      "views": 17302312,
+      "videoCount": 221
+    },
+    {
+      "id": "UCAoy6rzhSf4ydcYjJw3WoVg",
+      "subscribers": 792000,
+      "views": 45364961,
+      "videoCount": 1447
+    },
+    {
+      "id": "UC10wVt6hoQiwySRhz7RdOUA",
+      "subscribers": 510000,
+      "views": 127336311,
+      "videoCount": 401
+    },
+    {
+      "id": "UCJv02SHZgav7Mv3V0kBOR8Q",
+      "subscribers": 76500,
+      "views": 2045840,
+      "videoCount": 239
+    },
+    {
+      "id": "UCGNI4MENvnsymYjKiZwv9eg",
+      "subscribers": 140000,
+      "views": 12965145,
+      "videoCount": 1658
+    },
+    {
+      "id": "UCMGfV7TVTmHhEErVJg1oHBQ",
+      "subscribers": 712000,
+      "views": 98975558,
+      "videoCount": 582
+    },
+    {
+      "id": "UCMqGG8BRAiI1lJfKOpETM_w",
+      "subscribers": 133000,
+      "views": 9525238,
+      "videoCount": 863
+    },
+    {
+      "id": "UCgRqGV1gBf2Esxh0Tz1vxzw",
+      "subscribers": 105000,
+      "views": 4201004,
+      "videoCount": 769
+    },
+    {
+      "id": "UC_sFNM0z0MWm9A6WlKPuMMg",
+      "subscribers": 875000,
+      "views": 79112059,
+      "videoCount": 443
+    },
+    {
+      "id": "UCuI_opAVX6qbxZY-a-AxFuQ",
+      "subscribers": 441000,
+      "views": 51614347,
+      "videoCount": 252
+    },
+    {
+      "id": "UC1iA6_NT4mtAcIII6ygrvCw",
+      "subscribers": 951000,
+      "views": 226703904,
+      "videoCount": 643
+    },
+    {
+      "id": "UCvN5h1ShZtc7nly3pezRayg",
+      "subscribers": 424000,
+      "views": 24468965,
+      "videoCount": 253
+    },
+    {
+      "id": "UC9p_lqQ0FEDz327Vgf5JwqA",
+      "subscribers": 848000,
+      "views": 85792399,
+      "videoCount": 570
+    },
+    {
+      "id": "UCotXwY6s8pWmuWd_snKYjhg",
+      "subscribers": 870000,
+      "views": 132733238,
+      "videoCount": 323
+    },
+    {
+      "id": "UCGzTVXqMQHa4AgJVJIVvtDQ",
+      "subscribers": 366000,
+      "views": 41572604,
+      "videoCount": 250
+    },
+    {
+      "id": "UCWsfcksUUpoEvhia0_ut0bA",
+      "subscribers": 275000,
+      "views": 34353827,
+      "videoCount": 656
+    },
+    {
+      "id": "UCl69AEx4MdqMZH7Jtsm7Tig",
+      "subscribers": 530000,
+      "views": 33672474,
+      "videoCount": 310
+    },
+    {
+      "id": "UCc88OV45ICgHbn3ZqLLb52w",
+      "subscribers": 150000,
+      "views": 8135936,
+      "videoCount": 702
+    },
+    {
+      "id": "UCfrWoRGlawPQDQxxeIDRP0Q",
+      "subscribers": 565000,
+      "views": 47594280,
+      "videoCount": 243
+    },
+    {
+      "id": "UCZLZ8Jjx_RN2CXloOmgTHVg",
+      "subscribers": 860000,
+      "views": 96341995,
+      "videoCount": 1487
+    },
+    {
+      "id": "UC7gxU6NXjKF1LrgOddPzgTw",
+      "subscribers": 185000,
+      "views": 13879685,
+      "videoCount": 787
+    },
+    {
+      "id": "UChSvpZYRPh0FvG4SJGSga3g",
+      "subscribers": 224000,
+      "views": 15019409,
+      "videoCount": 878
+    },
+    {
+      "id": "UCJxZpzx4wHzEYD-eCiZPikg",
+      "subscribers": 127000,
+      "views": 8446070,
+      "videoCount": 78
+    },
+    {
+      "id": "UCDHABijvPBnJm7F-KlNME3w",
+      "subscribers": 461000,
+      "views": 27180587,
+      "videoCount": 242
+    },
+    {
+      "id": "UCtyWhCj3AqKh2dXctLkDtng",
+      "subscribers": 666000,
+      "views": 75150823,
+      "videoCount": 836
+    },
+    {
+      "id": "UCgnfPPb9JI3e9A4cXHnWbyg",
+      "subscribers": 649000,
+      "views": 58873881,
+      "videoCount": 650
+    },
+    {
+      "id": "UCu2n3qHuOuQIygREMnWeQWg",
+      "subscribers": 216000,
+      "views": 25360614,
+      "videoCount": 161
+    },
+    {
+      "id": "UCZgOv3YDEs-ZnZWDYVwJdmA",
+      "subscribers": 244000,
+      "views": 21659768,
+      "videoCount": 676
+    },
+    {
+      "id": "UC2hx0xVkMoHGWijwr_lA01w",
+      "subscribers": 240000,
+      "views": 22904047,
+      "videoCount": 841
+    },
+    {
+      "id": "UCW5uhrG1eCBYditmhL0Ykjw",
+      "subscribers": 531000,
+      "views": 19616810,
+      "videoCount": 170
+    },
+    {
+      "id": "UCwL7dgTxKo8Y4RFIKWaf8gA",
+      "subscribers": 194000,
+      "views": 10762697,
+      "videoCount": 1302
+    },
+    {
+      "id": "UCKMWFR6lAstLa7Vbf5dH7ig",
+      "subscribers": 372000,
+      "views": 22034538,
+      "videoCount": 194
+    },
+    {
+      "id": "UC060r4zABV18vcahAWR1n7w",
+      "subscribers": 154000,
+      "views": 8601092,
+      "videoCount": 694
+    },
+    {
+      "id": "UCNVEsYbiZjH5QLmGeSgTSzg",
+      "subscribers": 276000,
+      "views": 34145310,
+      "videoCount": 1206
+    },
+    {
+      "id": "UC6t3-_N8A6ME1JShZHHqOMw",
+      "subscribers": 148000,
+      "views": 9110760,
+      "videoCount": 1303
+    },
+    {
+      "id": "UCdfMHxjcCc2HSd9qFvfJgjg",
+      "subscribers": 163000,
+      "views": 12504745,
+      "videoCount": 899
+    },
+    {
+      "id": "UCajbFh6e_R8QZdHAMbbi4rQ",
+      "subscribers": 85900,
+      "views": 5043525,
+      "videoCount": 406
+    },
+    {
+      "id": "UCKeAhJvy8zgXWbh9duVjIaQ",
+      "subscribers": 229000,
+      "views": 36962091,
+      "videoCount": 3087
+    },
+    {
+      "id": "UCWQtYtq9EOB4-I5P-3fh8lA",
+      "subscribers": 694000,
+      "views": 122546123,
+      "videoCount": 622
+    },
+    {
+      "id": "UCHP4f7G2dWD4qib7BMatGAw",
+      "subscribers": 189000,
+      "views": 18863571,
+      "videoCount": 692
+    },
+    {
+      "id": "UCjk2nKmHzgH5Xy-C5qYRd5A",
+      "subscribers": 394000,
+      "views": 23792253,
+      "videoCount": 237
+    },
+    {
+      "id": "UC9mf_ZVpouoILRY9NUIaK-w",
+      "subscribers": 254000,
+      "views": 31024323,
+      "videoCount": 1160
+    }
+  ],
+  "vspo": [
+    {
+      "id": "UC61OwuYOVuKkpKnid-43Twg",
+      "subscribers": 316000,
+      "views": 32157044,
+      "videoCount": 433
+    },
+    {
+      "id": "UCL9hJsdk9eQa0IlWbFB2oRg",
+      "subscribers": 167000,
+      "views": 12492206,
+      "videoCount": 274
+    },
+    {
+      "id": "UCD5W21JqNMv_tV9nfjvF9sw",
+      "subscribers": 445000,
+      "views": 91089460,
+      "videoCount": 1087
+    },
+    {
+      "id": "UCIjdfjcSaEgdjwbgjxC3ZWg",
+      "subscribers": 579000,
+      "views": 104755716,
+      "videoCount": 888
+    },
+    {
+      "id": "UCF_U2GCKHvDz52jWdizppIA",
+      "subscribers": 458000,
+      "views": 84094233,
+      "videoCount": 1107
+    },
+    {
+      "id": "UCyLGcqYs7RsBb3L0SJfzGYA",
+      "subscribers": 688000,
+      "views": 139615419,
+      "videoCount": 1308
+    },
+    {
+      "id": "UCS5l_Y0oMVTjEos2LuyeSZQ",
+      "subscribers": 229000,
+      "views": 2751585,
+      "videoCount": 19
+    },
+    {
+      "id": "UCiMG6VdScBabPhJ1ZtaVmbw",
+      "subscribers": 451000,
+      "views": 97750997,
+      "videoCount": 1664
+    },
+    {
+      "id": "UCIcAj6WkJ8vZ7DeJVgmeqKw",
+      "subscribers": 743000,
+      "views": 211733807,
+      "videoCount": 2105
+    },
+    {
+      "id": "UCPkKpOHxEDcwmUAnRpIu-Ng",
+      "subscribers": 629000,
+      "views": 116677462,
+      "videoCount": 1045
+    },
+    {
+      "id": "UCjXBuHmWkieBApgBhDuJMMQ",
+      "subscribers": 605000,
+      "views": 112096559,
+      "videoCount": 1339
+    },
+    {
+      "id": "UCurEA8YoqFwimJcAuSHU0MQ",
+      "subscribers": 515000,
+      "views": 81523096,
+      "videoCount": 1365
+    },
+    {
+      "id": "UC8vKBjGY2HVfbW9GAmgikWw",
+      "subscribers": 227000,
+      "views": 19202066,
+      "videoCount": 171
+    },
+    {
+      "id": "UCgTzsBI0DIRopMylJEDqnog",
+      "subscribers": 271000,
+      "views": 21024464,
+      "videoCount": 1108
+    },
+    {
+      "id": "UCzUNASdzI4PV5SlqtYwAkKQ",
+      "subscribers": 764000,
+      "views": 157006771,
+      "videoCount": 1565
+    },
+    {
+      "id": "UC-WX1CXssCtCtc2TNIRnJzg",
+      "subscribers": 383000,
+      "views": 45589884,
+      "videoCount": 452
+    },
+    {
+      "id": "UCGWa1dMU_sDCaRQjdabsVgg",
+      "subscribers": 306000,
+      "views": 17943496,
+      "videoCount": 642
+    },
+    {
+      "id": "UC5LyYg6cCA4yHEYvtUsir3g",
+      "subscribers": 705000,
+      "views": 185245515,
+      "videoCount": 2014
+    },
+    {
+      "id": "UCuI5XaO-6VkOEhHao6ij7JA",
+      "subscribers": 366000,
+      "views": 44348705,
+      "videoCount": 107
+    },
+    {
+      "id": "UCX4WL24YEOUYd7qDsFSLDOw",
+      "subscribers": 292000,
+      "views": 24615494,
+      "videoCount": 375
+    },
+    {
+      "id": "UCnvVG9RbOW3J6Ifqo-zKLiw",
+      "subscribers": 438000,
+      "views": 97354076,
+      "videoCount": 1765
+    },
+    {
+      "id": "UCMp55EbT_ZlqiMS3lCj01BQ",
+      "subscribers": 436000,
+      "views": 57983975,
+      "videoCount": 1071
+    },
+    {
+      "id": "UCuDY3ibSP2MFRgf7eo3cojg",
+      "subscribers": 310000,
+      "views": 33725492,
+      "videoCount": 481
+    }
+  ],
+  "neoporte": [
+    {
+      "id": "UCEy9cYULQrC2cRlVqJPCcSw",
+      "subscribers": 171000,
+      "views": 12432013,
+      "videoCount": 431
+    },
+    {
+      "id": "UCIu-aUArYq_H84dBpCAokMA",
+      "subscribers": 383000,
+      "views": 162646227,
+      "videoCount": 2776
+    },
+    {
+      "id": "UCEtUOMEAuAMz8dor89rt2RA",
+      "subscribers": 83700,
+      "views": 7931613,
+      "videoCount": 1080
+    },
+    {
+      "id": "UCo6mwsozDGMW0UNGowBJGhg",
+      "subscribers": 91200,
+      "views": 10184596,
+      "videoCount": 630
+    },
+    {
+      "id": "UChLfthKoUV502J7gU9STArg",
+      "subscribers": 896000,
+      "views": 577156602,
+      "videoCount": 4383
+    },
+    {
+      "id": "UCWnQDjlXTLDyYowc3LaHyJQ",
+      "subscribers": 344000,
+      "views": 136911372,
+      "videoCount": 678
+    },
+    {
+      "id": "UCAHQGIKolfBfoeXXMY79SBA",
+      "subscribers": 77200,
+      "views": 5978751,
+      "videoCount": 440
+    },
+    {
+      "id": "UCZrYHIPsKhYAXqOls2kQQNQ",
+      "subscribers": 144000,
+      "views": 18635822,
+      "videoCount": 897
+    },
+    {
+      "id": "UCm5rjZAFQuRrnDCkxnwvWkg",
+      "subscribers": 54900,
+      "views": 2372136,
+      "videoCount": 28
+    },
+    {
+      "id": "UCZmUoMwjyuQ59sk5_7Tx07A",
+      "subscribers": 381000,
+      "views": 91384034,
+      "videoCount": 1646
+    },
+    {
+      "id": "UCbBLqA4HRowpj2JuLrkig5w",
+      "subscribers": 140000,
+      "views": 37164990,
+      "videoCount": 464
+    },
+    {
+      "id": "UC8hwewh9svh92E1gXvgVazg",
+      "subscribers": 189000,
+      "views": 20410771,
+      "videoCount": 508
+    },
+    {
+      "id": "UCuk7vapXKckSw6yCGGDspDg",
+      "subscribers": 378000,
+      "views": 63660452,
+      "videoCount": 1202
+    }
+  ],
+  "aogiri": [
+    {
+      "id": "UC7wZb5INldbGweowOhBIs8Q",
+      "subscribers": 175000,
+      "views": 13262655,
+      "videoCount": 413
+    },
+    {
+      "id": "UCAHXqn4nAd2j3LRu1Qyi_JA",
+      "subscribers": 183000,
+      "views": 8895636,
+      "videoCount": 561
+    },
+    {
+      "id": "UCXXlhNCp1EPbDQ2pzmmy9aw",
+      "subscribers": 59400,
+      "views": 2572267,
+      "videoCount": 117
+    },
+    {
+      "id": "UCIwHOJn_3QjBTwQ_gNj7WRA",
+      "subscribers": 113000,
+      "views": 6573051,
+      "videoCount": 385
+    },
+    {
+      "id": "UCXXnWssOLdB2jg-4CznteAA",
+      "subscribers": 429000,
+      "views": 76336755,
+      "videoCount": 639
+    },
+    {
+      "id": "UCFG6teapZaN6J1oVXl7MYPA",
+      "subscribers": 398000,
+      "views": 43951943,
+      "videoCount": 370
+    },
+    {
+      "id": "UCmiYJycZXBGc4s_zjIRUHhQ",
+      "subscribers": 255000,
+      "views": 66723594,
+      "videoCount": 616
+    },
+    {
+      "id": "UCPLeqi7rIqS9uY4_TrSUOMg",
+      "subscribers": 1070000,
+      "views": 1241560067,
+      "videoCount": 721
+    },
+    {
+      "id": "UC1sBUU-y9FlHNukwsrR4bmA",
+      "subscribers": 163000,
+      "views": 51134086,
+      "videoCount": 111
+    },
+    {
+      "id": "UCyY6YeINiwQoA-FnmdQCkug",
+      "subscribers": 208000,
+      "views": 40987498,
+      "videoCount": 690
+    },
+    {
+      "id": "UCt7_srJeiw55kTcK7M9ID6g",
+      "subscribers": 491000,
+      "views": 66480436,
+      "videoCount": 729
+    },
+    {
+      "id": "UCs-lYkwb-NYKE9_ssTRDK3Q",
+      "subscribers": 244000,
+      "views": 28798185,
+      "videoCount": 694
+    },
+    {
+      "id": "UCdi5pj0MDQ-3LFNUFIFmD8w",
+      "subscribers": 66300,
+      "views": 2548928,
+      "videoCount": 117
+    },
+    {
+      "id": "UCxy3KNlLQiN64tikKipnQNg",
+      "subscribers": 81100,
+      "views": 4399702,
+      "videoCount": 102
+    },
+    {
+      "id": "UCFvEuP2EDkvrgJpHI6-pyNw",
+      "subscribers": 210000,
+      "views": 23722738,
+      "videoCount": 462
+    }
+  ],
+  "nanashiiInc": [
+    {
+      "id": "UCXp7sNC0F_qkjickvlYkg-Q",
+      "subscribers": 124000,
+      "views": 14119504,
+      "videoCount": 1263
+    },
+    {
+      "id": "UCwePpiw1ocZRSNSkpKvVISw",
+      "subscribers": 260000,
+      "views": 58584748,
+      "videoCount": 2232
+    },
+    {
+      "id": "UCDh2bWI5EDu7PavqwICkVpA",
+      "subscribers": 99300,
+      "views": 11969952,
+      "videoCount": 1511
+    },
+    {
+      "id": "UC2hc-00y-MSR6eYA4eQ4tjQ",
+      "subscribers": 223000,
+      "views": 58825679,
+      "videoCount": 1571
+    },
+    {
+      "id": "UCJEpkwwDiTKS5lxwFttEbIQ",
+      "subscribers": 33400,
+      "views": 3555472,
+      "videoCount": 177
+    },
+    {
+      "id": "UC3EhsuKdEkI99TWZwZgWutg",
+      "subscribers": 190000,
+      "views": 43402738,
+      "videoCount": 1931
+    },
+    {
+      "id": "UCW8WKciBixmaqaGqrlTITRQ",
+      "subscribers": 108000,
+      "views": 18559676,
+      "videoCount": 2022
+    },
+    {
+      "id": "UC0Owc36U9lOyi9Gx9Ic-4qg",
+      "subscribers": 381000,
+      "views": 247999834,
+      "videoCount": 3899
+    },
+    {
+      "id": "UCBJ6nejlzes6mm9UruaxQsA",
+      "subscribers": 110000,
+      "views": 19882611,
+      "videoCount": 1040
+    },
+    {
+      "id": "UCYTz3uIgwVY3ZU-IQJS8r3A",
+      "subscribers": 86300,
+      "views": 14379949,
+      "videoCount": 1982
+    },
+    {
+      "id": "UC2kyQhzGOB-JPgcQX9OMgEw",
+      "subscribers": 113000,
+      "views": 18871096,
+      "videoCount": 1230
+    }
+  ],
+  "noripro": [
+    {
+      "id": "UCLyTXfCZtl7dyhta9Jg3pZg",
+      "subscribers": 146000,
+      "views": 6547523,
+      "videoCount": 157
+    },
+    {
+      "id": "UCle1cz6rcyH0a-xoMYwLlAg",
+      "subscribers": 112000,
+      "views": 10395445,
+      "videoCount": 131
+    },
+    {
+      "id": "UCMxIxoMdtcLkZ1wTq7qjztg",
+      "subscribers": 72300,
+      "views": 6872662,
+      "videoCount": 1114
+    },
+    {
+      "id": "UC16P6nSFhimmcjQKrdOx2IQ",
+      "subscribers": 270000,
+      "views": 24031395,
+      "videoCount": 504
+    },
+    {
+      "id": "UCWIPfdcux1WxuX5yZLPJDww",
+      "subscribers": 131000,
+      "views": 19460568,
+      "videoCount": 1088
+    },
+    {
+      "id": "UC8NZiqKx6fsDT3AVcMiVFyA",
+      "subscribers": 1040000,
+      "views": 422152504,
+      "videoCount": 1676
+    },
+    {
+      "id": "UCJCzy0Fyrm0UhIrGQ7tHpjg",
+      "subscribers": 100000,
+      "views": 2936695,
+      "videoCount": 399
+    },
+    {
+      "id": "UCCXME7oZmXB2VFHJbz5496A",
+      "subscribers": 58100,
+      "views": 2563672,
+      "videoCount": 293
+    },
+    {
+      "id": "UCJtDr_tuvwv-lfN4Gejd5hQ",
+      "subscribers": 33400,
+      "views": 4831640,
+      "videoCount": 300
+    },
+    {
+      "id": "UCxrmkJf_X1Yhte_a4devFzA",
+      "subscribers": 64700,
+      "views": 3797561,
+      "videoCount": 1022
+    },
+    {
+      "id": "UCDwPMymmju4GZV7kZcL2vIQ",
+      "subscribers": 18900,
+      "views": 761560,
+      "videoCount": 66
+    },
+    {
+      "id": "UCuycJ_IsA5ESbTYhe05ozqQ",
+      "subscribers": 92400,
+      "views": 9813082,
+      "videoCount": 898
+    }
+  ],
+  "dotlive": [
+    {
+      "id": "UCyb-cllCkMREr9de-hoiDrg",
+      "subscribers": 101000,
+      "views": 16938952,
+      "videoCount": 944
+    },
+    {
+      "id": "UCXUtikLthPFa5DDmgT3naGA",
+      "subscribers": 106000,
+      "views": 1067997,
+      "videoCount": 162
+    },
+    {
+      "id": "UCP9ZgeIJ3Ri9En69R0kJc9Q",
+      "subscribers": 137000,
+      "views": 29966356,
+      "videoCount": 1861
+    },
+    {
+      "id": "UCMzxQ58QL4NNbWghGymtHvw",
+      "subscribers": 116000,
+      "views": 21365028,
+      "videoCount": 1119
+    },
+    {
+      "id": "UClhLb5qSZy0Gvn3c-HuaInQ",
+      "subscribers": 103000,
+      "views": 6720134,
+      "videoCount": 487
+    },
+    {
+      "id": "UCPxSh63XjfSYJbkBLxM3fSw",
+      "subscribers": 72000,
+      "views": 2053129,
+      "videoCount": 462
+    },
+    {
+      "id": "UCUZ5AlC3rTlM-rA2cj5RP6w",
+      "subscribers": 97100,
+      "views": 29560828,
+      "videoCount": 1605
+    },
+    {
+      "id": "UCz6Gi81kE6p5cdW1rT0ixqw",
+      "subscribers": 170000,
+      "views": 23839323,
+      "videoCount": 1102
+    },
+    {
+      "id": "UCLhUvJ_wO9hOvv_yYENu4fQ",
+      "subscribers": 641000,
+      "views": 122963112,
+      "videoCount": 1467
+    },
+    {
+      "id": "UCyD-4021fig0lxKSYK9DL-g",
+      "subscribers": 126000,
+      "views": 727107,
+      "videoCount": 257
+    },
+    {
+      "id": "UC6TyfKcsrPwBsBnx2QobVLQ",
+      "subscribers": 93800,
+      "views": 8310134,
+      "videoCount": 189
+    },
+    {
+      "id": "UCGPSbXH61y4l85L9XTUl2mA",
+      "subscribers": 82800,
+      "views": 1504303,
+      "videoCount": 187
+    }
+  ]
+}
